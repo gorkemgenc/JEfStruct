@@ -1,4 +1,5 @@
 package interfaces;
 
-public interface IRotation {
+public interface IRotation{
+
 }

@@ -1,4 +1,7 @@
 package rotation;
 
-public class ArrayRotation {
+import interfaces.IRotation;
+
+public class ArrayRotation implements IRotation {
+
 }
