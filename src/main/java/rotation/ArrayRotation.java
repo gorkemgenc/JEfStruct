@@ -5,7 +5,7 @@ import exceptions.ArrayNullException;
 
 public class ArrayRotation<T> {
 
-    public static <T> void rotate(T[] array, Direction direction, int rotateCount){
+    public static <T> void rotate(T[] array, Direction direction, int rotateCount) throws ArrayNullException{
 
         if(array == null ) throw new ArrayNullException("Array is null");
         int length = array.length;
