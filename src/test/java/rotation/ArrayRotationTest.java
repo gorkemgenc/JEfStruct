@@ -48,7 +48,7 @@ public class ArrayRotationTest extends TestCase {
 
         ArrayRotation.rotate(objects, Direction.LEFT,2);
         for(int i=0; i<objects.length; i++){
-            Assert.assertEquals(objects[i].get_name(), objects[i].get_name());
+            Assert.assertEquals(objects[i].get_name(), result[i].get_name());
             Assert.assertEquals(objects[i].get_age(), result[i].get_age());
         }
     }

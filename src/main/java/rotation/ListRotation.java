@@ -39,7 +39,7 @@ public class ListRotation<T> {
 
         while(start < end){
             T temp = list.get(start);
-            list.set(start, temp);
+            list.set(start, list.get(end));
             list.set(end, temp);
             start++;
             end--;
