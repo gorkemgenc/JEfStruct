@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="397e27c8-6459-47f7-83e6-b1c9d0d9e752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/ArrayModifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +40,7 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="155" />
+    <option name="myElementSize" value="182" />
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
@@ -112,7 +111,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/helper/ArrayModifier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
               <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
@@ -124,10 +123,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+            <state relative-caret-position="357">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/test/java/rotation/StringRotationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java" />
         <option value="$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java" />
       </list>
     </option>
   </component>
@@ -330,7 +330,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Helper" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -391,7 +391,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Helper" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -412,7 +412,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533336672492" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533336784367" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -449,12 +449,12 @@
       <module name="jEfStruct" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Helper.*" />
+          <option name="PATTERN" value="helper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Helper" />
-      <option name="MAIN_CLASS_NAME" value="Helper.ArrayModifierTest" />
+      <option name="PACKAGE_NAME" value="helper" />
+      <option name="MAIN_CLASS_NAME" value="helper.ArrayModifierTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -463,12 +463,12 @@
       <module name="jEfStruct" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Helper.*" />
+          <option name="PATTERN" value="helper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Helper" />
-      <option name="MAIN_CLASS_NAME" value="Helper.ArrayModifierTest" />
+      <option name="PACKAGE_NAME" value="helper" />
+      <option name="MAIN_CLASS_NAME" value="helper.ArrayModifierTest" />
       <option name="METHOD_NAME" value="testDoubleArray" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -479,12 +479,12 @@
       <module name="jEfStruct" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Helper.*" />
+          <option name="PATTERN" value="helper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Helper" />
-      <option name="MAIN_CLASS_NAME" value="Helper.ArrayModifierTest" />
+      <option name="PACKAGE_NAME" value="helper" />
+      <option name="MAIN_CLASS_NAME" value="helper.ArrayModifierTest" />
       <option name="METHOD_NAME" value="testFloatArray" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -547,14 +547,11 @@
       <option name="presentableId" value="Default" />
       <updated>1533186486964</updated>
       <workItem from="1533186490980" duration="2961000" />
-      <workItem from="1533190864353" duration="26782000" />
+      <workItem from="1533190864353" duration="26898000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListRotationTest - 2018.08.04 at 01h 18m 13s.xml">
-      <configuration name="ListRotationTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArrayModifierTest - 2018.08.04 at 01h 41m 29s.xml">
       <configuration name="ArrayModifierTest" configurationId="JUnit" />
     </history-entry>
@@ -582,9 +579,12 @@
     <history-entry file="ArrayModifierTest_testDoubleArray - 2018.08.04 at 01h 49m 39s.xml">
       <configuration name="ArrayModifierTest.testDoubleArray" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArrayModifierTest - 2018.08.04 at 01h 51m 20s.xml">
+      <configuration name="ArrayModifierTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29743000" />
+    <option name="totallyTimeSpent" value="29859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="111" width="1938" height="1058" extended-state="6" />
@@ -599,7 +599,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -609,7 +609,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32969433" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.2521322" />
+      <window_info active="true" anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.2521322" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -655,13 +655,13 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java</url>
           <line>28</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="8" />
@@ -1059,7 +1059,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helper/ArrayModifier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/helper/ArrayModifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
@@ -1069,10 +1069,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Helper/ArrayModifierTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/helper/ArrayModifierTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        <state relative-caret-position="357">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

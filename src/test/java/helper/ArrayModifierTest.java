@@ -1,4 +1,4 @@
-package Helper;
+package helper;
 
 import exceptions.ArrayNullException;
 import junit.framework.TestCase;
