@@ -1,7 +1,6 @@
 package rotation;
 
-import Enums.Direction;
-import exceptions.ArrayNullException;
+import enums.Direction;
 import exceptions.ListNullException;
 
 import java.util.List;

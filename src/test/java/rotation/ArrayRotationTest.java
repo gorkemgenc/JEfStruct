@@ -1,6 +1,6 @@
 package rotation;
 
-import Enums.Direction;
+import enums.Direction;
 import exceptions.ArrayNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
