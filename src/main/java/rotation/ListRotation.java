@@ -30,7 +30,6 @@ public class ListRotation<T> {
     }
 
     private static <T> void rotationInner(List<T> list, int directionCount, int length){
-        System.out.println(directionCount);
         rotateArrayInner(list, 0, directionCount-1);
         rotateArrayInner(list, directionCount, length-1);
         rotateArrayInner(list, 0, length-1);

@@ -28,7 +28,6 @@ public class ArrayRotation<T> {
     }
 
     private static <T> void rotationInner(T[] array, int directionCount, int length){
-        System.out.println(directionCount);
         rotateArrayInner(array, 0, directionCount-1);
         rotateArrayInner(array, directionCount, length-1);
         rotateArrayInner(array, 0, length-1);
