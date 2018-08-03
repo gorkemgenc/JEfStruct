@@ -9,7 +9,7 @@ import java.util.List;
 public class ListRotation<T> {
     public static <T> void rotate(List<T> list, Direction direction, int rotateCount) throws ListNullException {
 
-        if(list == null ) throw new ArrayNullException("Array is null");
+        if(list == null ) throw new ListNullException("Array is null");
         int length = list.size();
 
         if(length == 0) return;

@@ -8,7 +8,6 @@ import org.junit.Test;
 
 public class ArrayRotationTest extends TestCase {
 
-
     @Test
     public void testRotateForInteger() {
         Integer[] arrayLeft = new Integer[]{1,2,3,4,5};

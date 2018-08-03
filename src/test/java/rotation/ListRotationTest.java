@@ -1,7 +1,7 @@
 package rotation;
 
 import Enums.Direction;
-import exceptions.ArrayNullException;
+import exceptions.ListNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -119,13 +119,13 @@ public class ListRotationTest extends TestCase {
         Assert.assertTrue(listRight.equals(resultListRight));
     }
 
-    @Test(expected = ArrayNullException.class)
-    public void testArrayNullException(){
+    @Test(expected = ListNullException.class)
+    public void testListNullException(){
         try {
             ListRotation.rotate(null, Direction.LEFT,2);
-            fail( "Array is null" );
+            fail( "List is null" );
         }
-        catch (ArrayNullException expectedException) {
+        catch (ListNullException expectedException) {
         }
     }
 
