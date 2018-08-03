@@ -6,24 +6,37 @@ import java.util.Arrays;
 
 public class ArrayModifier {
 
-    public static void intArray(Integer[] array) throws ArrayNullException {
+    public static int[] intArray(Integer[] array) throws ArrayNullException {
 
         if(array == null) throw new ArrayNullException("Array is null");
 
-        Arrays.stream(array).mapToInt(Integer::intValue).toArray();
+        return Arrays.stream(array).mapToInt(Integer::intValue).toArray();
     }
 
-    public static void doubleArray(Double[] array) throws ArrayNullException {
+    public static double[] doubleArray(Double[] array) throws ArrayNullException {
 
         if(array == null) throw new ArrayNullException("Array is null");
 
-        Arrays.stream(array).mapToDouble(Double::doubleValue).toArray();
+        return Arrays.stream(array).mapToDouble(Double::doubleValue).toArray();
     }
 
-    public static void longArray(Long[] array) throws ArrayNullException {
+    public static long[] longArray(Long[] array) throws ArrayNullException {
 
         if(array == null) throw new ArrayNullException("Array is null");
 
-        Arrays.stream(array).mapToLong(Long::longValue).toArray();
+        return Arrays.stream(array).mapToLong(Long::longValue).toArray();
+    }
+
+    public static float[] floatArray(Float[] array) throws ArrayNullException {
+
+        if(array == null) throw new ArrayNullException("Array is null");
+
+        float[] floatArray = new float[array.length];
+
+        for(int i = 0; i < array.length; i++){
+            floatArray[i] = (float)array[i];
+        }
+
+        return floatArray;
     }
 }
