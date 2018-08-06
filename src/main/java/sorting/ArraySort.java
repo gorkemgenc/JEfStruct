@@ -1,13 +1,65 @@
 package sorting;
 
-public class ArraySort {
-    //SORTING
-    //Class sorting with numeric area
-    //StringCheck sorted array like Integer - Big Sorting implementation for me
-    //Descending order StringCheck array
-    //Descending order Int array
-    //AlphabeticalOrder for class
-    //AlphabeticalOrder for class with substrings
-    // Arrays. sort with string length
-    // Arrays. sort with one two three class partial comparison ordering
+import java.util.List;
+
+public class ArraySort<T> {
+    public static void descendingOrder(int[] array){
+
+    }
+
+    public static void ascendingOrder(int[] array){
+
+    }
+
+    public static <T> void sortByLength(T[] array) {
+
+    }
+
+    public static void alphabeticalOrder(char[] array){
+
+    }
+
+    public static void alphabeticalOrder(String[] array){
+
+    }
+
+    public static void reverseAlphabeticalOrder(char[] array){
+
+    }
+
+    public static void reverseAlphabeticalOrder(String[] array){
+
+    }
+
+    public static <T> void orderBySpecial(T[] array, String areaName){
+
+    }
+
+    public static <T> void orderBySpecials(T[] array, List<String> areanames){
+
+    }
+
+    public static void alphabeticalOrderWithSubString(String[] array){
+
+    }
+
+    public static <T> void bubbleSort(T[] array){
+
+    }
+
+    public static <T> void mergeSort(T[] array){
+
+    }
+
+    public static <T> void quickSort(T[] array){
+
+    }
+
+    public static <T> void insertionSort(T[] array){
+
+    }
+
+    public static <T> void heapSort(T[] array){
+
+    }
 }
