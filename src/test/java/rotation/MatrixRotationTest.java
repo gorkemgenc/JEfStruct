@@ -20,41 +20,53 @@ public class MatrixRotationTest extends TestCase {
 
     @Test
     public void testRotateMatrixLeft() {
-        int[][] matrix = new int[][]{{1,2,3},
+        Integer[][] matrix = new Integer[][]{{1,2,3},
                 {4,5,6},
                 {7,8,9}};
 
-        int[][] rotateLeftMatrix = new int[][]{{3,6,9},
+        Object[][] rotateLeftMatrix = new Integer[][]{{3,6,9},
                 {2,5,8},
                 {1,4,7}};
 
-        MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
-        Assert.assertTrue(matrix.equals(rotateLeftMatrix));
+        Object[][] result = MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
+        for(int i=0; i<rotateLeftMatrix.length; i++){
+            for(int j=0; j<rotateLeftMatrix[i].length; j++){
+                Assert.assertEquals(result[i][j], rotateLeftMatrix[i][j]);
+            }
+        }
     }
 
     @Test
     public void testRotateMatrixLeftByOne() {
-        int[][] matrix = new int[][]{{1}};
+        Integer[][] matrix = new Integer[][]{{1}};
 
-        int[][] rotateLeftMatrix = new int[][]{{1}};
+        Integer[][] rotateLeftMatrix = new Integer[][]{{1}};
 
-        MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
-        Assert.assertTrue(matrix.equals(rotateLeftMatrix));
+        Object[][] result = MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
+        for(int i=0; i<rotateLeftMatrix.length; i++){
+            for(int j=0; j<rotateLeftMatrix[i].length; j++){
+                Assert.assertEquals(result[i][j], rotateLeftMatrix[i][j]);
+            }
+        }
     }
 
     @Test
     public void testRotateMatrixLeftWithDifferentSize() {
-        int[][] matrix = new int[][]{{1,2,3,4},
+        Integer[][] matrix = new Integer[][]{{1,2,3,4},
                 {4,5,6,7},
                 {7,8,9,8}};
 
-        int[][] rotateLeftMatrix = new int[][]{{4,7,8},
+        Integer[][] rotateLeftMatrix = new Integer[][]{{4,7,8},
                 {3,6,9},
                 {2,5,8},
                 {1,4,7}};
 
-        MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
-        Assert.assertTrue(matrix.equals(rotateLeftMatrix));
+        Object[][] result = MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
+        for(int i=0; i<rotateLeftMatrix.length; i++){
+            for(int j=0; j<rotateLeftMatrix[i].length; j++){
+                Assert.assertEquals(result[i][j], rotateLeftMatrix[i][j]);
+            }
+        }
     }
 
     @Test
@@ -67,18 +79,26 @@ public class MatrixRotationTest extends TestCase {
                 {"8","5","2"},
                 {"9","6","3"}};
 
-        MatrixRotation.rotateMatrix(matrix, Direction.LEFT);
-        Assert.assertTrue(matrix.equals(rotateRightMatrix));
+        Object[][] result = MatrixRotation.rotateMatrix(matrix, Direction.RIGHT);
+        for(int i=0; i<rotateRightMatrix.length; i++){
+            for(int j=0; j<rotateRightMatrix[i].length; j++){
+                Assert.assertEquals(result[i][j], rotateRightMatrix[i][j]);
+            }
+        }
     }
 
     @Test
     public void testTranspose(){
-        int[][] matrix = new int[][]{{1,2,3},
+        Integer[][] matrix = new Integer[][]{{1,2,3},
                 {4,5,6}};
 
-        int[][] transposeMatrix = new int[][]{{1,4},{2,5},{3,6}};
+        Integer[][] transposeMatrix = new Integer[][]{{1,4},{2,5},{3,6}};
 
-        MatrixRotation.transpose(matrix);
-        Assert.assertTrue(matrix.equals(transposeMatrix));
+        Object[][] result = MatrixRotation.transpose(matrix);
+        for(int i=0; i<transposeMatrix.length; i++){
+            for(int j=0; j<transposeMatrix[i].length; j++){
+                Assert.assertEquals(result[i][j], transposeMatrix[i][j]);
+            }
+        }
     }
 }
