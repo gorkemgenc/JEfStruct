@@ -30,7 +30,7 @@ public class MatrixRotation<T> {
 
         for (int  j = 0; j < matrix[0].length/2; j++) {
             for (int i = 0; i < matrix.length; i++) {
-                int x = matrix[i][j];
+                T x = matrix[i][j];
                 matrix[i][j] = matrix[i][matrix[0].length -1 -j];
                 matrix[i][matrix[0].length -1 -j] = x;
             }
@@ -44,7 +44,7 @@ public class MatrixRotation<T> {
 
         for (int  j = 0; j < matrix[0].length/2; j++) {
             for (int i = 0; i < matrix.length; i++) {
-                int x = matrix[i][j];
+                T x = matrix[i][j];
                 matrix[i][j] = matrix[i][matrix[0].length -1 -j];
                 matrix[i][matrix[0].length -1 -j] = x;
             }

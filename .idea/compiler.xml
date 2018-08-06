@@ -9,5 +9,8 @@
         <module name="jEfStruct" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jEfStruct" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
