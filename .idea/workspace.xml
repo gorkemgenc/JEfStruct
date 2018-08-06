@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/sorting/ListSortTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/ArraySort.java" afterPath="$PROJECT_DIR$/src/main/java/sorting/ArraySort.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sorting/ListSort.java" afterPath="$PROJECT_DIR$/src/main/java/sorting/ListSort.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,28 +86,28 @@
       <file leaf-file-name="ArraySort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sorting/ArraySort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="439">
+              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="101" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListSort.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListSort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sorting/ListSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="504">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListSortTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListSortTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/sorting/ListSortTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1239">
-              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="462">
+              <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -145,10 +145,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/rotation/MatrixRotation.java" />
         <option value="$PROJECT_DIR$/src/test/java/rotation/MatrixRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sorting/ArraySort.java" />
         <option value="$PROJECT_DIR$/src/test/java/sorting/ArraySortTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sorting/ListSort.java" />
         <option value="$PROJECT_DIR$/src/test/java/sorting/ListSortTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sorting/ArraySort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sorting/ListSort.java" />
       </list>
     </option>
   </component>
@@ -225,6 +225,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jEfStruct" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="similarity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -730,26 +738,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/sorting/ListSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sorting/ArraySort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="439">
+          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sorting/ListSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/sorting/ListSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        <state relative-caret-position="504">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>

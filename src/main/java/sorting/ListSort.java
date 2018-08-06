@@ -39,7 +39,7 @@ public class ListSort<T> {
 
     }
 
-    public static void alphabeticalOrderWithSubString(List<String> list){
+    public static void alphabeticalOrderWithSubString(List<String> list, String[] array, String name, int start, int end){
 
     }
 
