@@ -1,9 +1,11 @@
 package sorting;
 
-import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.text.Normalizer;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ArraySort<T> {
     public static void descendingOrder(Integer[] array){
@@ -39,11 +41,165 @@ public class ArraySort<T> {
     }
 
     public static <T> void orderBySpecial(T[] array, String areaName){
+        Arrays.sort(array,new Comparator<T>() {
+            @Override
+            public int compare(T s1, T s2) {
+                int returnValue = 0;
+                Field[] fields= s1.getClass().getDeclaredFields() ;
+                for (Field fd : fields) {
+                    if(!fd.getName().equals(areaName))  continue;
 
+                    boolean accessible = fd.isAccessible();
+                    fd.setAccessible(true);
+                    try {
+                        Object temp1 = fd.get(s1);
+                        Object temp2 = fd.get(s2);
+
+                        if (temp1 instanceof Number)
+                        {
+                            if ((temp1 != null && temp2 != null)
+                                    && (temp1 instanceof Integer || temp1 instanceof Long || temp1 instanceof Byte))
+                            {
+                                returnValue = Long.valueOf(temp1 + "").compareTo(Long. valueOf(temp2 + ""));
+                            }
+                            else if ((temp1 != null && temp2 != null) && (temp1 instanceof Double || temp1 instanceof Float))
+                            {
+
+                                returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(objectO2 + ""));
+
+                            }
+                        }
+                        else if (temp1 instanceof String || temp1 instanceof Character)
+                        {
+                            if ((temp1 != null) && temp2 != null)
+                            {
+                                returnValue = normalizedString(String.valueOf(temp1)).compareToIgnoreCase(
+                                        normalizedString(String.valueOf(temp2)));
+                            }
+                        }
+                        fd.setAccessible(accessible);
+
+                    } catch (IllegalAccessException e) {
+                        try {
+                            throw new NoSuchFieldException("There is no such field");
+                        } catch (NoSuchFieldException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                }
+                boolean isDesc = true;
+                if (isDesc)
+                {
+                    if (returnValue > 0)
+                    {
+                        return -1;
+                    }
+                    else if (returnValue < 0)
+                    {
+                        return 1;
+                    }
+                }
+                return returnValue;
+            }
+        });
     }
 
-    public static <T> void orderBySpecials(T[] array, List<String> areanames){
+    public static String normalizedString(String str)
+    {
+        if (!isNullOrBlank(str))
+        {
+            String nfdNormalizedString = Normalizer. normalize(str, Normalizer.Form.NFD );
+            Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+            return pattern.matcher(nfdNormalizedString).replaceAll("");
+        }
+        else
+        {
+            return "" ;
+        }
+    }
 
+    /**
+     * This function checks that the value is blank or null.
+     *
+     * @param value
+     *            value to be checked
+     * @return true if value is blank or null
+     */
+    public static boolean isNullOrBlank(String value)
+    {
+        boolean retFlag = false;
+        if (value == null || value.trim().equals("") || value.trim().equals("null" ))
+        {
+            retFlag = true;
+        }
+        return retFlag;
+    }
+
+    public static void orderBySpecials(Object[] array, List<String> areanames){
+        Arrays.sort(array,new Comparator<T>() {
+            @Override
+            public int compare(T s1, T s2) {
+                int returnValue = 0;
+                Field[] fields= s1.getClass().getDeclaredFields() ;
+                for(String areaname : areanames){
+                    if(returnValue != 0){
+                        break;
+                    }
+                    for (Field fd : fields) {
+                        if(!areaname.equals(fd.getName())) continue;
+                        boolean accessible = fd.isAccessible();
+                        fd.setAccessible(true);
+                        try {
+                            Object temp1 = fd.get(s1);
+                            Object temp2 = fd.get(s2);
+
+                            if (temp1 instanceof Number)
+                            {
+                                if ((temp1 != null && temp2 != null)
+                                        && (temp1 instanceof Integer || temp1 instanceof Long || temp1 instanceof Byte))
+                                {
+                                    returnValue = Long.valueOf(temp1 + "").compareTo(Long. valueOf(temp2 + ""));
+                                }
+                                else if ((temp1 != null && temp2 != null) && (temp1 instanceof Double || temp1 instanceof Float))
+                                {
+
+                                    returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(objectO2 + ""));
+
+                                }
+                            }
+                            else if (temp1 instanceof String || temp1 instanceof Character)
+                            {
+                                if ((temp1 != null) && temp2 != null)
+                                {
+                                    returnValue = normalizedString(String.valueOf(temp1)).compareToIgnoreCase(
+                                            normalizedString(String.valueOf(temp2)));
+                                }
+                            }
+                            fd.setAccessible(accessible);
+                        } catch (IllegalAccessException e) {
+                            try {
+                                throw new NoSuchFieldException("There is no such field");
+                            } catch (NoSuchFieldException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    }
+                }
+                boolean isDesc = true;
+                if (isDesc)
+                {
+                    if (returnValue > 0)
+                    {
+                        return -1;
+                    }
+                    else if (returnValue < 0)
+                    {
+                        return 1;
+                    }
+                }
+                return returnValue;
+            }
+        });
     }
 
     public static void alphabeticalOrderWithSubString(String[] array, int start, int end){

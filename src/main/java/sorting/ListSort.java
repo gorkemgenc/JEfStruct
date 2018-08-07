@@ -1,10 +1,12 @@
 package sorting;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ListSort<T> {
-    public static void descendingOrder(List<Integer>[] list){
-
+    public static void descendingOrder(List<Integer> list){
+        Collections.sort(list);
     }
 
     public static void ascendingOrder(List<Integer>[] list){
