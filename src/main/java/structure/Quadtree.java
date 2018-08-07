@@ -1,4 +1,4 @@
 package structure;
 
-public class Quadtree {
+public class Quadtree<T> {
 }
