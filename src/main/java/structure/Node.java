@@ -14,16 +14,6 @@ public class Node<T> {
     private Node<T> sw;
     private Node<T> se;
 
-    /**
-     * Constructs a new quad tree node.
-     *
-     * @param {double} x X-coordiate of node.
-     * @param {double} y Y-coordinate of node.
-     * @param {double} w Width of node.
-     * @param {double} h Height of node.
-     * @param {Node}   opt_parent Optional parent node.
-     * @constructor
-     */
     public Node(double x, double y, double w, double h, Node<T> opt_parent) {
         this.x = x;
         this.y = y;
@@ -34,10 +24,6 @@ public class Node<T> {
 
     public double getX() {
         return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
     }
 
     public double getY() {
@@ -52,24 +38,12 @@ public class Node<T> {
         return w;
     }
 
-    public void setW(double w) {
-        this.w = w;
-    }
-
     public double getH() {
         return h;
     }
 
-    public void setH(double h) {
-        this.h = h;
-    }
-
     public Node<T> getParent() {
         return opt_parent;
-    }
-
-    public void setParent(Node<T> opt_parent) {
-        this.opt_parent = opt_parent;
     }
 
     public void setPoint(Point<T> point) {
