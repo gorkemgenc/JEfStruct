@@ -65,4 +65,76 @@ public class ListSortTest {
     @Test
     public void heapSort() {
     }
+
+    @Test
+    public void descendingOrder1() {
+    }
+
+    @Test
+    public void ascendingOrder1() {
+    }
+
+    @Test
+    public void sortByLength1() {
+    }
+
+    @Test
+    public void sortByLengthDesc() {
+    }
+
+    @Test
+    public void alphabeticalCharOrder1() {
+    }
+
+    @Test
+    public void alphabeticalOrder1() {
+    }
+
+    @Test
+    public void reverseAlphabeticalCharOrder1() {
+    }
+
+    @Test
+    public void reverseAlphabeticalOrder1() {
+    }
+
+    @Test
+    public void orderBySpecial1() {
+    }
+
+    @Test
+    public void normalizedString() {
+    }
+
+    @Test
+    public void isNullOrBlank() {
+    }
+
+    @Test
+    public void orderBySpecials1() {
+    }
+
+    @Test
+    public void alphabeticalOrderWithSubString1() {
+    }
+
+    @Test
+    public void bubbleSort1() {
+    }
+
+    @Test
+    public void mergeSort1() {
+    }
+
+    @Test
+    public void quickSort1() {
+    }
+
+    @Test
+    public void insertionSort1() {
+    }
+
+    @Test
+    public void heapSort1() {
+    }
 }
