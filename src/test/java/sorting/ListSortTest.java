@@ -1,10 +1,11 @@
 package sorting;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ListSortTest {
+public class ListSortTest extends TestCase {
 
     @Test
     public void descendingOrder() {
