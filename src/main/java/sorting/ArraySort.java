@@ -65,7 +65,7 @@ public class ArraySort<T> {
                             else if ((temp1 != null && temp2 != null) && (temp1 instanceof Double || temp1 instanceof Float))
                             {
 
-                                returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(objectO2 + ""));
+                                returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(temp2 + ""));
 
                             }
                         }
@@ -135,7 +135,7 @@ public class ArraySort<T> {
         return retFlag;
     }
 
-    public static void orderBySpecials(Object[] array, List<String> areanames){
+    public static <T> void orderBySpecials(T[] array, List<String> areanames){
         Arrays.sort(array,new Comparator<T>() {
             @Override
             public int compare(T s1, T s2) {
@@ -163,7 +163,7 @@ public class ArraySort<T> {
                                 else if ((temp1 != null && temp2 != null) && (temp1 instanceof Double || temp1 instanceof Float))
                                 {
 
-                                    returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(objectO2 + ""));
+                                    returnValue = Double.valueOf(temp1 + "").compareTo(Double. valueOf(temp2 + ""));
 
                                 }
                             }
