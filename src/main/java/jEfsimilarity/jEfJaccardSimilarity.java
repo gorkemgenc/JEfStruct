@@ -28,11 +28,11 @@ public class jEfJaccardSimilarity {
 
         Set<Integer> s1 = new HashSet<>();
         for (int i = 0; i < a.size(); i++) {
-            s1.add(a[i]);
+            s1.add(a.get(i));
         }
         Set<Integer> s2 = new HashSet<>();
         for (int i = 0; i < b.size(); i++) {
-            s2.add(b[i]);
+            s2.add(b.get(i));
         }
 
         final int sa = s1.size();

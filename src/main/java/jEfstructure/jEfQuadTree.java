@@ -1,7 +1,7 @@
 package jEfstructure;
 
 import jEfenums.NodeType;
-import exceptions.QuadTreeException;
+import jEfexceptions.QuadTreeException;
 
 import java.util.ArrayList;
 import java.util.List;

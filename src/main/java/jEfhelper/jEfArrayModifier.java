@@ -1,9 +1,8 @@
 package jEfhelper;
 
-import exceptions.ArrayNullException;
+import jEfexceptions.ArrayNullException;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class jEfArrayModifier {
 

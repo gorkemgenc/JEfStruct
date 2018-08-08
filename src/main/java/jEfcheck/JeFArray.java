@@ -1,12 +1,23 @@
 package jEfcheck;
 
-import exceptions.ArrayNullException;
+
+import jEfexceptions.ArrayNullException;
+import jEfexceptions.ListNullException;
 
 import java.util.*;
 
 public class JeFArray<T> {
 
-    public static <T> boolean hasUniqueElement(T[] array){
+    /***
+     * This function determines whether array (Type T) is unique or not. If it is unique, it returns true otherwise it returns false.
+     * If array is null, function throw an ArrayNullException exceptions which extends from RuntimeException
+     * If array size is zero, then function returns true
+     * Type T is a generic type, you can give any type for input
+     * @param array
+     * @param <T>
+     * @return
+     */
+    public static <T> boolean hasUniqueElement(T[] array) throws ArrayNullException{
 
         if(array == null) throw  new ArrayNullException("Array is null");
         else if(array.length == 0) return true;
@@ -20,15 +31,24 @@ public class JeFArray<T> {
         return true;
     }
 
-    public static <T> boolean isArraysSame(List<T[]> list){
+    /***
+     * Given a List of object arrays with generic Type T, this function determines whether these arrays are totally same or not
+     * If same it returns true, otherwise it returns false
+     * If list is null it throws ListNullException exceptions which extends from RuntimeException
+     * If list size is zero then return true
+     * @param list
+     * @param <T>
+     * @return
+     */
+    public static <T> boolean isArraysSame(List<T[]> list) throws ListNullException{
 
-        if(list == null) throw  new exceptions.ListNullException("List is null");
-        else if(list.size() == 0) return true;
+        if(list == null) throw  new ListNullException("List is null");
+        if(list.size() == 0) return true;
 
         Hashtable<T, Integer> table = new Hashtable<>();
 
         for(T temp : list.get(0)){
-            if(table.contains(temp)){
+            if(table.containsKey(temp)){
                 table.put(temp, table.get(temp) + 1);
             }
             else{
@@ -41,7 +61,9 @@ public class JeFArray<T> {
             tempTable.putAll(table);
 
             for(T element : list.get(i)){
-                if(!tempTable.contains(element))    return false;
+                if(!tempTable.containsKey(element)){
+                    return false;
+                }
                 tempTable.put(element, tempTable.get(element) - 1);
             }
             for(Integer temp : tempTable.values()){
@@ -52,9 +74,17 @@ public class JeFArray<T> {
 
     }
 
-    public static <T> List<List<T>> permute(T[] array){
+    /***
+     * This function serves all permutation of array elements in list.
+     * If array is null then it throws ArrayNullException and if array length is zero then function returns null
+     * @param array
+     * @param <T>
+     * @return
+     */
+    public static <T> List<List<T>> permute(T[] array) throws ArrayNullException{
 
         if(array == null) throw new ArrayNullException("Array is null");
+        if(array.length == 0)  return null;
 
         List<List<T>> result = new ArrayList<>();
         permuteHelper(array, 0, result);

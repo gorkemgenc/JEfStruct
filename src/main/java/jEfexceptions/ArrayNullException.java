@@ -1,4 +1,4 @@
-package exceptions;
+package jEfexceptions;
 
 public class ArrayNullException extends RuntimeException {
 

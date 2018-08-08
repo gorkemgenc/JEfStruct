@@ -1,7 +1,7 @@
-package rotation;
+package jEfrotation;
 
 import jEfenums.Direction;
-import exceptions.ArrayNullException;
+import jEfexceptions.ArrayNullException;
 
 public class jEfArray<T> {
 

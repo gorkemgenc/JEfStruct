@@ -1,7 +1,7 @@
-package rotation;
+package jEfrotation;
 
 import jEfenums.Direction;
-import exceptions.StringNullException;
+import jEfexceptions.StringNullException;
 
 public class jEfString {
     public static String rotate(String str, Direction direction, int rotateCount) throws StringNullException {

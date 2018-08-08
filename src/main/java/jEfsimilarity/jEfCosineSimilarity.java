@@ -1,6 +1,6 @@
 package jEfsimilarity;
 
-import exceptions.VectorNullException;
+import jEfexceptions.VectorNullException;
 
 import java.util.HashSet;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package exceptions;
+package jEfexceptions;
 
 public class ListNullException extends RuntimeException{
 

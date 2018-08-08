@@ -1,4 +1,4 @@
-package exceptions;
+package jEfexceptions;
 
 public class MatrixNullException extends RuntimeException{
 

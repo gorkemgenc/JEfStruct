@@ -1,7 +1,8 @@
-package rotation;
+package jEfrotation;
 
 import jEfenums.Direction;
-import exceptions.ListNullException;
+import jEfexceptions.ArrayNullException;
+import jEfexceptions.ListNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class jEfListTest extends TestCase {
         Integer[] arrayResult = new Integer[]{3,4,5,1,2};
         List<Integer> listLeftResult = addToList(arrayResult);
 
-        ListRotation.rotate(listLeft, Direction.LEFT,2);
+        jEfList.rotate(listLeft, Direction.LEFT,2);
         Assert.assertTrue(listLeft.equals(listLeftResult));
 
         Integer[] arrayRight = new Integer[]{1,2,3,4,5};
@@ -28,7 +29,7 @@ public class jEfListTest extends TestCase {
         arrayResult = new Integer[]{4,5,1,2,3};
         List<Integer> listRightResult = addToList(arrayResult);
 
-        ListRotation.rotate(listRight, Direction.RIGHT,2);
+        jEfList.rotate(listRight, Direction.RIGHT,2);
         Assert.assertTrue(listRight.equals(listRightResult));
     }
 
@@ -40,7 +41,7 @@ public class jEfListTest extends TestCase {
         String[] arrayResult = new String[]{"13","14","15","11","12"};
         List<String> listLeftResult = addToList(arrayResult);
 
-        ListRotation.rotate(listLeft, Direction.LEFT,2);
+        jEfList.rotate(listLeft, Direction.LEFT,2);
         Assert.assertTrue(listLeft.equals(listLeftResult));
 
         String[] arrayRight = new String[]{"11","12","13","14","15"};
@@ -49,26 +50,26 @@ public class jEfListTest extends TestCase {
         arrayResult = new String[]{"14","15","11","12","13"};
         List<String> listRightResult = addToList(arrayResult);
 
-        ListRotation.rotate(listRight, Direction.RIGHT,2);
+        jEfList.rotate(listRight, Direction.RIGHT,2);
         Assert.assertTrue(listRight.equals(listRightResult));
     }
 
     @Test
     public void testRotateForObject() {
 
-        List<rotation.jEfListTest.Temp> objects = new ArrayList<>();
-        objects.add(new rotation.jEfListTest.Temp("Gorkem1", 21));
-        objects.add(new rotation.jEfListTest.Temp("Gorkem2", 22));
-        objects.add(new rotation.jEfListTest.Temp("Gorkem3", 23));
-        objects.add(new rotation.jEfListTest.Temp("Gorkem4", 24));
+        List<Temp> objects = new ArrayList<>();
+        objects.add(new Temp("Gorkem1", 21));
+        objects.add(new Temp("Gorkem2", 22));
+        objects.add(new Temp("Gorkem3", 23));
+        objects.add(new Temp("Gorkem4", 24));
 
-        List<rotation.jEfListTest.Temp> result = new ArrayList<>();
-        result.add(new rotation.jEfListTest.Temp("Gorkem3", 23));
-        result.add(new rotation.jEfListTest.Temp("Gorkem4", 24));
-        result.add(new rotation.jEfListTest.Temp("Gorkem1", 21));
-        result.add(new rotation.jEfListTest.Temp("Gorkem2", 22));
+        List<Temp> result = new ArrayList<>();
+        result.add(new Temp("Gorkem3", 23));
+        result.add(new Temp("Gorkem4", 24));
+        result.add(new Temp("Gorkem1", 21));
+        result.add(new Temp("Gorkem2", 22));
 
-        ListRotation.rotate(objects, Direction.LEFT,2);
+        jEfList.rotate(objects, Direction.LEFT,2);
         for(int i=0; i<objects.size(); i++){
             Assert.assertEquals(objects.get(i).get_name(), result.get(i).get_name());
             Assert.assertEquals(objects.get(i).get_age(), result.get(i).get_age());
@@ -80,7 +81,7 @@ public class jEfListTest extends TestCase {
         Integer[] arrayLeft = new Integer[]{1,2,3,4,5};
         List<Integer> listLeft = addToList(arrayLeft);
 
-        ListRotation.rotate(listLeft, Direction.LEFT,0);
+        jEfList.rotate(listLeft, Direction.LEFT,0);
         Integer[] resultArray = new Integer[]{1,2,3,4,5};
         List<Integer> resultList = addToList(resultArray);
         Assert.assertTrue(listLeft.equals(resultList));
@@ -94,7 +95,7 @@ public class jEfListTest extends TestCase {
         String[] resultLeft = new String[]{"11","12","13","14","15"};
         List<String> resultListLeft = addToList(resultLeft);
 
-        ListRotation.rotate(listLeft, Direction.LEFT, arrayLeft.length);
+        jEfList.rotate(listLeft, Direction.LEFT, arrayLeft.length);
         Assert.assertTrue(listLeft.equals(resultListLeft));
     }
 
@@ -106,7 +107,7 @@ public class jEfListTest extends TestCase {
         String[] resultLeft = new String[]{"13","14","15","11","12"};
         List<String> resultListLeft = addToList(resultLeft);
 
-        ListRotation.rotate(listLeft, Direction.LEFT,arrayLeft.length+2);
+        jEfList.rotate(listLeft, Direction.LEFT,arrayLeft.length+2);
         Assert.assertTrue(listLeft.equals(resultListLeft));
 
         String[] arrayRight = new String[]{"11","12","13","14","15"};
@@ -115,14 +116,14 @@ public class jEfListTest extends TestCase {
         String[] resultRight = new String[]{"14","15","11","12","13"};
         List<String> resultListRight = addToList(resultRight);
 
-        ListRotation.rotate(listRight, Direction.RIGHT,arrayRight.length+2);
+        jEfList.rotate(listRight, Direction.RIGHT,arrayRight.length+2);
         Assert.assertTrue(listRight.equals(resultListRight));
     }
 
     @Test(expected = ListNullException.class)
     public void testListNullException(){
         try {
-            ListRotation.rotate(null, Direction.LEFT,2);
+            jEfList.rotate(null, Direction.LEFT,2);
             fail( "List is null" );
         }
         catch (ListNullException expectedException) {

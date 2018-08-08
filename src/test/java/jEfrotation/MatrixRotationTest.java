@@ -1,7 +1,7 @@
-package rotation;
+package jEfrotation;
 
 import jEfenums.Direction;
-import exceptions.MatrixNullException;
+import jEfexceptions.MatrixNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;

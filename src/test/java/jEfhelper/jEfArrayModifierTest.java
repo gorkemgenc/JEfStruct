@@ -1,6 +1,6 @@
 package jEfhelper;
 
-import exceptions.ArrayNullException;
+import jEfexceptions.ArrayNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
