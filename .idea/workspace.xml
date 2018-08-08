@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/control/ListCheckTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/ArrayCheck.java" afterPath="$PROJECT_DIR$/src/main/java/control/ArrayCheck.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/ListCheck.java" afterPath="$PROJECT_DIR$/src/main/java/control/ListCheck.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" afterPath="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/control/StringCheckTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/control/StringCheck.java" afterPath="$PROJECT_DIR$/src/main/java/control/StringCheck.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +49,18 @@
       <file leaf-file-name="StringCheck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/control/StringCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="84">
+              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringCheckTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/control/StringCheckTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -62,16 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BigIntegerTransformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/transformation/BigIntegerTransformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -101,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MaxElement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,7 +118,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListCheckTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListCheckTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/control/ListCheckTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -169,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/test/java/similarity/JaccardSimilarityTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/similarity/LongestCommonSubsequence.java" />
         <option value="$PROJECT_DIR$/src/test/java/similarity/LongestCommonSubsequenceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/control/StringCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/structure/SpatialHashing.java" />
         <option value="$PROJECT_DIR$/src/main/java/structure/NodeType.java" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/QuadTreeException.java" />
@@ -193,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/main/java/control/ArrayCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/control/ListCheck.java" />
         <option value="$PROJECT_DIR$/src/test/java/control/ListCheckTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/control/StringCheck.java" />
+        <option value="$PROJECT_DIR$/src/test/java/control/StringCheckTest.java" />
       </list>
     </option>
   </component>
@@ -737,14 +737,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="149" column="8" lean-forward="false" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
@@ -1172,14 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/control/StringCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformation/BigIntegerTransformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1207,7 +1191,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MaxElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1252,6 +1236,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/control/StringCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/control/StringCheckTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
