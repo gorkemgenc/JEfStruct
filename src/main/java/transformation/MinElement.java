@@ -5,7 +5,7 @@ import java.util.*;
 public class MinElement<T, K> {
 
     public static <T> T minList(List<T> list){
-        return null;
+
     }
 
     public static <T> T minArray(T[] array){
