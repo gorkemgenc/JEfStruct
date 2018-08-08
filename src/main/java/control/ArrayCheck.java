@@ -48,5 +48,4 @@ public class ArrayCheck<T> {
             array[i] = t;
         }
     }
-
 }
