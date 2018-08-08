@@ -15,7 +15,7 @@ public class JeFArray<T> {
      * Type T is a generic type, you can give any type for input
      * @param array
      * @param <T>
-     * @return
+     * @return boolean
      */
     public static <T> boolean hasUniqueElement(T[] array) throws ArrayNullException{
 
@@ -38,7 +38,7 @@ public class JeFArray<T> {
      * If list size is zero then return true
      * @param list
      * @param <T>
-     * @return
+     * @return boolean
      */
     public static <T> boolean isArraysSame(List<T[]> list) throws ListNullException{
 
@@ -79,7 +79,7 @@ public class JeFArray<T> {
      * If array is null then it throws ArrayNullException and if array length is zero then function returns null
      * @param array
      * @param <T>
-     * @return
+     * @return List<List<T>>
      */
     public static <T> List<List<T>> permute(T[] array) throws ArrayNullException{
 
