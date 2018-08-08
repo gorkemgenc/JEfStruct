@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/StringCheck.java" afterPath="$PROJECT_DIR$/src/main/java/control/StringCheck.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transformation/StringTransformation.java" afterPath="$PROJECT_DIR$/src/main/java/transformation/StringTransformation.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/transformation/MinElement.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" afterPath="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transformation/ListTransformation.java" afterPath="$PROJECT_DIR$/src/main/java/transformation/ListTransformation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transformation/MaxElement.java" afterPath="$PROJECT_DIR$/src/main/java/transformation/MaxElement.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,18 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArrayCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/control/ArrayCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClassCheck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/control/ClassCheck.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,22 +58,44 @@
       <file leaf-file-name="ArrayTransformation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding>
                 <element signature="e#145#146#0" expanded="true" />
                 <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTransformation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringTransformation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformation/StringTransformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="84">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListTransformation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/transformation/ListTransformation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#170#171#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,9 +103,53 @@
       <file leaf-file-name="MaxElement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MaxElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="735">
+              <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinElement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MinElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,8 +181,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -178,14 +234,16 @@
         <option value="$PROJECT_DIR$/src/test/java/structure/PointTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/structure/QuadTreeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/control/ArrayCheckTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/transformation/MaxElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/control/ArrayCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/control/ListCheck.java" />
         <option value="$PROJECT_DIR$/src/test/java/control/ListCheckTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/control/StringCheckTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/control/StringCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/transformation/StringTransformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/transformation/ListTransformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/transformation/MaxElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/transformation/MinElement.java" />
       </list>
     </option>
   </component>
@@ -730,41 +788,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="139" column="57" lean-forward="false" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
-          <folding>
-            <element signature="e#5647#5648#0" expanded="false" />
-            <element signature="e#5678#5679#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sorting/ListSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#308#309#0" expanded="false" />
-            <element signature="e#368#369#0" expanded="false" />
-            <element signature="e#406#407#0" expanded="false" />
-            <element signature="e#464#465#0" expanded="false" />
-            <element signature="e#519#520#0" expanded="false" />
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#706#707#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#806#807#0" expanded="false" />
-            <element signature="e#844#845#0" expanded="false" />
-            <element signature="e#1048#1049#0" expanded="false" />
-            <element signature="e#1112#1113#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/StringNullException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1173,14 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MaxElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/control/ArrayCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="891">
@@ -1225,17 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#145#146#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/control/StringCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1244,11 +1248,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/ArrayTransformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MaxElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/MinElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/transformation/StringTransformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/transformation/ListTransformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
