@@ -2,15 +2,14 @@ package jEfcheck;
 
 import exceptions.ArrayNullException;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class JeFArray<T> {
 
-    public static <T> boolean isUnique(T[] array){
+    public static <T> boolean hasUniqueElement(T[] array){
 
         if(array == null) throw  new ArrayNullException("Array is null");
+        else if(array.length == 0) return true;
 
         HashSet<T> set = new HashSet<>();
 
@@ -21,8 +20,39 @@ public class JeFArray<T> {
         return true;
     }
 
+    public static <T> boolean isArraysSame(List<T[]> list){
 
-    public static <T> List<List<T>> permutations(T[] array){
+        if(list == null) throw  new exceptions.ListNullException("List is null");
+        else if(list.size() == 0) return true;
+
+        Hashtable<T, Integer> table = new Hashtable<>();
+
+        for(T temp : list.get(0)){
+            if(table.contains(temp)){
+                table.put(temp, table.get(temp) + 1);
+            }
+            else{
+                table.put(temp, 1);
+            }
+        }
+
+        for(int i=1; i<list.size(); i++){
+            Hashtable<T, Integer> tempTable = new Hashtable<>();
+            tempTable.putAll(table);
+
+            for(T element : list.get(i)){
+                if(!tempTable.contains(element))    return false;
+                tempTable.put(element, tempTable.get(element) - 1);
+            }
+            for(Integer temp : tempTable.values()){
+                if(temp!= 0) return  false;
+            }
+        }
+        return true;
+
+    }
+
+    public static <T> List<List<T>> permute(T[] array){
 
         if(array == null) throw new ArrayNullException("Array is null");
 
