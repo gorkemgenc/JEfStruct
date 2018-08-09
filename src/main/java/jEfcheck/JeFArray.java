@@ -22,13 +22,24 @@ public class JeFArray<T> {
         if(array == null) throw  new ArrayNullException("Array is null");
         else if(array.length == 0) return true;
 
-        HashSet<T> set = new HashSet<>();
+        if(isWrapperType(array[0].getClass())){
+            HashSet<T> set = new HashSet<>();
 
-        for(T temp : array){
-            if(set.contains(temp)) return false;
-            set.add(temp);
+            for(T temp : array){
+                if(set.contains(temp)) return false;
+                set.add(temp);
+            }
+            return true;
         }
-        return true;
+        else{
+            for(int i=0; i<array.length; i++){
+                for(int j=i+1; j<array.length; j++){
+                    if(jEfType.isSameByValue(array[i], array[j])) return false;
+                }
+            }
+            return true;
+        }
+
     }
 
     /***
@@ -117,5 +128,28 @@ public class JeFArray<T> {
             array[index] = array[i];
             array[i] = t;
         }
+    }
+
+    private static final Set<Class<?>> WRAPPER_TYPES = getWrapperTypes();
+
+    private static boolean isWrapperType(Class<?> clazz)
+    {
+        return WRAPPER_TYPES.contains(clazz);
+    }
+
+    private static Set<Class<?>> getWrapperTypes()
+    {
+        Set<Class<?>> ret = new HashSet<>();
+        ret.add(Boolean.class);
+        ret.add(Character.class);
+        ret.add(Byte.class);
+        ret.add(Short.class);
+        ret.add(Integer.class);
+        ret.add(Long.class);
+        ret.add(Float.class);
+        ret.add(Double.class);
+        ret.add(Void.class);
+        ret.add(String.class);
+        return ret;
     }
 }

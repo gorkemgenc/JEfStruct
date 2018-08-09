@@ -1,6 +1,6 @@
 package jEfcheck;
 
-import jEfexceptions.ArrayNullException;
+import jEfexceptions.ListNullException;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -70,7 +70,7 @@ public class jEfListTest {
         tempList.add(new Temp("Genc", 22));
         tempList.add(new Temp("Gorkem", 1));
 
-        Assert.assertTrue(jEfList.hasUniqueElement(tempList));
+        Assert.assertFalse(jEfList.hasUniqueElement(tempList));
     }
 
     @Test
@@ -89,8 +89,11 @@ public class jEfListTest {
         Temp temp1 = new Temp("Gorkem", 1);
         Temp temp2 = new Temp("Genc", 12);
         Temp temp3 = new Temp("Gorkem", 1);
+
+
         tempList.add(temp2);
         tempList.add(temp1);
+        tempList.add(temp3);
 
         Assert.assertFalse(jEfList.hasUniqueElement(tempList));
     }
@@ -116,91 +119,114 @@ public class jEfListTest {
     }
 
     @Test
-    public void hasUniqueElementThrowException() throws ArrayNullException {
-        expectedEx.expect(ArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
-        JeFArray.hasUniqueElement(null);
+    public void hasUniqueElementThrowException() throws ListNullException {
+        expectedEx.expect(ListNullException.class);
+        expectedEx.expectMessage("List is null");
+        jEfList.hasUniqueElement(null);
     }
 
     @Test
     public void isArraysSameReturnTrue() {
-        Integer[] firstList = new Integer[]{1,2,3};
-        Integer[] secondList = new Integer[]{1,2,3};
-        Integer[] thirdList = new Integer[]{1,2,3};
-        List<Integer[]> list = new ArrayList<>();
+        List<Integer> firstList = new ArrayList<>();
+        firstList.add(1);
+        firstList.add(2);
+        firstList.add(3);
+
+        List<Integer> secondList = new ArrayList<>();
+        secondList.add(1);
+        secondList.add(2);
+        secondList.add(3);
+
+        List<List<Integer>> list = new ArrayList<>();
         list.add(firstList);
         list.add(secondList);
-        list.add(thirdList);
 
-        Assert.assertTrue(JeFArray.isArraysSame(list));
+        Assert.assertTrue(jEfList.isListsSame(list));
     }
 
     @Test
     public void isArraysSameReturnMoreThanArrayTrue() {
-        Integer[] firstList = new Integer[]{1,2,3,3};
-        Integer[] secondList = new Integer[]{1,3,3,2};
-        Integer[] thirdList = new Integer[]{1,2,3,3};
 
-        List<Integer[]> list = new ArrayList<>();
+        List<Integer> firstList = new ArrayList<>();
+        firstList.add(1);
+        firstList.add(2);
+        firstList.add(3);
+
+        List<Integer> secondList = new ArrayList<>();
+        secondList.add(1);
+        secondList.add(2);
+        secondList.add(3);
+
+        List<Integer> thirdList = new ArrayList<>();
+        thirdList.add(1);
+        thirdList.add(2);
+        thirdList.add(3);
+
+        List<List<Integer>> list = new ArrayList<>();
         list.add(firstList);
         list.add(secondList);
-        list.add(thirdList);
+        list.add(secondList);
 
-        Assert.assertTrue(JeFArray.isArraysSame(list));
+        Assert.assertTrue(jEfList.isListsSame(list));
     }
 
     @Test
     public void isArraysSameReturnFalseArray() {
-        Integer[] firstList = new Integer[]{1,2,3,4};
-        Integer[] secondList = new Integer[]{1,2,3,4};
-        Integer[] thirdList = new Integer[]{1,2,3};
-        List<Integer[]> list = new ArrayList<>();
+
+        List<Integer> firstList = new ArrayList<>();
+        firstList.add(1);
+        firstList.add(2);
+        firstList.add(3);
+
+        List<Integer> secondList = new ArrayList<>();
+        secondList.add(1);
+        secondList.add(2);
+        secondList.add(3);
+        secondList.add(4);
+
+        List<Integer> thirdList = new ArrayList<>();
+        thirdList.add(1);
+        thirdList.add(2);
+
+        List<List<Integer>> list = new ArrayList<>();
         list.add(firstList);
         list.add(secondList);
-        list.add(thirdList);
+        list.add(secondList);
 
-        Assert.assertFalse(JeFArray.isArraysSame(list));
+        Assert.assertFalse(jEfList.isListsSame(list));
     }
 
     @Test
     public void isArraysSameReturnTrueForOneList() {
-        Integer[] firstList = new Integer[]{1,2,3};
-        List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
+        List<Integer> firstList = new ArrayList<>();
+        firstList.add(1);
+        firstList.add(2);
+        firstList.add(3);
+        List<List<Integer>> test = new ArrayList<>();
+        test.add(firstList);
 
-        Assert.assertTrue(JeFArray.isArraysSame(list));
+        Assert.assertTrue(jEfList.isListsSame(test));
     }
 
     @Test
-    public void isArraysSameReturnFalse() {
-        Integer[] firstList = new Integer[]{1,2,3};
-        Integer[] secondList = new Integer[]{4,5,6};
-        Integer[] thirdList = new Integer[]{1,2,3};
-        List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(thirdList);
-
-        Assert.assertFalse(JeFArray.isArraysSame(list));
-    }
-
-    @Test
-    public void permuteThrowException() throws ArrayNullException {
-        expectedEx.expect(ArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
-        JeFArray.permute(null);
+    public void permuteThrowException() throws ListNullException {
+        expectedEx.expect(ListNullException.class);
+        expectedEx.expectMessage("List is null");
+        jEfList.permute(null);
     }
 
     @Test
     public void permuteForOneElement() {
-        Integer[] array = new Integer[]{1};
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+
         List<List<Integer>> result = new ArrayList<>();
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
         expectedResult.add(temp);
 
-        result = JeFArray.permute(array);
+        result = jEfList.permute(list);
 
         for(int i=0; i<result.size(); i++){
             for(int j=0; j<result.get(i).size(); j++){
@@ -211,7 +237,10 @@ public class jEfListTest {
 
     @Test
     public void permuteForMoreThanOneElement() {
-        Integer[] array = new Integer[]{1,2};
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+
         List<List<Integer>> result = new ArrayList<>();
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
@@ -222,7 +251,7 @@ public class jEfListTest {
         temp.add(2);
         temp.add(1);
         expectedResult.add(temp);
-        result = JeFArray.permute(array);
+        result = jEfList.permute(list);
 
         for(int i=0; i<result.size(); i++){
             for(int j=0; j<result.get(i).size(); j++){

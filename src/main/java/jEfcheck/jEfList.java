@@ -2,10 +2,7 @@ package jEfcheck;
 
 import jEfexceptions.ListNullException;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.List;
+import java.util.*;
 
 public class jEfList {
 
@@ -23,13 +20,24 @@ public class jEfList {
         if(list == null) throw  new ListNullException("List is null");
         else if(list.size() == 0) return true;
 
-        HashSet<T> set = new HashSet<>();
+        if(isWrapperType(list.get(0).getClass())) {
 
-        for(T temp : list){
-            if(set.contains(temp)) return false;
-            set.add(temp);
+            HashSet<T> set = new HashSet<>();
+
+            for(T temp : list){
+                if(set.contains(temp)) return false;
+                set.add(temp);
+            }
+            return true;
         }
-        return true;
+        else{
+            for(int i=0; i<list.size(); i++){
+                for(int j=i+1; j<list.size(); j++){
+                    if(jEfType.isSameByValue(list.get(i), list.get(j))) return false;
+                }
+            }
+            return true;
+        }
     }
 
     /***
@@ -83,7 +91,11 @@ public class jEfList {
      * @param <T>
      * @return List<List<T>>
      */
-    public static <T> List<List<T>> permutations(List<T> list){
+    public static <T> List<List<T>> permute(List<T> list) throws ListNullException{
+
+        if(list == null) throw new ListNullException("List is null");
+        if(list.size() == 0) return null;
+
         List<List<T>> result = new ArrayList<>();
         permuteHelper(list, 0, result);
         return result;
@@ -113,5 +125,28 @@ public class jEfList {
             list.set(index, list.get(i));
             list.set(i, t);
         }
+    }
+
+    private static final Set<Class<?>> WRAPPER_TYPES = getWrapperTypes();
+
+    private static boolean isWrapperType(Class<?> clazz)
+    {
+        return WRAPPER_TYPES.contains(clazz);
+    }
+
+    private static Set<Class<?>> getWrapperTypes()
+    {
+        Set<Class<?>> ret = new HashSet<>();
+        ret.add(Boolean.class);
+        ret.add(Character.class);
+        ret.add(Byte.class);
+        ret.add(Short.class);
+        ret.add(Integer.class);
+        ret.add(Long.class);
+        ret.add(Float.class);
+        ret.add(Double.class);
+        ret.add(Void.class);
+        ret.add(String.class);
+        return ret;
     }
 }
