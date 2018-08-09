@@ -1,52 +1,43 @@
 package jEfSimilarity;
 
-import jEfExceptions.JEfVectorNullException;
+import jEfExceptions.JEfArrayLengthNotEqualException;
+import jEfExceptions.JEfArrayNullException;
+import jEfExceptions.JEfListNullException;
+import jEfExceptions.JEfListSizeNotEqualException;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.List;
 
 public class JEfCosineSimilarity {
 
-    public static Double cosineSimilarity(final Map<CharSequence, Integer> leftMap,
-                                   final Map<CharSequence, Integer> rightMap) {
-        if (leftMap == null || rightMap == null) {
-            throw new JEfVectorNullException("Vectors should not be null");
-        }
+    public static double cosineSimilarity(double[] vectorA, double[] vectorB) throws JEfArrayNullException, JEfArrayLengthNotEqualException{
 
-        final Set<CharSequence> intersection = getIntersection(leftMap, rightMap);
+        if(vectorA == null || vectorB == null) throw new JEfArrayNullException("Array is null");
+        if(vectorA.length != vectorB.length) throw new JEfArrayLengthNotEqualException("Array lengths should be equal");
 
-        final double dotProduct = dot(leftMap, rightMap, intersection);
-        double d1 = 0.0d;
-        for (final Integer value : leftMap.values()) {
-            d1 += Math.pow(value, 2);
+        double dotProduct = 0.0;
+        double normA = 0.0;
+        double normB = 0.0;
+        for (int i = 0; i < vectorA.length; i++) {
+            dotProduct += vectorA[i] * vectorB[i];
+            normA += Math.pow(vectorA[i], 2);
+            normB += Math.pow(vectorB[i], 2);
         }
-        double d2 = 0.0d;
-        for (final Integer value : rightMap.values()) {
-            d2 += Math.pow(value, 2);
-        }
-        double cosineSimilarity;
-        if (d1 <= 0.0 || d2 <= 0.0) {
-            cosineSimilarity = 0.0;
-        } else {
-            cosineSimilarity = dotProduct / (Math.sqrt(d1) * Math.sqrt(d2));
-        }
-        return cosineSimilarity;
+        return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 
-    private static Set<CharSequence> getIntersection(final Map<CharSequence, Integer> leftVector,
-                                              final Map<CharSequence, Integer> rightVector) {
-        final Set<CharSequence> intersection = new HashSet<>(leftVector.keySet());
-        intersection.retainAll(rightVector.keySet());
-        return intersection;
-    }
+    public static double cosineSimilarityForList(List<Double> vectorA, List<Double> vectorB) throws JEfListNullException, JEfListSizeNotEqualException{
 
-    private static double dot(final Map<CharSequence, Integer> leftVector, final Map<CharSequence, Integer> rightVector,
-                       final Set<CharSequence> intersection) {
-        long dotProduct = 0;
-        for (final CharSequence key : intersection) {
-            dotProduct += leftVector.get(key) * rightVector.get(key);
+        if(vectorA == null || vectorB == null) throw new JEfListNullException("List is null");
+        if(vectorA.size() != vectorB.size()) throw new JEfListSizeNotEqualException("Lists size should be equal");
+
+        double dotProduct = 0.0;
+        double normA = 0.0;
+        double normB = 0.0;
+        for (int i = 0; i < vectorA.size(); i++) {
+            dotProduct += vectorA.get(i) * vectorB.get(i);
+            normA += Math.pow(vectorA.get(i), 2);
+            normB += Math.pow(vectorB.get(i), 2);
         }
-        return dotProduct;
+        return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 }

@@ -86,7 +86,7 @@ public class JEfList {
 
     /***
      * This function serves all permutation of List elements in list.
-     * If array is null then it throws JEfArrayNullException and if array length is zero then function returns null
+     * If array is null then it throws JEfArrayLengthNotEqualException and if array length is zero then function returns null
      * @param list
      * @param <T>
      * @return List<List<T>>

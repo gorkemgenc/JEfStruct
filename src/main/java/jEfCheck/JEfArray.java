@@ -10,7 +10,7 @@ public class JEfArray<T> {
 
     /***
      * This function determines whether array (Type T) is unique or not. If it is unique, it returns true otherwise it returns false.
-     * If array is null, function throw an JEfArrayNullException exceptions which extends from RuntimeException
+     * If array is null, function throw an JEfArrayLengthNotEqualException exceptions which extends from RuntimeException
      * If array size is zero, then function returns true
      * Type T is a generic type, you can give any type for input
      * @param array
@@ -87,7 +87,7 @@ public class JEfArray<T> {
 
     /***
      * This function serves all permutation of array elements in list.
-     * If array is null then it throws JEfArrayNullException and if array length is zero then function returns null
+     * If array is null then it throws JEfArrayLengthNotEqualException and if array length is zero then function returns null
      * @param array
      * @param <T>
      * @return List<List<T>>
