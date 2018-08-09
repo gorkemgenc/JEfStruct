@@ -63,4 +63,13 @@ public class JEfJaccardSimilarityTest {
         expectedEx.expectMessage("List is null");
         JEfJaccardSimilarity.jaccardSimilarityForList(null, null);
     }
+
+    @Test
+    public void jaccardSimilarityForString() {
+        String first = "Ideas of March";
+        String second = "Ceaser died in March";
+        double result = JEfJaccardSimilarity.jaccardSimilarityForString(first,second);
+        double expected = 0.6;
+        Assert.assertEquals(result,expected,0);
+    }
 }
