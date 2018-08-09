@@ -54,6 +54,8 @@ public class JeFArrayTest{
         tempList[0] = new Temp("Gorkem",1);
         tempList[1] = new Temp("Genc", 22);
         tempList[2] = new Temp("Temp", 23);
+
+        Assert.assertTrue(JeFArray.hasUniqueElement(tempList));
     }
 
     @Test
@@ -72,6 +74,8 @@ public class JeFArrayTest{
         tempList[0] = new Temp("Gorkem",1);
         tempList[1] = new Temp("Genc", 22);
         tempList[2] = new Temp("Gorkem", 1);
+
+        Assert.assertFalse(JeFArray.hasUniqueElement(tempList));
     }
 
     @Test

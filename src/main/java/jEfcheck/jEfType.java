@@ -1,16 +1,26 @@
 package jEfcheck;
 
-public class jEfType<T> {
+public class jEfType<T, K> {
 
-    public static <T> boolean isWholeTypesSame(T firstObject, T secondObject){
+    public static <T, K> boolean isFieldsSame(T firstObject, K secondObject){
+
+        return firstObject.getClass().equals(secondObject.getClass());
+
+    }
+
+    public static <T, K> boolean isMethodsSame(T firstObject, K secondObject){
+
+        return firstObject.getClass().equals(secondObject.getClass());
+
+    }
+
+    public static boolean isContainObject(T firstObject, T secondObject){
+
         return true;
     }
 
-    public static boolean isContainObject(Object firstObject, Object secondObject){
-        return true;
-    }
+    public static <T> boolean isSameByValue(T object1, T object2){
 
-    public static <T> boolean isSame(T object1, T object2){
         return true;
     }
 }
