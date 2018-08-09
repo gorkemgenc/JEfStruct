@@ -1,4 +1,4 @@
-package jEfcheck;
+package jEfCheck;
 
 import java.lang.reflect.Field;
 import java.util.HashSet;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class jEfType<T, K> {
+public class JEfType<T, K> {
 
     private static boolean result = true;
     public static <T, K> boolean isClassesSame(T firstObject, K secondObject){
