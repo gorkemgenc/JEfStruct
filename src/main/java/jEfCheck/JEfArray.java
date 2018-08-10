@@ -87,7 +87,7 @@ class JEfArray<T> {
 
         for(int i=0; i<length; i++){
             for(int j=i+1; j<length; j++){
-                if(JEfType.isSameByValue(array[i], array[j])) return false;
+                if(JEfType.sameByValue(array[i], array[j])) return false;
             }
         }
         return true;

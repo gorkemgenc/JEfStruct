@@ -86,7 +86,7 @@ public class JEfList {
 
         for(int i=0; i<size; i++){
             for(int j=i+1; j<size; j++){
-                if(JEfType.isSameByValue(list.get(i), list.get(j))) return false;
+                if(JEfType.sameByValue(list.get(i), list.get(j))) return false;
             }
         }
         return true;

@@ -1,9 +1,7 @@
 package jEfCheck;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +11,7 @@ public class JEfTypeTest {
     public void isClassesSameReturnFalseTest() {
         Temp temp = new Temp("Test", 1);
         Other other = new Other("Test", 2);
-        Assert.assertFalse(JEfType.isClassesSame(temp,other));
+        Assert.assertFalse(JEfType.same(temp,other));
     }
 
 
@@ -21,21 +19,21 @@ public class JEfTypeTest {
     public void isClassesSameReturnTrueTest() {
         Temp temp = new Temp("Test", 1);
         Temp other = new Temp("Test", 2);
-        Assert.assertTrue(JEfType.isClassesSame(temp,other));
+        Assert.assertTrue(JEfType.same(temp,other));
     }
 
     @Test
     public void isInnerClassBaseTest() {
         Temp temp = new Temp("Test", 1);
         TempInner tempInner = new TempInner("TestTemp", 2, 2);
-        Assert.assertTrue(JEfType.isInnerClass(temp,tempInner));
+        Assert.assertTrue(JEfType.inner(temp,tempInner));
     }
 
-    @Ignore
+    @Test
     public void isSameByValueReturnTrueTest() {
         Temp tempFirst1 = new Temp("Test", 1);
         Temp tempSecond1 = new Temp("Test",1);
-        Assert.assertTrue(JEfType.isSameByValue(tempFirst1, tempSecond1));
+        Assert.assertTrue(JEfType.sameByValue(tempFirst1, tempSecond1));
     }
 
 
@@ -43,7 +41,7 @@ public class JEfTypeTest {
     public void isSameByValueReturnFalseTest() {
         Temp tempFirst = new Temp("Test", 1);
         Temp tempSecond = new Temp("Test1",1);
-        Assert.assertFalse(JEfType.isSameByValue(tempFirst, tempSecond));
+        Assert.assertFalse(JEfType.sameByValue(tempFirst, tempSecond));
     }
 
     @Test
@@ -52,7 +50,7 @@ public class JEfTypeTest {
         Temp tempSecond = new Temp("Test1", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempSecond);
         classOne.list.add(1);
-        Assert.assertTrue(JEfType.isInnerClass(tempFirst, tempSecond));
+        Assert.assertTrue(JEfType.inner(tempFirst, tempSecond));
     }
 
     @Test
@@ -61,37 +59,37 @@ public class JEfTypeTest {
         Temp tempFirst = new Temp("Test1", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempFirst);
         classOne.list.add(1);
-        Assert.assertFalse(JEfType.isInnerClass(other, tempFirst));
+        Assert.assertFalse(JEfType.inner(other, tempFirst));
     }
 
-    @Ignore
+    @Test
     public void isSameByValueReturnComplexTrueTest() {
         Temp tempFirst = new Temp("Test1", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempFirst);
         ComplexClassOne classTwo = new ComplexClassOne("field2","field2", tempFirst);
         classOne.list.add(1);
         classTwo.list.add(1);
-        Assert.assertTrue(JEfType.isSameByValue(classOne, classTwo));
+        Assert.assertTrue(JEfType.sameByValue(classOne, classTwo));
     }
 
 
-    @Ignore
+    @Test
     public void isSameByValueReturnComplexSecondFalseTest() {
         Temp tempFirst = new Temp("Test1", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempFirst);
         ComplexClassOne classTwo = new ComplexClassOne("field3","field2", tempFirst);
         classOne.list.add(1);
         classTwo.list.add(1);
-        Assert.assertFalse(JEfType.isSameByValue(classOne, classTwo));
+        Assert.assertFalse(JEfType.sameByValue(classOne, classTwo));
     }
 
-    @Ignore
+    @Test
     public void isSameByValueReturnComplexTrueOtherTest() {
         Temp tempFirst = new Temp("Test1", 1);
         Temp tempSecond = new Temp("Test1", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempFirst);
         ComplexClassOne classTwo = new ComplexClassOne("field2","field2", tempSecond);
-        Assert.assertTrue(JEfType.isSameByValue(classOne, classTwo));
+        Assert.assertTrue(JEfType.sameByValue(classOne, classTwo));
     }
 
 
@@ -101,10 +99,10 @@ public class JEfTypeTest {
         Temp tempSecond = new Temp("Test11", 1);
         ComplexClassOne classOne = new ComplexClassOne("field2","field2", tempFirst);
         ComplexClassOne classTwo = new ComplexClassOne("field2","field2", tempSecond);
-        Assert.assertFalse(JEfType.isSameByValue(classOne, classTwo));
+        Assert.assertFalse(JEfType.sameByValue(classOne, classTwo));
     }
 
-    class Temp{
+    private class Temp{
         String name;
         int count;
 
@@ -114,7 +112,7 @@ public class JEfTypeTest {
         }
     }
 
-    class ComplexClassOne{
+    private class ComplexClassOne{
         String field1;
         String field2;
         Temp temp;
@@ -128,7 +126,7 @@ public class JEfTypeTest {
         }
     }
 
-    class Other{
+    private class Other{
         String name;
         int count;
 
@@ -138,7 +136,7 @@ public class JEfTypeTest {
         }
     }
 
-    class TempInner extends Temp{
+    private class TempInner extends Temp{
         int result;
         public TempInner(String name, int count, int result) {
             super(name, count);

@@ -13,7 +13,8 @@ public class JEfType<T, K> {
     private static boolean result = true;
 
     /***
-     *
+     * This function determines whether type of first parameter and type of second parameter are same or not. If same, function returns true
+     * Otherwise function returns false
      * @param first
      * @param second
      * @param <T>
@@ -26,30 +27,34 @@ public class JEfType<T, K> {
     }
 
     /***
-     *
-     * @param firstObject
-     * @param secondObject
+     * This function determines whether first parameter is instance of second parameter. If first parameter is instance of second, function returns true
+     * Otherwise function returns false
+     * @param first
+     * @param second
      * @param <T>
      * @param <K>
      * @return
      */
-    public static <T, K> boolean isInner(T firstObject, K secondObject){
-        if(firstObject.getClass().isInstance(secondObject)) return true;
+    public static <T, K> boolean inner(T first, K second){
+
+        if(first.getClass().isInstance(second)) return true;
         return false;
     }
 
     /***
-     *
-     * @param object1
-     * @param object2
+     * This function determines whether first and second parameters have same declared fields or not, If true, function returns true
+     * Otherwise function returns false
+     * You can use this function for an object which has another object (inner class of other class)
+     * @param first
+     * @param second
      * @param <T>
      * @return
      */
-    public static <T> boolean sameByValue(T object1, T object2) {
+    public static <T> boolean sameByValue(T first, T second) {
 
         result = true;
 
-        Field[] fields = object1.getClass().getDeclaredFields();
+        Field[] fields = first.getClass().getDeclaredFields();
         for (int i = 0; i < fields.length; i++) {
             if (result == false) {
                 return false;
@@ -57,9 +62,8 @@ public class JEfType<T, K> {
             fields[i].setAccessible(true);
             if (JEfWrapper.isWrapperTypeForType(fields[i].getType()) || fields[i].getType().isPrimitive()) {
                 try {
-                    Object temp1 = fields[i].get(object1);
-                    Object temp2 = fields[i].get(object2);
-                    if (!temp1.equals(temp2)) {
+                    if(!checkTwoObjectField(fields[i].get(first), fields[i].get(second)))
+                    {
                         result = false;
                         return result;
                     }
@@ -70,7 +74,7 @@ public class JEfType<T, K> {
 
             } else {
                 try {
-                    sameByValue(fields[i].get(object1), fields[i].get(object2));
+                    sameByValue(fields[i].get(first), fields[i].get(second));
                 } catch (IllegalAccessException e) {
                     result = false;
                     return result;
@@ -78,5 +82,9 @@ public class JEfType<T, K> {
             }
         }
         return result;
+    }
+
+    private static boolean checkTwoObjectField(Object first, Object second){
+        return first.equals(second);
     }
 }
