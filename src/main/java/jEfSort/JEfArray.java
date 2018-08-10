@@ -1,5 +1,8 @@
 package jEfSort;
 
+import jEfExceptions.JEfArrayIndexOutOfRangeException;
+import jEfExceptions.JEfArrayLengthNotEqualException;
+
 import java.lang.reflect.Field;
 import java.text.Normalizer;
 import java.util.Arrays;
@@ -9,38 +12,57 @@ import java.util.regex.Pattern;
 
 public class JEfArray<T> {
     public static void descendingOrder(Integer[] array){
+
+        if(array == null) return;
         Arrays.sort(array, DescendingOrder);
     }
 
     public static void ascendingOrder(Integer[] array){
+
+        if(array == null) return;
         Arrays.sort(array);
     }
 
     public static void sortByLengthAsc(String[] array) {
+
+        if(array == null) return;
         Arrays.sort(array, SortByLengthAsc);
     }
 
     public static void sortByLengthDesc(String[] array) {
+
+        if(array == null) return;
         Arrays.sort(array, SortByLengthDesc);
     }
 
     public static void alphabeticalCharOrder(Character[] array){
+
+        if(array == null) return;
         Arrays.sort(array);
     }
 
     public static void alphabeticalStringOrder(String[] array){
+
+        if(array == null) return;
         Arrays.sort(array);
     }
 
     public static void reverseAlphabeticalOrder(Character[] array){
+
+        if(array == null) return;
         Arrays.sort(array, DescendingOrderChar);
     }
 
     public static void reverseAlphabeticalOrder(String[] array){
+
+        if(array == null) return;
         Arrays.sort(array, ReverseAlphabeticalOrder);
     }
 
     public static <T> void orderBySpecial(T[] array, String areaName){
+
+        if(array == null || areaName == null || areaName.trim().length() == 0) return;
+
         Arrays.sort(array,new Comparator<T>() {
             @Override
             public int compare(T s1, T s2) {
@@ -92,11 +114,11 @@ public class JEfArray<T> {
                 {
                     if (returnValue > 0)
                     {
-                        return -1;
+                        return 1;
                     }
                     else if (returnValue < 0)
                     {
-                        return 1;
+                        return -1;
                     }
                 }
                 return returnValue;
@@ -104,7 +126,7 @@ public class JEfArray<T> {
         });
     }
 
-    public static String normalizedString(String str)
+    private static String normalizedString(String str)
     {
         if (!isNullOrBlank(str))
         {
@@ -118,14 +140,8 @@ public class JEfArray<T> {
         }
     }
 
-    /**
-     * This function checks that the value is blank or null.
-     *
-     * @param value
-     *            value to be checked
-     * @return true if value is blank or null
-     */
-    public static boolean isNullOrBlank(String value)
+
+    private static boolean isNullOrBlank(String value)
     {
         boolean retFlag = false;
         if (value == null || value.trim().equals("") || value.trim().equals("null" ))
@@ -136,12 +152,17 @@ public class JEfArray<T> {
     }
 
     public static <T> void orderBySpecials(T[] array, List<String> areanames){
+
+        if(array == null || array.length == 0) return;
+        if(areanames == null || areanames.size() == 0) return;
+
         Arrays.sort(array,new Comparator<T>() {
             @Override
             public int compare(T s1, T s2) {
                 int returnValue = 0;
                 Field[] fields= s1.getClass().getDeclaredFields() ;
                 for(String areaname : areanames){
+                    areaname = areaname.trim();
                     if(returnValue != 0){
                         break;
                     }
@@ -190,11 +211,11 @@ public class JEfArray<T> {
                 {
                     if (returnValue > 0)
                     {
-                        return -1;
+                        return 1;
                     }
                     else if (returnValue < 0)
                     {
-                        return 1;
+                        return -1;
                     }
                 }
                 return returnValue;
@@ -206,7 +227,8 @@ public class JEfArray<T> {
 
         Arrays.sort(array, new Comparator<String>() {
 
-            public int compare(String str1, String str2) {
+            public int compare(String str1, String str2) throws JEfArrayLengthNotEqualException{
+                if(str1.length() < end || str2.length() < end) throw new JEfArrayIndexOutOfRangeException("Index out of range when comparing two string");
                 int res = String.CASE_INSENSITIVE_ORDER.compare(str1.substring(start, end+1), str2.substring(start, end+1));
 
                 if(res == 0) res = str1.compareTo(str2);
@@ -217,6 +239,8 @@ public class JEfArray<T> {
     }
 
     public static void bubbleSort(int[] array){
+
+        if(array == null) return;
 
         int length = array.length;
         for (int i = 0; i < length-1; i++)
@@ -230,6 +254,8 @@ public class JEfArray<T> {
     }
 
     public static void mergeSort(int[] array){
+
+        if(array == null) return;
         mergeSortInner(array, 0, array.length-1);
     }
 
@@ -289,6 +315,9 @@ public class JEfArray<T> {
     }
 
     public static void quickSort(int[] array){
+
+        if(array == null || array.length == 0) return;
+
         quickSortInner(array, 0, array.length-1);
     }
 
@@ -327,6 +356,9 @@ public class JEfArray<T> {
     }
 
     public static void insertionSort(int[] array){
+
+        if(array == null || array.length == 0) return;
+
         int n = array.length;
         for (int i=1; i<n; ++i)
         {
@@ -343,6 +375,9 @@ public class JEfArray<T> {
     }
 
     public static void heapSort(int[] array){
+
+        if(array == null || array.length == 0) return;
+
         int n = array.length;
 
         for (int i = n / 2 - 1; i >= 0; i--)
@@ -383,7 +418,7 @@ public class JEfArray<T> {
     private static Comparator<Integer> DescendingOrder = new Comparator<Integer>() {
         @Override
         public int compare(Integer o1, Integer o2) {
-            int result = o1 > o2 ? 1 : -1;
+            int result = o1 > o2 ? -1 : 1;
             return result;
         }
     };
@@ -410,7 +445,7 @@ public class JEfArray<T> {
                 result = temp1 > temp2 ? -1 : temp2 > temp1 ? 1 : 0;
             }
             if(result == 0){
-                result = firstLength > secondLength ? 1 : -1;
+                result = firstLength > secondLength ? -1 : 1;
             }
 
             return result;

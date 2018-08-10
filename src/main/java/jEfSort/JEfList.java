@@ -1,5 +1,8 @@
 package jEfSort;
 
+import jEfExceptions.JEfArrayIndexOutOfRangeException;
+import jEfExceptions.JEfListSizeNotEqualException;
+
 import java.lang.reflect.Field;
 import java.text.Normalizer;
 import java.util.*;
@@ -8,38 +11,63 @@ import java.util.stream.Collectors;
 
 public class JEfList<T> {
     public static void descendingOrder(List<Integer> list){
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list, DescendingOrder);
     }
 
     public static void ascendingOrder(List<Integer> list){
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list);
     }
 
     public static void sortByLength(List<String> list) {
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list, SortByLengthAsc);
     }
 
     public static void sortByLengthDesc(List<String> list) {
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list, SortByLengthDesc);
     }
 
     public static void alphabeticalCharOrder(List<Character> list){
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list);
     }
 
     public static void alphabeticalOrder(List<String> list){
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list);
     }
 
     public static void reverseAlphabeticalCharOrder(List<Character> list){
+
+        if(list == null || list.size() == 0) return;
+
         Collections.sort(list, DescendingOrderChar);
     }
 
     public static void reverseAlphabeticalOrder(List<String> list){
+
         Collections.sort(list, ReverseAlphabeticalOrder);
     }
 
     public static <T> void orderBySpecial(List<T> list, String areaName){
+
+        if(list == null || areaName == null || areaName.trim().length() == 0) return;
+
         Collections.sort(list,new Comparator<T>() {
             @Override
             public int compare(T s1, T s2) {
@@ -91,11 +119,11 @@ public class JEfList<T> {
                 {
                     if (returnValue > 0)
                     {
-                        return -1;
+                        return 1;
                     }
                     else if (returnValue < 0)
                     {
-                        return 1;
+                        return -1;
                     }
                 }
                 return returnValue;
@@ -103,7 +131,7 @@ public class JEfList<T> {
         });
     }
 
-    public static String normalizedString(String str)
+    private static String normalizedString(String str)
     {
         if (!isNullOrBlank(str))
         {
@@ -117,14 +145,7 @@ public class JEfList<T> {
         }
     }
 
-    /**
-     * This function checks that the value is blank or null.
-     *
-     * @param value
-     *            value to be checked
-     * @return true if value is blank or null
-     */
-    public static boolean isNullOrBlank(String value)
+    private static boolean isNullOrBlank(String value)
     {
         boolean retFlag = false;
         if (value == null || value.trim().equals("") || value.trim().equals("null" ))
@@ -136,6 +157,10 @@ public class JEfList<T> {
 
 
     public static <T> void orderBySpecials(List<T> list, List<String> areanames){
+
+        if(array == null || array.length == 0) return;
+        if(areanames == null || areanames.size() == 0) return;
+
         Collections.sort(list,new Comparator<T>() {
             @Override
             public int compare(T s1, T s2) {
@@ -190,11 +215,11 @@ public class JEfList<T> {
                 {
                     if (returnValue > 0)
                     {
-                        return -1;
+                        return 1;
                     }
                     else if (returnValue < 0)
                     {
-                        return 1;
+                        return -1;
                     }
                 }
                 return returnValue;
@@ -205,7 +230,8 @@ public class JEfList<T> {
     public static void alphabeticalOrderWithSubString(List<String> list, int start, int end){
         Collections.sort(list, new Comparator<String>() {
 
-            public int compare(String str1, String str2) {
+            public int compare(String str1, String str2) throws JEfListSizeNotEqualException {
+                if(str1.length() < end || str2.length() < end) throw new JEfListSizeNotEqualException("Index out of range when comparing two string");
                 int res = String.CASE_INSENSITIVE_ORDER.compare(str1.substring(start, end+1), str2.substring(start, end+1));
 
                 if(res == 0) res = str1.compareTo(str2);
@@ -250,7 +276,7 @@ public class JEfList<T> {
     private static Comparator<Integer> DescendingOrder = new Comparator<Integer>() {
         @Override
         public int compare(Integer o1, Integer o2) {
-            int result = o1 > o2 ? 1 : -1;
+            int result = o1 > o2 ? -1 : 1;
             return result;
         }
     };
@@ -277,7 +303,7 @@ public class JEfList<T> {
                 result = temp1 > temp2 ? -1 : temp2 > temp1 ? 1 : 0;
             }
             if(result == 0){
-                result = firstLength > secondLength ? 1 : -1;
+                result = firstLength > secondLength ? -1 : 1;
             }
 
             return result;
