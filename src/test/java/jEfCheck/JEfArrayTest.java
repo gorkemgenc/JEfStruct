@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class JEfArrayTest {
@@ -40,15 +41,6 @@ public class JEfArrayTest {
 
     @Test
     public void uniqueForObjectReturnTrueTest() {
-        class Temp{
-            String name;
-            int count;
-
-            Temp(String name, int count){
-                this.name = name;
-                this.count = count;
-            }
-        }
 
         Temp[] tempList = new Temp[3];
         tempList[0] = new Temp("Gorkem",1);
@@ -60,15 +52,6 @@ public class JEfArrayTest {
 
     @Test
     public void uniqueForObjectReturnFalseTest() {
-        class Temp{
-            String name;
-            int count;
-
-            Temp(String name, int count){
-                this.name = name;
-                this.count = count;
-            }
-        }
 
         Temp[] tempList = new Temp[3];
         tempList[0] = new Temp("Gorkem",1);
@@ -87,13 +70,12 @@ public class JEfArrayTest {
 
     @Test
     public void isArraysSameReturnTrueTest() {
+
         Integer[] firstList = new Integer[]{1,2,3};
         Integer[] secondList = new Integer[]{1,2,3};
         Integer[] thirdList = new Integer[]{1,2,3};
         List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(thirdList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
         Assert.assertTrue(JEfArray.same(list));
     }
@@ -104,9 +86,7 @@ public class JEfArrayTest {
         Integer[] secondList = new Integer[]{1,3,3,2};
         Integer[] thirdList = new Integer[]{1,2,3,3};
         List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(thirdList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
         Assert.assertTrue(JEfArray.same(list));
     }
@@ -117,9 +97,7 @@ public class JEfArrayTest {
         Integer[] secondList = new Integer[]{1,2,3,4};
         Integer[] thirdList = new Integer[]{1,2,3};
         List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(thirdList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
         Assert.assertFalse(JEfArray.same(list));
     }
@@ -139,9 +117,7 @@ public class JEfArrayTest {
         Integer[] secondList = new Integer[]{4,5,6};
         Integer[] thirdList = new Integer[]{1,2,3};
         List<Integer[]> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(thirdList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
         Assert.assertFalse(JEfArray.same(list));
     }
@@ -156,25 +132,19 @@ public class JEfArrayTest {
     @Test
     public void permuteForOneElementTest() {
         Integer[] array = new Integer[]{1};
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> result = JEfArray.permute(array);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
         expectedResult.add(temp);
 
-        result = JEfArray.permute(array);
-
-        for(int i=0; i<result.size(); i++){
-            for(int j=0; j<result.get(i).size(); j++){
-                Assert.assertEquals(result.get(i).get(j), expectedResult.get(i).get(j));
-            }
-        }
+        JEfHelper.checkElementByElement(result,expectedResult);
     }
 
     @Test
     public void permuteForMoreThanOneElementTest() {
         Integer[] array = new Integer[]{1,2};
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> result = JEfArray.permute(array);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
@@ -184,12 +154,17 @@ public class JEfArrayTest {
         temp.add(2);
         temp.add(1);
         expectedResult.add(temp);
-        result = JEfArray.permute(array);
 
-        for(int i=0; i<result.size(); i++){
-            for(int j=0; j<result.get(i).size(); j++){
-                Assert.assertEquals(result.get(i).get(j), expectedResult.get(i).get(j));
-            }
+        JEfHelper.checkElementByElement(result,expectedResult);
+    }
+
+    private class Temp{
+        String name;
+        int count;
+
+        Temp(String name, int count){
+            this.name = name;
+            this.count = count;
         }
     }
 }

@@ -5,8 +5,8 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class JEfListTest {
@@ -15,46 +15,40 @@ public class JEfListTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void hasUniqueElementSizeZero() {
+    public void uniqueSizeZeroTest() {
         List<Integer> list = new ArrayList<>();
-        Assert.assertTrue(JEfList.hasUniqueElement(list));
+        Assert.assertTrue(JEfList.unique(list));
     }
 
     @Test
-    public void hasUniqueElementSizeOne() {
+    public void uniqueSizeOneTest() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
 
-        Assert.assertTrue(JEfList.hasUniqueElement(list));
+        Assert.assertTrue(JEfList.unique(list));
     }
 
     @Test
-    public void hasUniqueElementForIntegerReturnTrue() {
+    public void uniqueForIntegerReturnTrueTest() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
         list.add(3);
         list.add(10);
 
-        Assert.assertTrue(JEfList.hasUniqueElement(list));
+        Assert.assertTrue(JEfList.unique(list));
     }
 
     @Test
-    public void hasUniqueElementForIntegerReturnFalse() {
+    public void uniqueForIntegerReturnFalseTest() {
 
         List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(2);
-        list.add(5);
-        list.add(4);
-
-        Assert.assertFalse(JEfList.hasUniqueElement(list));
+        list.addAll(Arrays.asList(1,2,3,2,5,4));
+        Assert.assertFalse(JEfList.unique(list));
     }
 
     @Test
-    public void hasUniqueElementReturnTrue() {
+    public void uniqueReturnTrueTest() {
         class Temp{
             String name;
             int count;
@@ -70,178 +64,127 @@ public class JEfListTest {
         tempList.add(new Temp("Genc", 22));
         tempList.add(new Temp("Gorkem", 1));
 
-        Assert.assertFalse(JEfList.hasUniqueElement(tempList));
+        Assert.assertFalse(JEfList.unique(tempList));
     }
 
     @Test
-    public void hasUniqueElementReturnFalse() {
-        class Temp{
-            String name;
-            int count;
-
-            Temp(String name, int count){
-                this.name = name;
-                this.count = count;
-            }
-        }
+    public void uniqueReturnFalseTest() {
 
         List<Temp> tempList = new ArrayList<>();
         Temp temp1 = new Temp("Gorkem", 1);
         Temp temp2 = new Temp("Genc", 12);
         Temp temp3 = new Temp("Gorkem", 1);
+        tempList.addAll(Arrays.asList(temp2, temp1, temp3));
 
-
-        tempList.add(temp2);
-        tempList.add(temp1);
-        tempList.add(temp3);
-
-        Assert.assertFalse(JEfList.hasUniqueElement(tempList));
+        Assert.assertFalse(JEfList.unique(tempList));
     }
 
     @Test
-    public void hasUniqueElementForObjectReturnTrue() {
-        class Temp{
-            String name;
-            int count;
-
-            Temp(String name, int count){
-                this.name = name;
-                this.count = count;
-            }
-        }
+    public void uniqueForObjectReturnTrueTest() {
 
         List<Temp> tempList = new ArrayList<>();
         tempList.add(new Temp("Gorkem",1));
         tempList.add(new Temp("Genc", 22));
         tempList.add(new Temp("Temp1", 1));
 
-        Assert.assertTrue(JEfList.hasUniqueElement(tempList));
+        Assert.assertTrue(JEfList.unique(tempList));
     }
 
     @Test
-    public void hasUniqueElementThrowException() throws JEfListNullException {
+    public void uniqueThrowExceptionTest() throws JEfListNullException {
         expectedEx.expect(JEfListNullException.class);
         expectedEx.expectMessage("List is null");
-        JEfList.hasUniqueElement(null);
+        JEfList.unique(null);
     }
 
     @Test
-    public void isArraysSameReturnTrue() {
+    public void sameReturnTrueTest() {
         List<Integer> firstList = new ArrayList<>();
-        firstList.add(1);
-        firstList.add(2);
-        firstList.add(3);
+        firstList.addAll(Arrays.asList(1,2,3));
 
         List<Integer> secondList = new ArrayList<>();
-        secondList.add(1);
-        secondList.add(2);
-        secondList.add(3);
+        secondList.addAll(Arrays.asList(1,2,3));
 
         List<List<Integer>> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
+        list.addAll(Arrays.asList(firstList,secondList));
 
-        Assert.assertTrue(JEfList.isListsSame(list));
+        Assert.assertTrue(JEfList.same(list));
     }
 
     @Test
-    public void isArraysSameReturnMoreThanArrayTrue() {
+    public void sameReturnMoreThanArrayTrueTest() {
 
         List<Integer> firstList = new ArrayList<>();
-        firstList.add(1);
-        firstList.add(2);
-        firstList.add(3);
+        firstList.addAll(Arrays.asList(1,2,3));
 
         List<Integer> secondList = new ArrayList<>();
-        secondList.add(1);
-        secondList.add(2);
-        secondList.add(3);
+        secondList.addAll(Arrays.asList(1,2,3));
 
         List<Integer> thirdList = new ArrayList<>();
-        thirdList.add(1);
-        thirdList.add(2);
-        thirdList.add(3);
+        thirdList.addAll(Arrays.asList(1,2,3));
 
         List<List<Integer>> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(secondList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
-        Assert.assertTrue(JEfList.isListsSame(list));
+        Assert.assertTrue(JEfList.same(list));
     }
 
     @Test
-    public void isArraysSameReturnFalseArray() {
+    public void sameReturnFalseArrayTest() {
 
         List<Integer> firstList = new ArrayList<>();
-        firstList.add(1);
-        firstList.add(2);
-        firstList.add(3);
+        firstList.addAll(Arrays.asList(1,2,3));
 
         List<Integer> secondList = new ArrayList<>();
-        secondList.add(1);
-        secondList.add(2);
-        secondList.add(3);
-        secondList.add(4);
+        secondList.addAll(Arrays.asList(1,2,3,4));
 
         List<Integer> thirdList = new ArrayList<>();
-        thirdList.add(1);
-        thirdList.add(2);
+        thirdList.addAll(Arrays.asList(1,2));
 
         List<List<Integer>> list = new ArrayList<>();
-        list.add(firstList);
-        list.add(secondList);
-        list.add(secondList);
+        list.addAll(Arrays.asList(firstList,secondList,thirdList));
 
-        Assert.assertFalse(JEfList.isListsSame(list));
+        Assert.assertFalse(JEfList.same(list));
     }
 
     @Test
-    public void isArraysSameReturnTrueForOneList() {
+    public void sameReturnTrueForOneListTest() {
         List<Integer> firstList = new ArrayList<>();
-        firstList.add(1);
-        firstList.add(2);
-        firstList.add(3);
+        firstList.addAll(Arrays.asList(1,2,3));
         List<List<Integer>> test = new ArrayList<>();
         test.add(firstList);
 
-        Assert.assertTrue(JEfList.isListsSame(test));
+        Assert.assertTrue(JEfList.same(test));
     }
 
     @Test
-    public void permuteThrowException() throws JEfListNullException {
+    public void permuteThrowExceptionTest() throws JEfListNullException {
         expectedEx.expect(JEfListNullException.class);
         expectedEx.expectMessage("List is null");
         JEfList.permute(null);
     }
 
     @Test
-    public void permuteForOneElement() {
+    public void permuteForOneElementTest() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
 
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> result = JEfList.permute(list);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
         expectedResult.add(temp);
 
-        result = JEfList.permute(list);
-
-        for(int i=0; i<result.size(); i++){
-            for(int j=0; j<result.get(i).size(); j++){
-                Assert.assertEquals(result.get(i).get(j), expectedResult.get(i).get(j));
-            }
-        }
+        JEfHelper.checkElementByElement(result,expectedResult);
     }
 
     @Test
-    public void permuteForMoreThanOneElement() {
+    public void permuteForMoreThanOneElementTest() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
 
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> result = JEfList.permute(list);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         temp.add(1);
@@ -251,12 +194,17 @@ public class JEfListTest {
         temp.add(2);
         temp.add(1);
         expectedResult.add(temp);
-        result = JEfList.permute(list);
 
-        for(int i=0; i<result.size(); i++){
-            for(int j=0; j<result.get(i).size(); j++){
-                Assert.assertEquals(result.get(i).get(j), expectedResult.get(i).get(j));
-            }
+        JEfHelper.checkElementByElement(result,expectedResult);
+    }
+
+    class Temp{
+        String name;
+        int count;
+
+        Temp(String name, int count){
+            this.name = name;
+            this.count = count;
         }
     }
 }

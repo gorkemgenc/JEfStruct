@@ -4,10 +4,9 @@ package jEfCheck;
 import jEfExceptions.JEfArrayNullException;
 import jEfExceptions.JEfListNullException;
 import jEfHelper.JEfWrapper;
-
 import java.util.*;
 
-public class JEfArray<T> {
+class JEfArray<T> {
 
     /***
      * This function determines whether array (Type T) is unique or not. If it is unique, it returns true otherwise it returns false.
@@ -49,8 +48,8 @@ public class JEfArray<T> {
         for(int i=1; i<list.size(); i++){
             if(!checkListForUniqueness(list.get(i),table)) return false;
         }
-        return true;
 
+        return true;
     }
 
     /***
@@ -84,8 +83,10 @@ public class JEfArray<T> {
 
     private static <T> boolean getUniqueForObjectType(T[] array){
 
-        for(int i=0; i<array.length; i++){
-            for(int j=i+1; j<array.length; j++){
+        int length = array.length;
+
+        for(int i=0; i<length; i++){
+            for(int j=i+1; j<length; j++){
                 if(JEfType.isSameByValue(array[i], array[j])) return false;
             }
         }
@@ -125,12 +126,14 @@ public class JEfArray<T> {
     }
 
     private static <T> void changeResultWithIndexCheck(T[] array, List<List<T>> result){
+
+        int length = array.length;
         List<T> temp = new ArrayList<>();
-        for(int i = 0; i < array.length - 1; i++){
+        for(int i = 0; i < length - 1; i++){
             temp.add(array[i]);
         }
-        if(array.length > 0)
-            temp.add(array[array.length-1]);
+        if(length > 0)
+            temp.add(array[length-1]);
 
         result.add(temp);
     }
