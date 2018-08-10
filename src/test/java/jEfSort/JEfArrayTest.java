@@ -1,5 +1,6 @@
 package jEfSort;
 
+import jEfEnums.JEfOrderType;
 import jEfExceptions.JEfArrayIndexOutOfRangeException;
 import org.junit.Assert;
 import org.junit.Rule;
@@ -168,7 +169,7 @@ public class JEfArrayTest {
         Temp thirdTemp = new Temp("BBB", "BBX",1,thirdInner);
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
-        Temp[] result = new Temp[]{secondTemp,thirdTemp,firstTemp};
+        Temp[] result = new Temp[]{firstTemp,secondTemp, thirdTemp};
         JEfArray.orderBySpecial(array, "parameter4", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
@@ -205,7 +206,7 @@ public class JEfArrayTest {
         String[] array = new String[]{"Gorkem", "Genc", "Zarkm"};
 
         expectedEx.expect(JEfArrayIndexOutOfRangeException.class);
-        expectedEx.expectMessage("Index out of range when comparing two string");
+        expectedEx.expectMessage("IndexOutOfRange Exception when comparing two string");
         JEfArray.alphabeticalOrderWithSubString(array, 1, 5);
     }
 

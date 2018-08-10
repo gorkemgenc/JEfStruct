@@ -1,4 +1,4 @@
-package jEfSort;
+package jEfEnums;
 
 public enum JEfOrderType {
     ASC,

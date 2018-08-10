@@ -1,5 +1,6 @@
 package jEfSort;
 
+import jEfEnums.JEfOrderType;
 import jEfExceptions.JEfArrayIndexOutOfRangeException;
 import jEfExceptions.JEfArrayLengthNotEqualException;
 import java.lang.reflect.Field;
@@ -91,7 +92,7 @@ public class JEfArray<T> {
 
     /***
      * This function sorts given String array related to alphabetical order (descending order)
-     * If arra is null, function does nothing
+     * If array is null, function does nothing
      * @param array
      */
     public static void reverseAlphabeticalOrder(String[] array){
@@ -161,15 +162,10 @@ public class JEfArray<T> {
                 }
                 if (orderType == JEfOrderType.DESC)
                 {
-                    if (returnValue > 0)
-                    {
-                        return -1;
-                    }
-                    else if (returnValue < 0)
-                    {
-                        return 1;
-                    }
+                    if (returnValue > 0) return -1;
+                    else if (returnValue < 0) return 1;
                 }
+
                 return returnValue;
             }
         });
@@ -181,7 +177,7 @@ public class JEfArray<T> {
      * If fieldName is not in object class, function throws a NoSuchFieldException
      * You can use this function for inner classes
      * @param array
-     * @param areanames
+     * @param fieldName
      * @param <T>
      */
     public static <T> void orderBySpecials(T[] array, List<String> fieldName, JEfOrderType orderType){
@@ -242,15 +238,10 @@ public class JEfArray<T> {
 
                 if (orderType == JEfOrderType.DESC)
                 {
-                    if (returnValue > 0)
-                    {
-                        return -1;
-                    }
-                    else if (returnValue < 0)
-                    {
-                        return 1;
-                    }
+                    if (returnValue > 0) return -1;
+                    else if (returnValue < 0) return 1;
                 }
+
                 return returnValue;
             }
         });

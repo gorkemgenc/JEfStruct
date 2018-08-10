@@ -1,5 +1,6 @@
 package jEfSort;
 
+import jEfEnums.JEfOrderType;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -149,7 +150,28 @@ public class JEfListTest {
         List<Temp> result = new ArrayList<>();
         result.addAll(Arrays.asList(firstTemp,thirdTemp,secondTemp));
 
-        JEfList.orderBySpecial(list, "parameter1");
+        JEfList.orderBySpecial(list, "parameter1", JEfOrderType.ASC);
+        Assert.assertEquals(list,result);
+    }
+
+    @Test
+    public void orderBySpecialDescTest() {
+
+        TempInner firstInner = new TempInner("BBB","ZZZ",1);
+        TempInner secondInner = new TempInner("AAA","EEE",2);
+        TempInner thirdInner = new TempInner("CCC","DDD",3);
+
+        Temp firstTemp = new Temp("BBA", "XXX",1,firstInner);
+        Temp secondTemp = new Temp("BBZ", "XBX",1,secondInner);
+        Temp thirdTemp = new Temp("BBB", "BBX",1,thirdInner);
+
+        List<Temp> list = new ArrayList<>();
+        list.addAll(Arrays.asList(firstTemp,secondTemp,thirdTemp));
+
+        List<Temp> result = new ArrayList<>();
+        result.addAll(Arrays.asList(secondTemp, thirdTemp, firstTemp));
+
+        JEfList.orderBySpecial(list, "parameter1", JEfOrderType.DESC);
         Assert.assertEquals(list,result);
     }
 
@@ -172,7 +194,7 @@ public class JEfListTest {
         List<String> parameters = new ArrayList<>();
         parameters.add("parameter1");
         parameters.add("parameter3");
-        JEfList.orderBySpecials(list, parameters);
+        JEfList.orderBySpecials(list, parameters, JEfOrderType.ASC);
         Assert.assertEquals(list,result);
     }
 
@@ -244,7 +266,7 @@ public class JEfListTest {
         List<Integer> result = new ArrayList<>();
         result.addAll(Arrays.asList(1,1,2,3));
 
-        List<Integer> expected = JEfList.bubbleSort(list);
+        List<Integer> expected = JEfList.heapSort(list);
         Assert.assertEquals(result,expected);
     }
 
