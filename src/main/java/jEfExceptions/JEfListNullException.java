@@ -2,14 +2,16 @@ package jEfExceptions;
 
 public class JEfListNullException extends RuntimeException{
 
-    private String _message;
+    private final String _message;
 
-    public JEfListNullException(String message){
-        _message = message;
+    public JEfListNullException(){
+
+        _message = "List is null exception";
     }
 
     @Override
     public String getMessage(){
+
         return _message;
     }
 }

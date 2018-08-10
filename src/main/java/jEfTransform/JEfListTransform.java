@@ -10,7 +10,7 @@ public class JEfListTransform<T>{
 
     public static <T> BigInteger[] toBigIntList(List<String> list) throws JEfListNullException{
 
-        if(list == null) throw new JEfListNullException("List is null");
+        if(list == null) throw new JEfListNullException();
         if(list.size() == 0) return null;
 
         int length = list.size();
@@ -30,7 +30,7 @@ public class JEfListTransform<T>{
 
     public static int[] toIntList(List<Integer> list){
 
-        if(list == null) throw new JEfListNullException("List is null");
+        if(list == null) throw new JEfListNullException();
         if(list.size() == 0) return null;
 
         Integer[] result = list.toArray(new Integer[list.size()]);
@@ -39,7 +39,7 @@ public class JEfListTransform<T>{
 
     public static String[] toStringList(List<String> list){
 
-        if(list == null) throw new JEfListNullException("List is null");
+        if(list == null) throw new JEfListNullException();
         if(list.size() == 0) return null;
 
         return list.toArray(new String[list.size()]);

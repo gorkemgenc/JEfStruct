@@ -4,8 +4,9 @@ public class JEfArrayIndexOutOfRangeException extends RuntimeException{
 
     private String _message;
 
-    public JEfArrayIndexOutOfRangeException(String message){
-        _message = message;
+    public JEfArrayIndexOutOfRangeException(){
+
+        _message = "IndexOutOfRange Exception when comparing two string";
     }
 
     @Override

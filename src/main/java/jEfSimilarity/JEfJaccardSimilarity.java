@@ -12,7 +12,7 @@ public class JEfJaccardSimilarity {
 
     public static double jaccardSimilarity(int[] a, int[] b) throws JEfArrayNullException{
 
-        if(a == null || b == null) throw new JEfArrayNullException("Array is null");
+        if(a == null || b == null) throw new JEfArrayNullException();
         if(a.length == 0 || b.length == 0) return 0d;
 
         Set<Integer> s1 = new HashSet<>();
@@ -33,7 +33,7 @@ public class JEfJaccardSimilarity {
 
     public static double jaccardSimilarityForList(List<Integer> a, List<Integer> b) throws JEfListNullException{
 
-        if(a == null || b == null) throw new JEfListNullException("List is null");
+        if(a == null || b == null) throw new JEfListNullException();
         if(a.size() == 0 || b.size() == 0) return 0d;
 
         Set<Integer> s1 = new HashSet<>();

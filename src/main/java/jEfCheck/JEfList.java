@@ -17,7 +17,7 @@ public class JEfList {
      */
     public static <T> boolean hasUniqueElement(List<T> list) throws JEfListNullException {
 
-        if(list == null) throw  new JEfListNullException("List is null");
+        if(list == null) throw  new JEfListNullException();
         else if(list.size() == 0) return true;
 
         if(isWrapperType(list.get(0).getClass())) {
@@ -52,7 +52,7 @@ public class JEfList {
      */
     public static <T> boolean isListsSame(List<List<T>> list) throws JEfListNullException {
 
-        if(list == null) throw  new JEfListNullException("List is null");
+        if(list == null) throw  new JEfListNullException();
         if(list.size() == 0) return true;
 
         Hashtable<T, Integer> table = new Hashtable<>();
@@ -93,7 +93,7 @@ public class JEfList {
      */
     public static <T> List<List<T>> permute(List<T> list) throws JEfListNullException {
 
-        if(list == null) throw new JEfListNullException("List is null");
+        if(list == null) throw new JEfListNullException();
         if(list.size() == 0) return null;
 
         List<List<T>> result = new ArrayList<>();

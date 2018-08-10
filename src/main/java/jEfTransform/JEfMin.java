@@ -16,7 +16,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <T> T minList(List<T> list) throws JEfListNullException {
 
-        if(list == null || list.size() == 0) throw new JEfListNullException("List is null");
+        if(list == null || list.size() == 0) throw new JEfListNullException();
         T min = list.get(0);
 
         for (int i=1; i<list.size(); i++){
@@ -29,7 +29,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <T> T minArray(T[] array) throws JEfArrayNullException{
 
-        if(array == null || array.length == 0) throw new JEfArrayNullException("Array is null");
+        if(array == null || array.length == 0) throw new JEfArrayNullException();
         T min = array[0];
 
         for (int i=1; i<array.length; i++){

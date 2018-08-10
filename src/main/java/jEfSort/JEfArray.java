@@ -228,7 +228,7 @@ public class JEfArray<T> {
         Arrays.sort(array, new Comparator<String>() {
 
             public int compare(String str1, String str2) throws JEfArrayLengthNotEqualException{
-                if(str1.length() < end || str2.length() < end) throw new JEfArrayIndexOutOfRangeException("Index out of range when comparing two string");
+                if(str1.length() < end || str2.length() < end) throw new JEfArrayIndexOutOfRangeException();
                 int res = String.CASE_INSENSITIVE_ORDER.compare(str1.substring(start, end+1), str2.substring(start, end+1));
 
                 if(res == 0) res = str1.compareTo(str2);

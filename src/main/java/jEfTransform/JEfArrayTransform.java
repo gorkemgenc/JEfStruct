@@ -9,7 +9,7 @@ public class JEfArrayTransform<T>{
 
     public static <T> BigInteger[] toBigIntArray(String[] array) throws JEfArrayNullException{
 
-        if(array == null) throw new JEfArrayNullException("Array is null");
+        if(array == null) throw new JEfArrayNullException();
         if(array.length == 0) return null;
 
         int length = array.length;

@@ -33,7 +33,7 @@ public class JEfLongestCommonSubsequence<T> {
 
     public static <T> int longestCommonSubsequence( T[] first, T[] second) throws JEfArrayNullException
     {
-        if(first == null || second == null ) throw  new JEfArrayNullException("Array is null");
+        if(first == null || second == null ) throw  new JEfArrayNullException();
         if(first.length == 0) return second.length;
         else if(second.length == 0) return first.length;
 

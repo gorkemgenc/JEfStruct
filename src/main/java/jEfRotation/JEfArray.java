@@ -7,7 +7,7 @@ public class JEfArray<T> {
 
     public static <T> void rotate(T[] array, JEfDirection JEfDirection, int rotateCount) throws JEfArrayNullException {
 
-        if(array == null ) throw new JEfArrayNullException("Array is null");
+        if(array == null ) throw new JEfArrayNullException();
         int length = array.length;
 
         if(length == 0) return;

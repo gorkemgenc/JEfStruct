@@ -16,7 +16,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <T> T maxList(List<T> list) throws JEfListNullException{
 
-        if(list == null || list.size() == 0) throw new JEfListNullException("List is null");
+        if(list == null || list.size() == 0) throw new JEfListNullException();
         T max = list.get(0);
 
         for (int i=1; i<list.size(); i++){
@@ -29,7 +29,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <T> T maxArray(T[] array) throws JEfArrayNullException{
 
-        if(array == null || array.length == 0) throw new JEfArrayNullException("Array is null");
+        if(array == null || array.length == 0) throw new JEfArrayNullException();
         T max = array[0];
 
         for (int i=1; i<array.length; i++){

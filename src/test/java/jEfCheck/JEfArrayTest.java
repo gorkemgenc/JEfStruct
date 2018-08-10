@@ -15,31 +15,31 @@ public class JEfArrayTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void hasUniqueElementSizeZero() {
+    public void uniqueSizeZeroTest() {
         Integer[] array = new Integer[0];
-        Assert.assertTrue(JEfArray.hasUniqueElement(array));
+        Assert.assertTrue(JEfArray.unique(array));
     }
 
     @Test
-    public void hasUniqueElementSizeOne() {
+    public void uniqueSizeOneTest() {
         Integer[] array = new Integer[]{1};
-        Assert.assertTrue(JEfArray.hasUniqueElement(array));
+        Assert.assertTrue(JEfArray.unique(array));
     }
 
     @Test
-    public void hasUniqueElementForIntegerReturnTrue() {
+    public void uniqueForIntegerReturnTrueTest() {
         Integer[] array = new Integer[]{1,2,3,10};
-        Assert.assertTrue(JEfArray.hasUniqueElement(array));
+        Assert.assertTrue(JEfArray.unique(array));
     }
 
     @Test
-    public void hasUniqueElementForIntegerReturnFalse() {
+    public void uniqueForIntegerReturnFalseTest() {
         Integer[] array = new Integer[]{1,2,3,2,5,4};
-        Assert.assertFalse(JEfArray.hasUniqueElement(array));
+        Assert.assertFalse(JEfArray.unique(array));
     }
 
     @Test
-    public void hasUniqueElementForObjectReturnTrue() {
+    public void uniqueForObjectReturnTrueTest() {
         class Temp{
             String name;
             int count;
@@ -55,11 +55,11 @@ public class JEfArrayTest {
         tempList[1] = new Temp("Genc", 22);
         tempList[2] = new Temp("Temp", 23);
 
-        Assert.assertTrue(JEfArray.hasUniqueElement(tempList));
+        Assert.assertTrue(JEfArray.unique(tempList));
     }
 
     @Test
-    public void hasUniqueElementForObjectReturnFalse() {
+    public void uniqueForObjectReturnFalseTest() {
         class Temp{
             String name;
             int count;
@@ -75,18 +75,18 @@ public class JEfArrayTest {
         tempList[1] = new Temp("Genc", 22);
         tempList[2] = new Temp("Gorkem", 1);
 
-        Assert.assertFalse(JEfArray.hasUniqueElement(tempList));
+        Assert.assertFalse(JEfArray.unique(tempList));
     }
 
     @Test
-    public void hasUniqueElementThrowException() throws JEfArrayNullException {
+    public void uniqueThrowExceptionTest() throws JEfArrayNullException {
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
-        JEfArray.hasUniqueElement(null);
+        expectedEx.expectMessage("Array null exception.");
+        JEfArray.unique(null);
     }
 
     @Test
-    public void isArraysSameReturnTrue() {
+    public void isArraysSameReturnTrueTest() {
         Integer[] firstList = new Integer[]{1,2,3};
         Integer[] secondList = new Integer[]{1,2,3};
         Integer[] thirdList = new Integer[]{1,2,3};
@@ -95,11 +95,11 @@ public class JEfArrayTest {
         list.add(secondList);
         list.add(thirdList);
 
-        Assert.assertTrue(JEfArray.isArraysSame(list));
+        Assert.assertTrue(JEfArray.same(list));
     }
 
     @Test
-    public void isArraysSameReturnMoreThanArrayTrue() {
+    public void isArraysSameReturnMoreThanArrayTrueTest() {
         Integer[] firstList = new Integer[]{1,2,3,3};
         Integer[] secondList = new Integer[]{1,3,3,2};
         Integer[] thirdList = new Integer[]{1,2,3,3};
@@ -108,11 +108,11 @@ public class JEfArrayTest {
         list.add(secondList);
         list.add(thirdList);
 
-        Assert.assertTrue(JEfArray.isArraysSame(list));
+        Assert.assertTrue(JEfArray.same(list));
     }
 
     @Test
-    public void isArraysSameReturnFalseArray() {
+    public void isArraysSameReturnFalseArrayTest() {
         Integer[] firstList = new Integer[]{1,2,3,4};
         Integer[] secondList = new Integer[]{1,2,3,4};
         Integer[] thirdList = new Integer[]{1,2,3};
@@ -121,20 +121,20 @@ public class JEfArrayTest {
         list.add(secondList);
         list.add(thirdList);
 
-        Assert.assertFalse(JEfArray.isArraysSame(list));
+        Assert.assertFalse(JEfArray.same(list));
     }
 
     @Test
-    public void isArraysSameReturnTrueForOneList() {
+    public void isArraysSameReturnTrueForOneListTest() {
         Integer[] firstList = new Integer[]{1,2,3};
         List<Integer[]> list = new ArrayList<>();
         list.add(firstList);
 
-        Assert.assertTrue(JEfArray.isArraysSame(list));
+        Assert.assertTrue(JEfArray.same(list));
     }
 
     @Test
-    public void isArraysSameReturnFalse() {
+    public void isArraysSameReturnFalseTest() {
         Integer[] firstList = new Integer[]{1,2,3};
         Integer[] secondList = new Integer[]{4,5,6};
         Integer[] thirdList = new Integer[]{1,2,3};
@@ -143,18 +143,18 @@ public class JEfArrayTest {
         list.add(secondList);
         list.add(thirdList);
 
-        Assert.assertFalse(JEfArray.isArraysSame(list));
+        Assert.assertFalse(JEfArray.same(list));
     }
 
     @Test
-    public void permuteThrowException() throws JEfArrayNullException {
+    public void permuteThrowExceptionTest() throws JEfArrayNullException {
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array null exception.");
         JEfArray.permute(null);
     }
 
     @Test
-    public void permuteForOneElement() {
+    public void permuteForOneElementTest() {
         Integer[] array = new Integer[]{1};
         List<List<Integer>> result = new ArrayList<>();
         List<List<Integer>> expectedResult = new ArrayList<>();
@@ -172,7 +172,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void permuteForMoreThanOneElement() {
+    public void permuteForMoreThanOneElementTest() {
         Integer[] array = new Integer[]{1,2};
         List<List<Integer>> result = new ArrayList<>();
         List<List<Integer>> expectedResult = new ArrayList<>();

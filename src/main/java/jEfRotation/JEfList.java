@@ -8,7 +8,7 @@ import java.util.List;
 public class JEfList<T> {
     public static <T> void rotate(List<T> list, JEfDirection JEfDirection, int rotateCount) throws JEfListNullException {
 
-        if(list == null ) throw new JEfListNullException("Array is null");
+        if(list == null ) throw new JEfListNullException();
         int length = list.size();
 
         if(length == 0) return;
