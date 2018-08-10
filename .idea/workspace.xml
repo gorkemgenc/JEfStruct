@@ -68,31 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JEfList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java">
+      <file leaf-file-name="JEfArrayTransform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JEfOrderType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jEfEnums/JEfOrderType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JEfListTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5628">
-              <caret line="268" column="50" lean-forward="false" selection-start-line="268" selection-start-column="50" selection-end-line="268" selection-end-column="50" />
+            <state relative-caret-position="399">
+              <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,24 +80,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JEfArrayTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java">
+      <file leaf-file-name="JEfArrayTransformTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfArrayTransformTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4368">
-              <caret line="208" column="35" lean-forward="false" selection-start-line="208" selection-start-column="35" selection-end-line="208" selection-end-column="35" />
+            <state relative-caret-position="483">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JEfArrayIndexOutOfRangeException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayIndexOutOfRangeException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="66" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfListTransform.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfCheck/JEfHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfHelper/JEfWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfCheck/JEfList.java" />
@@ -208,6 +176,8 @@
         <option value="$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jEfTransform/JEfArrayTransformTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java" />
       </list>
     </option>
   </component>
@@ -283,7 +253,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jEfSort" type="462c0819:PsiDirectoryNode" />
+              <item name="jEfTransform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -304,7 +274,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jEfSort" type="462c0819:PsiDirectoryNode" />
+              <item name="jEfTransform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -356,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JEfListTest">
+  <component name="RunManager" selected="JUnit.JEfArrayTransformTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -428,18 +398,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="JEfJaccardSimilarityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JEfArrayTransformTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="jEfSimilarity.*" />
+          <option name="PATTERN" value="jEfTransform.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="jEfStruct" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jEfSimilarity" />
-      <option name="MAIN_CLASS_NAME" value="jEfSimilarity.JEfJaccardSimilarityTest" />
+      <option name="PACKAGE_NAME" value="jEfTransform" />
+      <option name="MAIN_CLASS_NAME" value="jEfTransform.JEfArrayTransformTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -564,19 +534,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JEfArrayTest.orderBySpecial5Test" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JEfArrayTest.orderBySpecial5Test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JEfArrayTransformTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JEfArrayTest.orderBySpecial5Test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JEfArrayTransformTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JEfArrayTest.orderBySpecial5Test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -615,6 +585,9 @@
     <history-entry file="JEfArrayTest_orderBySpecial5Test - 2018.08.10 at 23h 10m 47s.xml">
       <configuration name="JEfArrayTest.orderBySpecial5Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JEfArrayTransformTest - 2018.08.10 at 23h 29m 22s.xml">
+      <configuration name="JEfArrayTransformTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="JEfListTest - 2018.08.10 at 22h 53m 14s.xml">
       <configuration name="JEfListTest" configurationId="JUnit" />
     </history-entry>
@@ -623,9 +596,6 @@
     </history-entry>
     <history-entry file="JEfListTest - 2018.08.10 at 23h 23m 27s.xml">
       <configuration name="JEfListTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JEfLongestCommonSubsequenceTest - 2018.08.10 at 21h 28m 00s.xml">
-      <configuration name="JEfLongestCommonSubsequenceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -792,88 +762,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfListTransform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfCheck/JEfArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfCheck/JEfList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfCheck/JEfString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfCheck/JEfType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2589#2590#0" expanded="false" />
-            <element signature="e#2632#2633#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfEnums/JEfDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfEnums/JEfNodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/jEfQueueEmptyException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <element signature="e#174#175#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/jEfSetIsNullException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -894,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfMin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="126" column="42" lean-forward="false" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/JEfQuadTreeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -910,14 +790,6 @@
             <element signature="e#128#129#0" expanded="false" />
             <element signature="e#152#153#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfMax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayIndexOutOfRangeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4368">
@@ -1257,8 +1121,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5628">
-          <caret line="268" column="50" lean-forward="false" selection-start-line="268" selection-start-column="50" selection-end-line="268" selection-end-column="50" />
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfStructure/JEfGridTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayIndexOutOfRangeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfListTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfMax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfMin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="126" column="42" lean-forward="false" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfStringTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfMaxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfStringTransformTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfMinTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfListTransformTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jEfTransform/JEfArrayTransformTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
