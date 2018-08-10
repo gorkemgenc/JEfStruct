@@ -15,10 +15,10 @@ public class JEfMaxTest {
         list.add(9);
         list.add(3);
         list.add(12);
-        list.add(3);
         list.add(15);
+        list.add(3);
         Integer result = JEfMax.maxList(list);
-        Integer expectedResult = 3;
+        Integer expectedResult = 15;
         Assert.assertEquals(result,expectedResult);
     }
 
@@ -33,7 +33,7 @@ public class JEfMaxTest {
         list.add(3d);
         list.add(15d);
         Double result = JEfMax.maxList(list);
-        Double expectedResult = 3d;
+        Double expectedResult = 15d;
         Assert.assertEquals(result,expectedResult);
     }
 
@@ -41,15 +41,15 @@ public class JEfMaxTest {
     public void maxArrayInteger() {
         Integer[] array = new Integer[]{12,10,9,3,12,3,15};
         Integer result = JEfMax.maxArray(array);
-        Integer expectedResult = 3;
+        Integer expectedResult = 15;
         Assert.assertEquals(result,expectedResult);
     }
 
     @Test
     public void maxArrayDouble() {
-        Double[] array = new Double[]{12d,10d,9d,3d,12d,3d,15d};
+        Double[] array = new Double[]{12d,10d,9d,3d,12d,15d,3d};
         Double result = JEfMax.maxArray(array);
-        Double expectedResult = 3d;
+        Double expectedResult = 15d;
         Assert.assertEquals(result,expectedResult);
     }
 

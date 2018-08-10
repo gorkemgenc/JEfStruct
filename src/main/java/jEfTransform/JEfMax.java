@@ -17,27 +17,27 @@ public class JEfMax<T extends Number, K extends Number> {
     public static <T> T maxList(List<T> list) throws JEfListNullException{
 
         if(list == null || list.size() == 0) throw new JEfListNullException("List is null");
-        T min = list.get(0);
+        T max = list.get(0);
 
         for (int i=1; i<list.size(); i++){
-            if(comparison((Number)list.get(i),(Number)min)){
-                min = list.get(i);
+            if(!comparison((Number)list.get(i),(Number)max)){
+                max = list.get(i);
             }
         }
-        return min;
+        return max;
     }
 
     public static <T> T maxArray(T[] array) throws JEfArrayNullException{
 
         if(array == null || array.length == 0) throw new JEfArrayNullException("Array is null");
-        T min = array[0];
+        T max = array[0];
 
         for (int i=1; i<array.length; i++){
-            if(comparison((Number)array[i],(Number)min)){
-                min = array[i];
+            if(!comparison((Number)array[i],(Number)max)){
+                max = array[i];
             }
         }
-        return min;
+        return max;
     }
 
     public static <T> T maxQueue(Queue<T> queue){
