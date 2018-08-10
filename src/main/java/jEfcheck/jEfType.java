@@ -1,14 +1,9 @@
 package jEfCheck;
 
 import jEfHelper.JEfWrapper;
-
 import java.lang.reflect.Field;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-public class JEfType<T, K> {
+public class JEfType <T, K> {
 
     private static boolean result = true;
 
