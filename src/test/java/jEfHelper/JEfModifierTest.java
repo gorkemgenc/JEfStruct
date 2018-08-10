@@ -25,12 +25,12 @@ public class JEfModifierTest {
     public void intArrayTestException() throws JEfArrayNullException{
 
        expectedEx.expect(JEfArrayNullException.class);
-       expectedEx.expectMessage("Array is null");
+       expectedEx.expectMessage("Array should not be null.");
        JEfModifier.intArray(null);
     }
 
     @Test
-    public void doubleArray() {
+    public void doubleArrayTest() {
 
         Double[] parameter = new Double[]{1.0d,2.0d,3.0d,4.0d};
         double[] expected = new double[]{1.0d,2.0d,3.0d,4.0d};
@@ -45,12 +45,12 @@ public class JEfModifierTest {
     public void doubleArrayTestException() throws JEfArrayNullException{
 
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array should not be null.");
         JEfModifier.doubleArray(null);
     }
 
     @Test
-    public void longArray() {
+    public void longArrayTest() {
 
         Long[] parameter = new Long[]{1l,2l,3l,4l};
         long[] expected = new long[]{1l,2l,3l,4l};
@@ -63,12 +63,12 @@ public class JEfModifierTest {
     public void longArrayTestException() throws JEfArrayNullException{
 
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array should not be null.");
         JEfModifier.longArray(null);
     }
 
     @Test
-    public void floatArray() {
+    public void floatArrayTest() {
 
         Float[] parameter = new Float[]{1f,2f,3f,4f};
         float[] expected = new float[]{1f,2f,3f,4f};
@@ -83,7 +83,7 @@ public class JEfModifierTest {
     public void floatArrayTestException() throws JEfArrayNullException{
 
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array should not be null.");
         JEfModifier.floatArray(null);
     }
 }
