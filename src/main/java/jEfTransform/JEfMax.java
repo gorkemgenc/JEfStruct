@@ -2,6 +2,8 @@ package jEfTransform;
 
 import jEfExceptions.JEfArrayNullException;
 import jEfExceptions.JEfListNullException;
+import jEfExceptions.jEfQueueEmptyException;
+import jEfExceptions.jEfSetIsNullException;
 
 import java.util.*;
 
@@ -39,26 +41,99 @@ public class JEfMax<T extends Number, K extends Number> {
     }
 
     public static <T> T maxQueue(Queue<T> queue){
-        return null;
+
+        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException("Queue is empty");
+
+        Queue<T> tempQueue = queue;
+
+        T max = tempQueue.peek();
+
+        while(!tempQueue.isEmpty()) {
+            T variable = tempQueue.poll();
+            if ( !comparison((Number)variable, (Number)max)) {
+                max = variable;
+            }
+        }
+        return max;
     }
 
     public static <T> T maxHashSet(HashSet<T> set){
-        return null;
+
+        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+
+        Set<T> tempSet = set;
+
+        T max = tempSet.iterator().next();
+
+        for(T key : tempSet) {
+            if ( !comparison((Number)key, (Number)max)) {
+                max = key;
+            }
+        }
+        return max;
     }
 
-    public static <T, K> T maxHashMapByValue(HashMap<K,T> map){
-        return null;
+    public static <K, T> T maxHashMapByValue(HashMap<K,T> map){
+
+        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+
+        Map.Entry<K,T> entry = map.entrySet().iterator().next();
+
+        T max = entry.getValue();
+
+        for (Map.Entry<K,T> tempEntry : map.entrySet()) {
+            T value = tempEntry.getValue();
+            if ( !comparison((Number)value, (Number)max)) {
+                max = value;
+            }
+        }
+        return max;
     }
 
-    public static <T, K> K maxHashMapByKey(HashMap<K,T> map){
-        return null;
+    public static <K, T> K maxHashMapByKey(HashMap<K,T> map){
+
+        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+
+        K max = map.keySet().stream().findFirst().get();
+
+        for (Map.Entry<K,T> entry : map.entrySet()) {
+            K key = entry.getKey();
+            if ( !comparison((Number)key, (Number)max)) {
+                max = key;
+            }
+        }
+        return max;
     }
 
-    public static <T, K> T maxHashTableByValue(Hashtable<T, K> hashTable){
-        return null;
+    public static <K, T> T maxHashTableByValue(Hashtable<K, T> hashTable){
+
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+
+        Map.Entry<K,T> entry = hashTable.entrySet().iterator().next();
+
+        T max = entry.getValue();
+
+        for (Map.Entry<K,T> tempEntry : hashTable.entrySet()) {
+            T value = tempEntry.getValue();
+            if ( !comparison((Number)value, (Number)max)) {
+                max = value;
+            }
+        }
+        return max;
     }
 
-    public static <T, K> K maxHashTableByKey(Hashtable<T, K> hashTable){
-        return null;
+    public static <K, T> K maxHashTableByKey(Hashtable<K, T> hashTable){
+
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+
+        K max = hashTable.keySet().stream().findFirst().get();
+
+        for (Map.Entry<K,T> entry : hashTable.entrySet()) {
+            K key = entry.getKey();
+            if ( !comparison((Number)key, (Number)max)) {
+                max = key;
+            }
+        }
+        return max;
     }
 }
