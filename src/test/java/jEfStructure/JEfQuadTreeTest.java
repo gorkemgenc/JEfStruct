@@ -381,8 +381,4 @@ public class JEfQuadTreeTest {
         assertEquals(Double.valueOf(4.0), JEfRectangleObject.getW());
         assertEquals(Double.valueOf(4.0), JEfRectangleObject.getH());
     }
-
-    //TODO should probably just make an inner class to this called MockRectangleObject that will have helpful constructors
-
-
 }

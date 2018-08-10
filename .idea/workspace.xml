@@ -151,8 +151,8 @@
       <file leaf-file-name="JEfQuadTreeTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/jEfStructure/JEfQuadTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="7771">
+              <caret line="376" column="40" lean-forward="true" selection-start-line="376" selection-start-column="40" selection-end-line="376" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1394,8 +1394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jEfStructure/JEfQuadTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="7771">
+          <caret line="376" column="40" lean-forward="true" selection-start-line="376" selection-start-column="40" selection-end-line="376" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
