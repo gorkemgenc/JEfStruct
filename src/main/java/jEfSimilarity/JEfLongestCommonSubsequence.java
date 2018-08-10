@@ -5,60 +5,90 @@ import jEfExceptions.JEfStringNullException;
 
 public class JEfLongestCommonSubsequence<T> {
 
-    public static int longestCommonSubsequenceString( String first, String second) throws JEfArrayNullException
+    /***
+     * This function calculates and returns the longest common subsequence with given two string
+     * If first string or second string is null function throws a JEfStringNullException
+     * @param first
+     * @param second
+     * @return
+     * @throws JEfArrayNullException
+     */
+    public static int longestCommonSubsequenceString(String first, String second) throws JEfArrayNullException
     {
         if(first == null || second == null ) throw  new JEfStringNullException();
-        if(first.length() == 0) return second.length();
+        else if(first.length() == 0) return second.length();
         else if(second.length() == 0) return first.length();
 
         int firstLength = first.length();
         int secondLength = second.length();
 
-        int L[][] = new int[firstLength+1][secondLength+1];
+        int dynamicArray[][] = createDynamicArray(first, second, firstLength, secondLength);
 
-        for (int i=0; i<=firstLength; i++)
-        {
-            for (int j=0; j<=secondLength; j++)
-            {
-                if (i == 0 || j == 0)
-                    L[i][j] = 0;
-                else if (first.charAt(i-1) == second.charAt(j-1))
-                    L[i][j] = L[i-1][j-1] + 1;
-                else
-                    L[i][j] = max(L[i-1][j], L[i][j-1]);
-            }
-        }
-        return L[firstLength][secondLength];
+        return dynamicArray[firstLength][secondLength];
     }
 
+    /***
+     * This function calculates and returns the longest common subsequence with given two generic type of different list
+     * If first string or second string is null function throws a JEfStringNullException
+     * @param first
+     * @param second
+     * @param <T>
+     * @return
+     * @throws JEfArrayNullException
+     */
     public static <T> int longestCommonSubsequence( T[] first, T[] second) throws JEfArrayNullException
     {
         if(first == null || second == null ) throw  new JEfArrayNullException();
-        if(first.length == 0) return second.length;
+        else if(first.length == 0) return second.length;
         else if(second.length == 0) return first.length;
 
         int firstLength = first.length;
         int secondLength = second.length;
 
-        int L[][] = new int[firstLength+1][secondLength+1];
+        int dynamicArray[][] = createDynamicArrayForArray(first, second, firstLength, secondLength);
+        return dynamicArray[firstLength][secondLength];
+    }
+
+    private static int[][] createDynamicArray(String first, String second, int firstLength, int secondLength){
+
+        int dynamicArray[][] = new int[firstLength+1][secondLength+1];
 
         for (int i=0; i<=firstLength; i++)
         {
             for (int j=0; j<=secondLength; j++)
             {
                 if (i == 0 || j == 0)
-                    L[i][j] = 0;
-                else if (first[i-1] == second[j-1])
-                    L[i][j] = L[i-1][j-1] + 1;
+                    dynamicArray[i][j] = 0;
+                else if (first.charAt(i-1) == second.charAt(j-1))
+                    dynamicArray[i][j] = dynamicArray[i-1][j-1] + 1;
                 else
-                    L[i][j] = max(L[i-1][j], L[i][j-1]);
+                    dynamicArray[i][j] = max(dynamicArray[i-1][j], dynamicArray[i][j-1]);
             }
         }
-        return L[firstLength][secondLength];
+        return dynamicArray;
     }
 
-    private static int max(int a, int b)
+    private static <T> int[][] createDynamicArrayForArray(T[] first, T[] second, int firstLength, int secondLength){
+
+        int[][] dynamicArray = new int[firstLength+1][secondLength+1];
+
+        for (int i=0; i<=firstLength; i++)
+        {
+            for (int j=0; j<=secondLength; j++)
+            {
+                if (i == 0 || j == 0)
+                    dynamicArray[i][j] = 0;
+                else if (first[i-1].equals(second[j-1]))
+                    dynamicArray[i][j] = dynamicArray[i-1][j-1] + 1;
+                else
+                    dynamicArray[i][j] = max(dynamicArray[i-1][j], dynamicArray[i][j-1]);
+            }
+        }
+        return dynamicArray;
+    }
+
+    private static int max(int first, int second)
     {
-        return a > b ? a : b;
+        return first > second ? first : second;
     }
 }

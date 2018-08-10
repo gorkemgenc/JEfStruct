@@ -13,7 +13,7 @@ public class JEfEditDistanceSimilarityTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void editDistance() {
+    public void editDistanceTest() {
         String str1 = "sunday";
         String str2 = "saturday";
 
@@ -21,7 +21,7 @@ public class JEfEditDistanceSimilarityTest {
     }
 
     @Test
-    public void edisDistanceWhenFirstLengthIsZero(){
+    public void edisDistanceWhenFirstLengthIsZeroTest(){
         String str1 = "abcds";
         String str2 = "";
 
@@ -29,9 +29,9 @@ public class JEfEditDistanceSimilarityTest {
     }
 
     @Test
-    public void editDistanceThrowException() {
+    public void editDistanceThrowExceptionTest() {
         expectedEx.expect(JEfStringNullException.class);
-        expectedEx.expectMessage("String is null");
+        expectedEx.expectMessage("String should not be null");
         JEfEditDistanceSimilarity.editDistance(null,null);
     }
 }

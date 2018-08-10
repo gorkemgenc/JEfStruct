@@ -4,15 +4,47 @@ import jEfExceptions.JEfArrayLengthNotEqualException;
 import jEfExceptions.JEfArrayNullException;
 import jEfExceptions.JEfListNullException;
 import jEfExceptions.JEfListSizeNotEqualException;
-
 import java.util.List;
 
 public class JEfCosineSimilarity {
 
+    /***
+     * This function returns cosine similarity with given two different double array
+     * If one of two vectors is null function throws a JEfArrayNullException
+     * If vectors size are not equal, function throws a JEfArrayLengthNotEqualException
+     * @param vectorA
+     * @param vectorB
+     * @return
+     * @throws JEfArrayNullException
+     * @throws JEfArrayLengthNotEqualException
+     */
     public static double cosineSimilarity(double[] vectorA, double[] vectorB) throws JEfArrayNullException, JEfArrayLengthNotEqualException{
 
         if(vectorA == null || vectorB == null) throw new JEfArrayNullException();
         if(vectorA.length != vectorB.length) throw new JEfArrayLengthNotEqualException();
+
+        return calculateCosineSimilarityForArray(vectorA,vectorB);
+    }
+
+    /***
+     * This function returns cosine similarity with given two different Double list
+     * If one of two vectors is null function throws a JEfArrayNullException
+     * If vectors size are not equal, function throws a JEfArrayLengthNotEqualException
+     * @param vectorA
+     * @param vectorB
+     * @return
+     * @throws JEfListNullException
+     * @throws JEfListSizeNotEqualException
+     */
+    public static double cosineSimilarityForList(List<Double> vectorA, List<Double> vectorB) throws JEfListNullException, JEfListSizeNotEqualException{
+
+        if(vectorA == null || vectorB == null) throw new JEfListNullException();
+        if(vectorA.size() != vectorB.size()) throw new JEfListSizeNotEqualException();
+
+        return calculateCosineSimilarityForList(vectorA,vectorB);
+    }
+
+    private static double calculateCosineSimilarityForArray(double[] vectorA, double[] vectorB){
 
         double dotProduct = 0.0;
         double normA = 0.0;
@@ -25,10 +57,7 @@ public class JEfCosineSimilarity {
         return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 
-    public static double cosineSimilarityForList(List<Double> vectorA, List<Double> vectorB) throws JEfListNullException, JEfListSizeNotEqualException{
-
-        if(vectorA == null || vectorB == null) throw new JEfListNullException();
-        if(vectorA.size() != vectorB.size()) throw new JEfListSizeNotEqualException();
+    private static double calculateCosineSimilarityForList(List<Double> vectorA, List<Double> vectorB){
 
         double dotProduct = 0.0;
         double normA = 0.0;

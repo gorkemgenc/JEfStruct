@@ -13,39 +13,39 @@ public class JEfLongestCommonSubsequenceTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void longestCommonSubsequenceStringFirst() {
+    public void longestCommonSubsequenceStringFirstTest() {
         String str1 = "ABCDGH";
         String str2 = "AEDFHR";
         Assert.assertEquals(JEfLongestCommonSubsequence.longestCommonSubsequenceString(str1,str2), 3);
     }
 
     @Test
-    public void longestCommonSubsequenceStringSecond() {
+    public void longestCommonSubsequenceStringSecondTest() {
         String str1 = "AGGTAB";
         String str2 = "GXTXAYB";
         Assert.assertEquals(JEfLongestCommonSubsequence.longestCommonSubsequenceString(str1,str2), 4);
     }
 
     @Test
-    public void longestCommonSubsequenceFirst() {
+    public void longestCommonSubsequenceFirstTest() {
         String[] array1 = new String[]{"Gorkem", "Genc", "Try"};
         String[] array2 = new String[]{"Gorkem", "Try"};
         Assert.assertEquals(JEfLongestCommonSubsequence.longestCommonSubsequence(array1,array2), 2);
     }
 
     @Test
-    public void cosineSimilarityThrowStringException() throws JEfStringNullException {
+    public void cosineSimilarityThrowStringExceptionTest() throws JEfStringNullException {
 
         expectedEx.expect(JEfStringNullException.class);
-        expectedEx.expectMessage("String is null");
+        expectedEx.expectMessage("String should not be null");
         JEfLongestCommonSubsequence.longestCommonSubsequenceString(null,null);
     }
 
     @Test
-    public void cosineSimilarityThrowArrayException() throws JEfArrayNullException {
+    public void cosineSimilarityThrowArrayExceptionTest() throws JEfArrayNullException {
 
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array should not be null.");
         JEfLongestCommonSubsequence.longestCommonSubsequence(null,null);
     }
 }

@@ -4,45 +4,54 @@ import jEfExceptions.JEfStringNullException;
 
 public class JEfEditDistanceSimilarity {
 
-    public static int editDistance(String str1, String str2) throws JEfStringNullException{
+    /***
+     * This function returns edit distance with given two different string.
+     * If one of two string is null, function throws a JEfStringNullException
+     * Usage of an example:: JEfEditDistanceSimilarity.editDistance("sunday","saturday") return 3
+     * @param parameter1
+     * @param parameter2
+     * @return
+     * @throws JEfStringNullException
+     */
+    public static int editDistance(String parameter1, String parameter2) throws JEfStringNullException{
 
-        if(str1 == null || str2 == null) throw new JEfStringNullException();
-        if(str1.length() == 0) return str2.length();
-        else if(str2.length() == 0) return str1.length();
+        if(parameter1 == null || parameter2 == null) throw new JEfStringNullException();
+        else if(parameter1.length() == 0) return parameter2.length();
+        else if(parameter2.length() == 0) return parameter1.length();
 
-        return editDistanceInner(str1, str2, str1.length(), str2.length());
+        return editDistanceInner(parameter1, parameter2, parameter1.length(), parameter2.length());
     }
 
-    private static int editDistanceInner(String str1, String str2, int m, int n)
+    private static int editDistanceInner(String parameter1, String parameter2, int firstLength, int secondLength)
     {
-        int dp[][] = new int[m+1][n+1];
+        int dynamicArray[][] = new int[firstLength+1][secondLength+1];
 
-        for (int i=0; i<=m; i++)
+        for (int i=0; i<=firstLength; i++)
         {
-            for (int j=0; j<=n; j++)
+            for (int j=0; j<=secondLength; j++)
             {
                 if (i==0)
-                    dp[i][j] = j;
+                    dynamicArray[i][j] = j;
 
                 else if (j==0)
-                    dp[i][j] = i;
+                    dynamicArray[i][j] = i;
 
-                else if (str1.charAt(i-1) == str2.charAt(j-1))
-                    dp[i][j] = dp[i-1][j-1];
+                else if (parameter1.charAt(i-1) == parameter2.charAt(j-1))
+                    dynamicArray[i][j] = dynamicArray[i-1][j-1];
 
                 else
-                    dp[i][j] = 1 + min(dp[i][j-1],dp[i-1][j],dp[i-1][j-1]);
+                    dynamicArray[i][j] = 1 + min(dynamicArray[i][j-1],dynamicArray[i-1][j],dynamicArray[i-1][j-1]);
             }
         }
 
-        return dp[m][n];
+        return dynamicArray[firstLength][secondLength];
     }
 
-    private static int min(int x,int y,int z)
+    private static int min(int first,int second,int third)
     {
-        if (x <= y && x <= z) return x;
-        if (y <= x && y <= z) return y;
-        else return z;
+        if (first <= second && first <= third) return first;
+        else if (second <= first && second <= third) return second;
+        else return third;
     }
 
 }

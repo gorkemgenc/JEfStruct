@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class JEfJaccardSimilarityTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void jaccardSimilarity() {
+    public void jaccardSimilarityTest() {
         int[] first = new int[]{1,1,0,1};
         int[] second = new int[]{2,0,1,1};
 
@@ -28,15 +27,15 @@ public class JEfJaccardSimilarityTest {
     }
 
     @Test
-    public void cosineSimilarityThrowException() throws JEfArrayNullException {
+    public void cosineSimilarityThrowExceptionTest() throws JEfArrayNullException {
 
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array is null");
+        expectedEx.expectMessage("Array should not be null.");
         JEfJaccardSimilarity.jaccardSimilarity(null, null);
     }
 
     @Test
-    public void jaccardSimilarityForList() {
+    public void jaccardSimilarityForListTest() {
 
         List<Integer> first = new ArrayList<>();
         first.add(1);
@@ -57,15 +56,15 @@ public class JEfJaccardSimilarityTest {
     }
 
     @Test
-    public void cosineSimilarityForListException() throws JEfListNullException {
+    public void cosineSimilarityForListExceptionTest() throws JEfListNullException {
 
         expectedEx.expect(JEfListNullException.class);
-        expectedEx.expectMessage("List is null");
+        expectedEx.expectMessage("List should not be null");
         JEfJaccardSimilarity.jaccardSimilarityForList(null, null);
     }
 
     @Test
-    public void jaccardSimilarityForString() {
+    public void jaccardSimilarityForStringTest() {
         String first = "Ideas of March";
         String second = "Ceaser died in March";
         double result = JEfJaccardSimilarity.jaccardSimilarityForString(first,second);
