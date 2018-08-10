@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class JEfStringTransform {
 
-    private static String deduplication(String str){
+    public static String deduplication(String str){
         if(str == null) return null;
 
         int length = str.length();
