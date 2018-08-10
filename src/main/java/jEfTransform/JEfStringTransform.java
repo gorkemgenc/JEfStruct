@@ -4,7 +4,15 @@ import java.util.HashSet;
 
 public class JEfStringTransform {
 
-    public static String deduplication(String str){
+    /***
+     * This function return String with creating unique element string from given string.
+     * If string is null, function returns null. If you give ignoreCharacter function does not control this character
+     * If you give null value to ignore character, function does not trace any character
+     * @param str
+     * @return
+     */
+    public static String deduplication(String str, Character ignoreCharacter){
+
         if(str == null) return null;
 
         int length = str.length();
@@ -13,8 +21,10 @@ public class JEfStringTransform {
 
         for(int i=0; i<length; i++){
             Character c = str.charAt(i);
-
-            if(!set.contains(c)){
+            if(ignoreCharacter != null && c.equals(ignoreCharacter)){
+                builder.append(c);
+            }
+            else if(!set.contains(c)){
                 builder.append(c);
                 set.add(c);
             }
