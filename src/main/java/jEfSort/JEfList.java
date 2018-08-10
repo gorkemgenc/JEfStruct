@@ -158,7 +158,7 @@ public class JEfList<T> {
 
     public static <T> void orderBySpecials(List<T> list, List<String> areanames){
 
-        if(array == null || array.length == 0) return;
+        if(list == null || list.size() == 0) return;
         if(areanames == null || areanames.size() == 0) return;
 
         Collections.sort(list,new Comparator<T>() {
