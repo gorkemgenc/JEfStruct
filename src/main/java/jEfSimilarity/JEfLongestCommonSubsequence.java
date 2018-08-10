@@ -7,7 +7,7 @@ public class JEfLongestCommonSubsequence<T> {
 
     public static int longestCommonSubsequenceString( String first, String second) throws JEfArrayNullException
     {
-        if(first == null || second == null ) throw  new JEfStringNullException("String is null");
+        if(first == null || second == null ) throw  new JEfStringNullException();
         if(first.length() == 0) return second.length();
         else if(second.length() == 0) return first.length();
 

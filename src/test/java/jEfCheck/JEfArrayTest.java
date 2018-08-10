@@ -43,8 +43,8 @@ public class JEfArrayTest {
     public void uniqueForObjectReturnTrueTest() {
 
         Temp[] tempList = new Temp[3];
-        tempList[0] = new Temp("Gorkem",1);
-        tempList[1] = new Temp("Genc", 22);
+        tempList[0] = new Temp("Test",1);
+        tempList[1] = new Temp("Try", 22);
         tempList[2] = new Temp("Temp", 23);
 
         Assert.assertTrue(JEfArray.unique(tempList));
@@ -54,9 +54,9 @@ public class JEfArrayTest {
     public void uniqueForObjectReturnFalseTest() {
 
         Temp[] tempList = new Temp[3];
-        tempList[0] = new Temp("Gorkem",1);
-        tempList[1] = new Temp("Genc", 22);
-        tempList[2] = new Temp("Gorkem", 1);
+        tempList[0] = new Temp("Test",1);
+        tempList[1] = new Temp("Try", 22);
+        tempList[2] = new Temp("Test", 1);
 
         Assert.assertFalse(JEfArray.unique(tempList));
     }

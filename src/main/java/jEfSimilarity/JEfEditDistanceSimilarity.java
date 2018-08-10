@@ -6,7 +6,7 @@ public class JEfEditDistanceSimilarity {
 
     public static int editDistance(String str1, String str2) throws JEfStringNullException{
 
-        if(str1 == null || str2 == null) throw new JEfStringNullException("String is null");
+        if(str1 == null || str2 == null) throw new JEfStringNullException();
         if(str1.length() == 0) return str2.length();
         else if(str2.length() == 0) return str1.length();
 

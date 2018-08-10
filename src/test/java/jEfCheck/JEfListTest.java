@@ -60,9 +60,9 @@ public class JEfListTest {
         }
 
         List<Temp> tempList = new ArrayList<>();
-        tempList.add(new Temp("Gorkem",1));
-        tempList.add(new Temp("Genc", 22));
-        tempList.add(new Temp("Gorkem", 1));
+        tempList.add(new Temp("Test",1));
+        tempList.add(new Temp("Try", 22));
+        tempList.add(new Temp("Test", 1));
 
         Assert.assertFalse(JEfList.unique(tempList));
     }
@@ -71,9 +71,9 @@ public class JEfListTest {
     public void uniqueReturnFalseTest() {
 
         List<Temp> tempList = new ArrayList<>();
-        Temp temp1 = new Temp("Gorkem", 1);
-        Temp temp2 = new Temp("Genc", 12);
-        Temp temp3 = new Temp("Gorkem", 1);
+        Temp temp1 = new Temp("Test", 1);
+        Temp temp2 = new Temp("Try", 12);
+        Temp temp3 = new Temp("Test", 1);
         tempList.addAll(Arrays.asList(temp2, temp1, temp3));
 
         Assert.assertFalse(JEfList.unique(tempList));
@@ -83,9 +83,9 @@ public class JEfListTest {
     public void uniqueForObjectReturnTrueTest() {
 
         List<Temp> tempList = new ArrayList<>();
-        tempList.add(new Temp("Gorkem",1));
-        tempList.add(new Temp("Genc", 22));
-        tempList.add(new Temp("Temp1", 1));
+        tempList.add(new Temp("Test",1));
+        tempList.add(new Temp("Try", 22));
+        tempList.add(new Temp("Temp", 1));
 
         Assert.assertTrue(JEfList.unique(tempList));
     }

@@ -12,21 +12,21 @@ public class JEfStringTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void isUniqueTest() {
-        String str = "Gorkem";
-        Assert.assertTrue(JEfString.isUnique(str));
+    public void uniqueTest() {
+        String parameter = "Test";
+        Assert.assertTrue(JEfString.unique(parameter));
     }
 
     @Test
-    public void isNotUniqueTest() {
-        String str = "GorkemGorkem";
-        Assert.assertFalse(JEfString.isUnique(str));
+    public void notUniqueTest() {
+        String parameter = "TestTest";
+        Assert.assertFalse(JEfString.unique(parameter));
     }
 
     @Test
-    public void hasUniqueElementThrowException() throws JEfStringNullException {
+    public void uniqueThrowException() throws JEfStringNullException {
         expectedEx.expect(JEfStringNullException.class);
         expectedEx.expectMessage("String is null");
-        JEfString.isUnique(null);
+        JEfString.unique(null);
     }
 }

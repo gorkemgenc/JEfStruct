@@ -6,7 +6,7 @@ import jEfExceptions.JEfStringNullException;
 public class JEfString {
     public static String rotate(String str, JEfDirection JEfDirection, int rotateCount) throws JEfStringNullException {
 
-        if(str == null ) throw new JEfStringNullException("String is null");
+        if(str == null ) throw new JEfStringNullException();
         int length = str.length();
 
         if(length == 0) return str;

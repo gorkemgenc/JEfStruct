@@ -15,16 +15,22 @@ public class JEfString {
      * @return
      * @throws JEfStringNullException
      */
-    public static boolean isUnique(String str) throws JEfStringNullException {
+    public static boolean unique(String parameter) throws JEfStringNullException {
 
-        if(str == null) throw new JEfStringNullException("String is null");
-        else if(str.length() == 0) return true;
+        if(parameter == null) throw new JEfStringNullException();
+        else if(parameter.length() == 0) return true;
+
+        return getUniqueInner(parameter);
+    }
+
+    private static boolean getUniqueInner(String parameter){
 
         HashSet<Character> set = new HashSet<>();
 
-        for(int i = 0; i<str.length(); i++){
-            if(set.contains(str.charAt(i))) return false;
-            set.add(str.charAt(i));
+        for(int i=0; i<parameter.length(); i++){
+            Character temp = parameter.charAt(i);
+            if(set.contains(temp)) return false;
+            set.add(temp);
         }
         return true;
     }
