@@ -1,8 +1,8 @@
 package jEfExceptions;
 
-public class jEfSetIsNullException extends RuntimeException {
+public class JEfSetIsNullException extends RuntimeException {
 
-    public jEfSetIsNullException() {
+    public JEfSetIsNullException() {
         super("SetIsNull Exception");
     }
 }

@@ -2,43 +2,49 @@ package jEfTransform;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.*;
 
 public class JEfMaxTest {
 
     @Test
-    public void maxListInteger() {
+    public void maxListIntegerTest() {
         List<Integer> list = new ArrayList<>();
-        list.add(12);
-        list.add(10);
-        list.add(9);
-        list.add(3);
-        list.add(12);
-        list.add(15);
-        list.add(3);
+        list.addAll(Arrays.asList(12,10,9,3,12,15,3));
         Integer result = JEfMax.maxList(list);
         Integer expectedResult = 15;
         Assert.assertEquals(result,expectedResult);
     }
 
     @Test
-    public void maxListDouble() {
+    public void maxListIntegerOneElementTest() {
+        List<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(12));
+        Integer result = JEfMax.maxList(list);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+    @Test
+    public void maxListDoubleTest() {
         List<Double> list = new ArrayList<>();
-        list.add(12d);
-        list.add(10d);
-        list.add(9d);
-        list.add(3d);
-        list.add(12d);
-        list.add(3d);
-        list.add(15d);
+        list.addAll(Arrays.asList(12d,10d,9d,3d,12d,3d,15d));
         Double result = JEfMax.maxList(list);
         Double expectedResult = 15d;
         Assert.assertEquals(result,expectedResult);
     }
 
     @Test
-    public void maxArrayInteger() {
+    public void maxListDoubleOneElementTest() {
+        List<Double> list = new ArrayList<>();
+        list.addAll(Arrays.asList(12d));
+        Double result = JEfMax.maxList(list);
+        Double expectedResult = 12d;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+
+    @Test
+    public void maxArrayIntegerTest() {
         Integer[] array = new Integer[]{12,10,9,3,12,3,15};
         Integer result = JEfMax.maxArray(array);
         Integer expectedResult = 15;
@@ -46,7 +52,15 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxArrayDouble() {
+    public void maxArrayIntegerOneElementTest() {
+        Integer[] array = new Integer[]{12};
+        Integer result = JEfMax.maxArray(array);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+    @Test
+    public void maxArrayDoubleTest() {
         Double[] array = new Double[]{12d,10d,9d,3d,12d,15d,3d};
         Double result = JEfMax.maxArray(array);
         Double expectedResult = 15d;
@@ -54,15 +68,17 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxQueue() {
+    public void maxArrayDoubleOneElementTest() {
+        Double[] array = new Double[]{12d};
+        Double result = JEfMax.maxArray(array);
+        Double expectedResult = 12d;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+    @Test
+    public void maxQueueTest() {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(12);
-        queue.add(10);
-        queue.add(9);
-        queue.add(3);
-        queue.add(12);
-        queue.add(3);
-        queue.add(15);
+        queue.addAll(Arrays.asList(12,10,9,3,12,3,15));
 
         Integer result = JEfMax.maxQueue(queue);
         Integer expectedResult = 15;
@@ -70,15 +86,19 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxHashSet() {
+    public void maxQueueOneElementTest() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.addAll(Arrays.asList(12));
+
+        Integer result = JEfMax.maxQueue(queue);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void maxHashSetTest() {
         HashSet<Integer> set = new HashSet<>();
-        set.add(12);
-        set.add(10);
-        set.add(9);
-        set.add(3);
-        set.add(12);
-        set.add(3);
-        set.add(15);
+        set.addAll(Arrays.asList(12,10,9,3,12,3,15));
 
         Integer result = JEfMax.maxHashSet(set);
         Integer expectedResult = 15;
@@ -86,7 +106,17 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxHashMapByValue() {
+    public void maxHashSetOneElementTest() {
+        HashSet<Integer> set = new HashSet<>();
+        set.addAll(Arrays.asList(12));
+
+        Integer result = JEfMax.maxHashSet(set);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+    @Test
+    public void maxHashMapByValueTest() {
         HashMap<Integer, Double> map = new HashMap<>();
         map.put(1,10d);
         map.put(2,20d);
@@ -98,7 +128,17 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxHashMapByKey() {
+    public void maxHashMapByValueOneElementTest() {
+        HashMap<Integer, Double> map = new HashMap<>();
+        map.put(2,20d);
+
+        Double max = JEfMax.maxHashMapByValue(map);
+        Double expectedResult = 20d;
+        Assert.assertEquals(max, expectedResult);
+    }
+
+    @Test
+    public void maxHashMapByKeyTest() {
         HashMap<Integer, Double> map = new HashMap<>();
         map.put(10,10d);
         map.put(2,20d);
@@ -110,7 +150,17 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxHashTableByValue() {
+    public void maxHashMapByKeyOneElementTest() {
+        HashMap<Integer, Double> map = new HashMap<>();
+        map.put(2,20d);
+
+        Integer max = JEfMax.maxHashMapByKey(map);
+        Integer expectedResult = 2;
+        Assert.assertEquals(max, expectedResult);
+    }
+
+    @Test
+    public void maxHashTableByValueTest() {
         Hashtable<Integer, Double> table = new Hashtable<>();
         table.put(1,10d);
         table.put(2,20d);
@@ -122,7 +172,17 @@ public class JEfMaxTest {
     }
 
     @Test
-    public void maxHashTableByKey() {
+    public void maxHashTableByValueOneElementTest() {
+        Hashtable<Integer, Double> table = new Hashtable<>();
+        table.put(2,20d);
+
+        Double max = JEfMax.maxHashTableByValue(table);
+        Double expectedResult = 20d;
+        Assert.assertEquals(max, expectedResult);
+    }
+
+    @Test
+    public void maxHashTableByKeyTest() {
         Hashtable<Integer, Double> table = new Hashtable<>();
         table.put(10,10d);
         table.put(2,20d);
@@ -130,6 +190,16 @@ public class JEfMaxTest {
 
         Integer max = JEfMax.maxHashTableByKey(table);
         Integer expectedResult = 32;
+        Assert.assertEquals(max, expectedResult);
+    }
+
+    @Test
+    public void maxHashTableByKeyOneElementTest() {
+        Hashtable<Integer, Double> table = new Hashtable<>();
+        table.put(2,20d);
+
+        Integer max = JEfMax.maxHashTableByKey(table);
+        Integer expectedResult = 2;
         Assert.assertEquals(max, expectedResult);
     }
 }

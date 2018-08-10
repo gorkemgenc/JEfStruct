@@ -1,8 +1,8 @@
 package jEfExceptions;
 
-public class jEfQueueEmptyException extends RuntimeException {
+public class JEfQueueEmptyException extends RuntimeException {
 
-    public jEfQueueEmptyException() {
+    public JEfQueueEmptyException() {
         super("Queue should not be empty");
     }
 }

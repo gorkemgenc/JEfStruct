@@ -10,22 +10,25 @@ import static org.junit.Assert.*;
 public class JEfMinTest {
 
     @Test
-    public void minListInteger() {
+    public void minListIntegerTest() {
         List<Integer> list = new ArrayList<>();
-        list.add(12);
-        list.add(10);
-        list.add(9);
-        list.add(3);
-        list.add(12);
-        list.add(15);
-        list.add(3);
+        list.addAll(Arrays.asList(12,10,9,3,12,15,3));
         Integer result = JEfMin.minList(list);
         Integer expectedResult = 3;
         Assert.assertEquals(result,expectedResult);
     }
 
     @Test
-    public void minArrayInteger() {
+    public void minListIntegerOneElementTest() {
+        List<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(12));
+        Integer result = JEfMin.minList(list);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result,expectedResult);
+    }
+
+    @Test
+    public void minArrayIntegerTest() {
         Integer[] array = new Integer[]{12,10,9,3,12,3,15};
         Integer result = JEfMin.minArray(array);
         Integer expectedResult = 3;
@@ -33,39 +36,34 @@ public class JEfMinTest {
     }
 
     @Test
-    public void minQueue() {
+    public void minQueueTest() {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(12);
-        queue.add(10);
-        queue.add(9);
-        queue.add(3);
-        queue.add(12);
-        queue.add(3);
-        queue.add(15);
-
+        queue.addAll(Arrays.asList(12,10,9,3,12,3,15));
         Integer result = JEfMin.minQueue(queue);
         Integer expectedResult = 3;
         Assert.assertEquals(result, expectedResult);
     }
 
     @Test
-    public void minHashSet() {
-        HashSet<Integer> set = new HashSet<>();
-        set.add(12);
-        set.add(10);
-        set.add(9);
-        set.add(3);
-        set.add(12);
-        set.add(3);
-        set.add(15);
+    public void minQueueOneElementTest() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.addAll(Arrays.asList(12));
+        Integer result = JEfMin.minQueue(queue);
+        Integer expectedResult = 12;
+        Assert.assertEquals(result, expectedResult);
+    }
 
+    @Test
+    public void minHashSetTest() {
+        HashSet<Integer> set = new HashSet<>();
+        set.addAll(Arrays.asList(12,10,9,3,12,3,15));
         Integer result = JEfMin.minHashSet(set);
         Integer expectedResult = 3;
         Assert.assertEquals(result,expectedResult);
     }
 
     @Test
-    public void minHashMapByValue() {
+    public void minHashMapByValueTest() {
         HashMap<Integer, Double> map = new HashMap<>();
         map.put(1,10d);
         map.put(2,20d);
@@ -77,7 +75,18 @@ public class JEfMinTest {
     }
 
     @Test
-    public void minHashMapByKey() {
+    public void minHashMapByValueOneElementTest() {
+        HashMap<Integer, Double> map = new HashMap<>();
+        map.put(1,10d);
+
+
+        Double min = JEfMin.minHashMapByValue(map);
+        Double expectedResult = 10d;
+        Assert.assertEquals(min, expectedResult);
+    }
+
+    @Test
+    public void minHashMapByKeyTest() {
         HashMap<Integer, Double> map = new HashMap<>();
         map.put(10,10d);
         map.put(2,20d);
@@ -89,7 +98,17 @@ public class JEfMinTest {
     }
 
     @Test
-    public void minHashTableByValue() {
+    public void minHashMapByKeyOneElementTest() {
+        HashMap<Integer, Double> map = new HashMap<>();
+        map.put(10,10d);
+
+        Integer min = JEfMin.minHashMapByKey(map);
+        Integer expectedResult = 10;
+        Assert.assertEquals(min, expectedResult);
+    }
+
+    @Test
+    public void minHashTableByValueTest() {
         Hashtable<Integer, Double> table = new Hashtable<>();
         table.put(1,10d);
         table.put(2,20d);
@@ -101,7 +120,17 @@ public class JEfMinTest {
     }
 
     @Test
-    public void minHashTableByKey() {
+    public void minHashTableByValueOneElementTest() {
+        Hashtable<Integer, Double> table = new Hashtable<>();
+        table.put(1,10d);
+
+        Double min = JEfMin.minHashTableByValue(table);
+        Double expectedResult = 10d;
+        Assert.assertEquals(min, expectedResult);
+    }
+
+    @Test
+    public void minHashTableByKeyTest() {
         Hashtable<Integer, Double> table = new Hashtable<>();
         table.put(10,10d);
         table.put(2,20d);
@@ -109,6 +138,16 @@ public class JEfMinTest {
 
         Integer min = JEfMin.minHashTableByKey(table);
         Integer expectedResult = 2;
+        Assert.assertEquals(min, expectedResult);
+    }
+
+    @Test
+    public void minHashTableByKeyOneElementTest() {
+        Hashtable<Integer, Double> table = new Hashtable<>();
+        table.put(10,10d);
+
+        Integer min = JEfMin.minHashTableByKey(table);
+        Integer expectedResult = 10;
         Assert.assertEquals(min, expectedResult);
     }
 }

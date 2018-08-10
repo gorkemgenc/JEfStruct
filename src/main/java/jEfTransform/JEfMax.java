@@ -1,19 +1,21 @@
 package jEfTransform;
 
-import jEfExceptions.JEfArrayNullException;
-import jEfExceptions.JEfListNullException;
-import jEfExceptions.jEfQueueEmptyException;
-import jEfExceptions.jEfSetIsNullException;
+import jEfExceptions.*;
 
 import java.util.*;
 
 public class JEfMax<T extends Number, K extends Number> {
 
-    private static boolean comparison(Number a, Number b)
-    {
-        return a.doubleValue() - b.doubleValue() < 0;
-    }
+    private static boolean comparison(Number a, Number b){ return a.doubleValue() - b.doubleValue() < 0; }
 
+    /***
+     * This function returns the maximum element of generic type of list. Generic type extends from Number class.
+     * If list is null or list size is zero, function throws a JEfListNullException exception
+     * @param list
+     * @param <T>
+     * @return
+     * @throws JEfListNullException
+     */
     public static <T> T maxList(List<T> list) throws JEfListNullException{
 
         if(list == null || list.size() == 0) throw new JEfListNullException();
@@ -27,6 +29,14 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
+    /***
+     * This function returns the maximum element of generic type of array. Generic type extends from Number class.
+     * If array is null or array length is zero, function throws a JEfArrayNullException exception
+     * @param array
+     * @param <T>
+     * @return
+     * @throws JEfArrayNullException
+     */
     public static <T> T maxArray(T[] array) throws JEfArrayNullException{
 
         if(array == null || array.length == 0) throw new JEfArrayNullException();
@@ -40,9 +50,16 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <T> T maxQueue(Queue<T> queue){
+    /***
+     * This function returns the maximum element of generic type of Java Queue. Generic type extends from Number class.
+     * If Queue is empty or Queue size is zero, function throws a JEfQueueEmptyException exception
+     * @param queue
+     * @param <T>
+     * @return
+     */
+    public static <T> T maxQueue(Queue<T> queue) throws JEfQueueEmptyException{
 
-        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException();
+        if(queue == null || queue.size() == 0 ) throw new JEfQueueEmptyException();
 
         Queue<T> tempQueue = queue;
 
@@ -57,9 +74,16 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <T> T maxHashSet(HashSet<T> set){
+    /***
+     * This function returns the maximum element of generic type of Java hashset. Generic type extends from Number class.
+     * If set is empty or set size is zero, function throws a JEfSetIsNullException exception
+     * @param set
+     * @param <T>
+     * @return
+     */
+    public static <T> T maxHashSet(HashSet<T> set) throws JEfSetIsNullException{
 
-        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException();
+        if(set == null || set.size() == 0 ) throw new JEfSetIsNullException();
 
         Set<T> tempSet = set;
 
@@ -73,9 +97,17 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <K, T> T maxHashMapByValue(HashMap<K,T> map){
+    /***
+     * This function returns the maximum element of generic type of Java HashMap according to values. Generic type extends from Number class.
+     * If map is empty or map size is zero, function throws a JEfMapIsNullException exception
+     * @param map
+     * @param <K>
+     * @param <T>
+     * @return
+     */
+    public static <K, T> T maxHashMapByValue(HashMap<K,T> map) throws JEfMapIsNullException{
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException();
+        if(map == null || map.size() == 0 ) throw new JEfMapIsNullException();
 
         Map.Entry<K,T> entry = map.entrySet().iterator().next();
 
@@ -90,9 +122,17 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <K, T> K maxHashMapByKey(HashMap<K,T> map){
+    /***
+     * This function returns the maximum element of generic type of Java HashMap according to Keys. Generic type extends from Number class.
+     * If map is empty or map size is zero, function throws a JEfMapIsNullException exception
+     * @param map
+     * @param <K>
+     * @param <T>
+     * @return
+     */
+    public static <K, T> K maxHashMapByKey(HashMap<K,T> map) throws JEfMapIsNullException{
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException();
+        if(map == null || map.size() == 0 ) throw new JEfMapIsNullException();
 
         K max = map.keySet().stream().findFirst().get();
 
@@ -105,9 +145,17 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <K, T> T maxHashTableByValue(Hashtable<K, T> hashTable){
+    /***
+     * This function returns the maximum element of generic type of Java HashTable according to Values. Generic type extends from Number class.
+     * If HashTable is empty or map size is zero, function throws a JEfHashTableIsNullException exception
+     * @param hashTable
+     * @param <K>
+     * @param <T>
+     * @return
+     */
+    public static <K, T> T maxHashTableByValue(Hashtable<K, T> hashTable) throws JEfHashTableIsNullException{
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
+        if(hashTable == null || hashTable.size() == 0 ) throw new JEfHashTableIsNullException();
 
         Map.Entry<K,T> entry = hashTable.entrySet().iterator().next();
 
@@ -122,9 +170,17 @@ public class JEfMax<T extends Number, K extends Number> {
         return max;
     }
 
-    public static <K, T> K maxHashTableByKey(Hashtable<K, T> hashTable){
+    /***
+     * This function returns the maximum element of generic type of Java HashTable according to Keys. Generic type extends from Number class.
+     * If HashTable is empty or map size is zero, function throws a JEfHashTableIsNullException exception
+     * @param hashTable
+     * @param <K>
+     * @param <T>
+     * @return
+     */
+    public static <K, T> K maxHashTableByKey(Hashtable<K, T> hashTable) throws JEfHashTableIsNullException{
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
+        if(hashTable == null || hashTable.size() == 0 ) throw new JEfHashTableIsNullException();
 
         K max = hashTable.keySet().stream().findFirst().get();
 

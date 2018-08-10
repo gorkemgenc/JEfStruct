@@ -1,4 +1,6 @@
 package jEfExceptions;
 
-public class jEfMapIsNullException {
+public class JEfMapIsNullException extends RuntimeException {
+
+    public JEfMapIsNullException(){ super("MapIsNull Exception"); }
 }
