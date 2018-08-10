@@ -42,7 +42,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <T> T minQueue(Queue<T> queue){
 
-        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException("Queue is empty");
+        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException();
 
         Queue<T> tempQueue = queue;
 
@@ -59,7 +59,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <T> T minHashSet(HashSet<T> set){
 
-        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException();
 
         Set<T> tempSet = set;
 
@@ -75,7 +75,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <K,T> T minHashMapByValue(HashMap<K,T> map){
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( map.size() == 0 ) throw new jEfSetIsNullException();
 
         Map.Entry<K,T> entry = map.entrySet().iterator().next();
 
@@ -92,7 +92,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <K,T> K minHashMapByKey(HashMap<K,T> map){
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( map.size() == 0 ) throw new jEfSetIsNullException();
 
         K min = map.keySet().stream().findFirst().get();
 
@@ -107,7 +107,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <K, T> T minHashTableByValue(Hashtable<K, T> hashTable){
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
 
         Map.Entry<K,T> entry = hashTable.entrySet().iterator().next();
 
@@ -124,7 +124,7 @@ public class JEfMin<T extends Number, K extends Number> {
 
     public static <K, T> K minHashTableByKey(Hashtable<K, T> hashTable){
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
 
         K min = hashTable.keySet().stream().findFirst().get();
 

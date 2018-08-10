@@ -1,7 +1,6 @@
 package jEfCheck;
 
 import jEfExceptions.JEfStringNullException;
-
 import java.util.HashSet;
 
 public class JEfString {

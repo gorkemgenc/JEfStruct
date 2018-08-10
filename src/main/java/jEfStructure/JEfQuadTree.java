@@ -199,13 +199,13 @@ public class JEfQuadTree<T> {
                 break;
 
             default:
-                throw new JEfQuadTreeException("Invalid nodeType");
+                throw new JEfQuadTreeException("Default case exception");
         }
         return resposne;
     }
 
     private boolean insert(JEfNode<T> parent, JEfPoint<T> JEfPoint) {
-        Boolean result = false;
+        Boolean result;
         switch (parent.getNodeType()) {
             case EMPTY:
                 this.setPointForNode(parent, JEfPoint);

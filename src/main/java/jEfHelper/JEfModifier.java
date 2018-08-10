@@ -1,7 +1,6 @@
 package jEfHelper;
 
 import jEfExceptions.JEfArrayNullException;
-
 import java.util.Arrays;
 
 public class JEfModifier {
@@ -34,7 +33,7 @@ public class JEfModifier {
         float[] floatArray = new float[array.length];
 
         for(int i = 0; i < array.length; i++){
-            floatArray[i] = (float)array[i];
+            floatArray[i] = array[i];
         }
 
         return floatArray;

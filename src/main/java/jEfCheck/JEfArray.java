@@ -1,6 +1,5 @@
 package jEfCheck;
 
-
 import jEfExceptions.JEfArrayNullException;
 import jEfExceptions.JEfListNullException;
 import jEfHelper.JEfWrapper;

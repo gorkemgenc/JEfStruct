@@ -42,7 +42,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <T> T maxQueue(Queue<T> queue){
 
-        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException("Queue is empty");
+        if ( queue == null || queue.size() == 0 ) throw new jEfQueueEmptyException();
 
         Queue<T> tempQueue = queue;
 
@@ -59,7 +59,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <T> T maxHashSet(HashSet<T> set){
 
-        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if ( set == null || set.size() == 0 ) throw new jEfSetIsNullException();
 
         Set<T> tempSet = set;
 
@@ -75,7 +75,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <K, T> T maxHashMapByValue(HashMap<K,T> map){
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( map.size() == 0 ) throw new jEfSetIsNullException();
 
         Map.Entry<K,T> entry = map.entrySet().iterator().next();
 
@@ -92,7 +92,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <K, T> K maxHashMapByKey(HashMap<K,T> map){
 
-        if( map.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( map.size() == 0 ) throw new jEfSetIsNullException();
 
         K max = map.keySet().stream().findFirst().get();
 
@@ -107,7 +107,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <K, T> T maxHashTableByValue(Hashtable<K, T> hashTable){
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
 
         Map.Entry<K,T> entry = hashTable.entrySet().iterator().next();
 
@@ -124,7 +124,7 @@ public class JEfMax<T extends Number, K extends Number> {
 
     public static <K, T> K maxHashTableByKey(Hashtable<K, T> hashTable){
 
-        if( hashTable.size() == 0 ) throw new jEfSetIsNullException("Set is empty");
+        if( hashTable.size() == 0 ) throw new jEfSetIsNullException();
 
         K max = hashTable.keySet().stream().findFirst().get();
 

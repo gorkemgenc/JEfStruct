@@ -12,7 +12,7 @@ public class JEfCosineSimilarity {
     public static double cosineSimilarity(double[] vectorA, double[] vectorB) throws JEfArrayNullException, JEfArrayLengthNotEqualException{
 
         if(vectorA == null || vectorB == null) throw new JEfArrayNullException();
-        if(vectorA.length != vectorB.length) throw new JEfArrayLengthNotEqualException("Array lengths should be equal");
+        if(vectorA.length != vectorB.length) throw new JEfArrayLengthNotEqualException();
 
         double dotProduct = 0.0;
         double normA = 0.0;
@@ -28,7 +28,7 @@ public class JEfCosineSimilarity {
     public static double cosineSimilarityForList(List<Double> vectorA, List<Double> vectorB) throws JEfListNullException, JEfListSizeNotEqualException{
 
         if(vectorA == null || vectorB == null) throw new JEfListNullException();
-        if(vectorA.size() != vectorB.size()) throw new JEfListSizeNotEqualException("Lists size should be equal");
+        if(vectorA.size() != vectorB.size()) throw new JEfListSizeNotEqualException();
 
         double dotProduct = 0.0;
         double normA = 0.0;

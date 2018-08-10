@@ -26,7 +26,7 @@ public class JEfStringTest {
     @Test
     public void uniqueThrowException() throws JEfStringNullException {
         expectedEx.expect(JEfStringNullException.class);
-        expectedEx.expectMessage("String is null");
+        expectedEx.expectMessage("String should not be null");
         JEfString.unique(null);
     }
 }

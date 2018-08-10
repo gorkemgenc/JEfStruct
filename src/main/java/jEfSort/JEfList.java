@@ -231,7 +231,7 @@ public class JEfList<T> {
         Collections.sort(list, new Comparator<String>() {
 
             public int compare(String str1, String str2) throws JEfListSizeNotEqualException {
-                if(str1.length() < end || str2.length() < end) throw new JEfListSizeNotEqualException("Index out of range when comparing two string");
+                if(str1.length() < end || str2.length() < end) throw new JEfListSizeNotEqualException();
                 int res = String.CASE_INSENSITIVE_ORDER.compare(str1.substring(start, end+1), str2.substring(start, end+1));
 
                 if(res == 0) res = str1.compareTo(str2);

@@ -64,7 +64,7 @@ public class JEfArrayTest {
     @Test
     public void uniqueThrowExceptionTest() throws JEfArrayNullException {
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array null exception.");
+        expectedEx.expectMessage("Array should not be null.");
         JEfArray.unique(null);
     }
 
@@ -125,7 +125,7 @@ public class JEfArrayTest {
     @Test
     public void permuteThrowExceptionTest() throws JEfArrayNullException {
         expectedEx.expect(JEfArrayNullException.class);
-        expectedEx.expectMessage("Array null exception.");
+        expectedEx.expectMessage("Array should not be null.");
         JEfArray.permute(null);
     }
 

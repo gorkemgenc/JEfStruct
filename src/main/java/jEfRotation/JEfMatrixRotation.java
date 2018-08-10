@@ -8,14 +8,14 @@ import java.util.Arrays;
 public class JEfMatrixRotation<T> {
 
     public static <T> T[][] rotateMatrix(T matrix[][], JEfDirection JEfDirection) {
-            if(matrix == null) throw new JEfMatrixNullException("Matrix is null");
+            if(matrix == null) throw new JEfMatrixNullException();
             if(JEfDirection == JEfDirection.LEFT) return rotateInnerLeft(matrix);
             return rotateInnerRight(matrix);
     }
 
     public static <T> T[][] transpose(T[][] matrix){
 
-        if(matrix == null) throw new JEfMatrixNullException("Matrix is null");
+        if(matrix == null) throw new JEfMatrixNullException();
 
         int length = matrix.length;
         int columnLength = matrix[0].length;

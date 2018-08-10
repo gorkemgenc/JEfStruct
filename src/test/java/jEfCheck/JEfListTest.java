@@ -93,7 +93,7 @@ public class JEfListTest {
     @Test
     public void uniqueThrowExceptionTest() throws JEfListNullException {
         expectedEx.expect(JEfListNullException.class);
-        expectedEx.expectMessage("List is null");
+        expectedEx.expectMessage("List should not be null");
         JEfList.unique(null);
     }
 
@@ -160,7 +160,7 @@ public class JEfListTest {
     @Test
     public void permuteThrowExceptionTest() throws JEfListNullException {
         expectedEx.expect(JEfListNullException.class);
-        expectedEx.expectMessage("List is null");
+        expectedEx.expectMessage("List should not be null");
         JEfList.permute(null);
     }
 
