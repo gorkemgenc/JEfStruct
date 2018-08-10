@@ -1,0 +1,27 @@
+package jEfStructure;
+
+public class JEfGeometryUtil {
+
+    public static Double distanceBetweenPoints(Double x1,Double y1,Double x2,Double y2){
+        return Math.sqrt((x2 - x1)*(x2 - x1) + (y2 - y1) * (y2 - y1));
+    }
+
+    public static Boolean rectangleObjectsOverlap(JEfRectangleObject r1, JEfRectangleObject r2){
+        if(r1.getX() > r2.getX() + r2.getW() || r2.getX() > r1.getX() + r1.getW()){
+            return false;
+        }
+        if(r1.getY() > r2.getY() + r2.getH() || r2.getY() > r1.getY() + r1.getH()){
+            return false;
+        }
+
+        return true;
+    }
+
+    public static Boolean rectangleObjectIsInside(JEfRectangleObject containingRectangle, JEfRectangleObject testRectangle){
+
+        return (testRectangle.getX() >= containingRectangle.getX())
+                && (testRectangle.getX() + testRectangle.getW() <= containingRectangle.getX() + containingRectangle.getW())
+                && (testRectangle.getY() >= containingRectangle.getY())
+                && (testRectangle.getY() + testRectangle.getH() <= containingRectangle.getY() + containingRectangle.getH());
+    }
+}
