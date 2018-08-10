@@ -34,16 +34,16 @@ public class JEfArrayTest extends TestCase {
     public void testRotateForObject() {
 
         Temp[] objects = new Temp[4];
-        objects[0] = new Temp("Gorkem1", 21);
-        objects[1] = new Temp("Gorkem2", 22);
-        objects[2] = new Temp("Gorkem3", 23);
-        objects[3] = new Temp("Gorkem4", 24);
+        objects[0] = new Temp("Test1", 21);
+        objects[1] = new Temp("Test2", 22);
+        objects[2] = new Temp("Test3", 23);
+        objects[3] = new Temp("Test4", 24);
 
         Temp[] result = new Temp[4];
-        result[0] = new Temp("Gorkem3", 23);
-        result[1] = new Temp("Gorkem4", 24);
-        result[2] = new Temp("Gorkem1", 21);
-        result[3] = new Temp("Gorkem2", 22);
+        result[0] = new Temp("Test3", 23);
+        result[1] = new Temp("Test4", 24);
+        result[2] = new Temp("Test1", 21);
+        result[3] = new Temp("Test2", 22);
 
         JEfArray.rotate(objects, JEfDirection.LEFT,2);
         for(int i=0; i<objects.length; i++){

@@ -2,17 +2,32 @@ package jEfRotation;
 
 import jEfEnums.JEfDirection;
 import jEfExceptions.JEfMatrixNullException;
-
 import java.util.Arrays;
 
 public class JEfMatrixRotation<T> {
 
+    /***
+     * This function rotates matrix with given direction. Function returns matrix to left or right 90 degree.
+     * If matrix is null function throw a JEfMatrixNullException
+     * @param matrix
+     * @param JEfDirection
+     * @param <T>
+     * @return
+     */
     public static <T> T[][] rotateMatrix(T matrix[][], JEfDirection JEfDirection) {
+
             if(matrix == null) throw new JEfMatrixNullException();
             if(JEfDirection == JEfDirection.LEFT) return rotateInnerLeft(matrix);
             return rotateInnerRight(matrix);
     }
 
+    /***
+     * This function creates transpose of given generic type of matrix.
+     * If matrix is null, function throw a JEfMatrixNullException. You can give different rows and columns count matrix.
+     * @param matrix
+     * @param <T>
+     * @return
+     */
     public static <T> T[][] transpose(T[][] matrix){
 
         if(matrix == null) throw new JEfMatrixNullException();

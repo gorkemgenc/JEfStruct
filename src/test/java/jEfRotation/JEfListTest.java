@@ -5,7 +5,6 @@ import jEfExceptions.JEfListNullException;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,16 +56,16 @@ public class JEfListTest extends TestCase {
     public void testRotateForObject() {
 
         List<Temp> objects = new ArrayList<>();
-        objects.add(new Temp("Gorkem1", 21));
-        objects.add(new Temp("Gorkem2", 22));
-        objects.add(new Temp("Gorkem3", 23));
-        objects.add(new Temp("Gorkem4", 24));
+        objects.add(new Temp("Test1", 21));
+        objects.add(new Temp("Test2", 22));
+        objects.add(new Temp("Test3", 23));
+        objects.add(new Temp("Test4", 24));
 
         List<Temp> result = new ArrayList<>();
-        result.add(new Temp("Gorkem3", 23));
-        result.add(new Temp("Gorkem4", 24));
-        result.add(new Temp("Gorkem1", 21));
-        result.add(new Temp("Gorkem2", 22));
+        result.add(new Temp("Test3", 23));
+        result.add(new Temp("Test4", 24));
+        result.add(new Temp("Test1", 21));
+        result.add(new Temp("Test2", 22));
 
         JEfList.rotate(objects, JEfDirection.LEFT,2);
         for(int i=0; i<objects.size(); i++){

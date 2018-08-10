@@ -12,7 +12,7 @@ public class JEfMatrixRotationTest extends TestCase {
     public void testMatrixNullException(){
         try {
             JEfMatrixRotation.transpose(null);
-            fail( "Matrix is null" );
+            fail( "Matrix should not be null" );
         }
         catch (JEfMatrixNullException expectedException) {
         }
