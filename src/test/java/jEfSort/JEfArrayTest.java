@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class JEfArrayTest {
     public ExpectedException expectedEx = ExpectedException.none();
 
     @Test
-    public void descendingOrder() {
+    public void descendingOrderTest() {
         Integer[] array = new Integer[]{1,2,3};
         JEfArray.descendingOrder(array);
         Integer[] result = new Integer[]{3,2,1};
@@ -23,7 +22,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void ascendingOrder() {
+    public void ascendingOrderTest() {
         Integer[] array = new Integer[]{1,2,3,1};
         JEfArray.ascendingOrder(array);
         Integer[] result = new Integer[]{1,1,2,3};
@@ -31,7 +30,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void sortByLengthAsc() {
+    public void sortByLengthAscTest() {
         String[] array = new String[]{"Test", "TestTestTestTest", "TestTestTest", "Test"};
         JEfArray.sortByLengthAsc(array);
         String[] result = new String[]{"Test", "Test", "TestTestTest", "TestTestTestTest"};
@@ -39,7 +38,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void sortByLengthDesc() {
+    public void sortByLengthDescTest() {
         String[] array = new String[]{"Test", "TestTestTestTest", "TestTestTest", "Test"};
         JEfArray.sortByLengthDesc(array);
         String[] result = new String[]{"TestTestTestTest","TestTestTest","Test", "Test"};
@@ -47,7 +46,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void alphabeticalCharOrder() {
+    public void alphabeticalCharOrderTest() {
         Character[] array = new Character[]{'g', 'a', 'g', 'b', 'c', 'g'};
         JEfArray.alphabeticalCharOrder(array);
         Character[] result = new Character[]{'a', 'b', 'c', 'g', 'g', 'g'};
@@ -55,7 +54,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void alphabeticalStringOrder() {
+    public void alphabeticalStringOrderTest() {
         String[] array = new String[]{"Test", "TestTestTestTest", "TestTestTest", "Test", "Try", "ABC"};
         JEfArray.alphabeticalStringOrder(array);
         String[] result = new String[]{"ABC", "Test", "Test", "TestTestTest", "TestTestTestTest", "Try"};
@@ -63,7 +62,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void reverseAlphabeticalOrder() {
+    public void reverseAlphabeticalOrderTest() {
         String[] array = new String[]{"Test", "TestTestTestTest", "TestTestTest", "Test", "Try", "ABC"};
         JEfArray.reverseAlphabeticalOrder(array);
         String[] result = new String[]{"Try", "TestTestTestTest", "TestTestTest", "Test", "Test", "ABC"};
@@ -71,7 +70,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void reverseAlphabeticalOrder1() {
+    public void reverseAlphabeticalOrder1Test() {
         Character[] array = new Character[]{'g', 'a', 'g', 'b', 'c', 'g'};
         JEfArray.reverseAlphabeticalOrder(array);
         Character[] result = new Character[]{'g', 'g', 'g', 'c', 'b', 'a'};
@@ -79,7 +78,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void orderBySpecial() {
+    public void orderBySpecialTest() {
         TempInner firstInner = new TempInner("BBB","ZZZ",1);
         TempInner secondInner = new TempInner("AAA","EEE",2);
         TempInner thirdInner = new TempInner("CCC","DDD",3);
@@ -90,12 +89,28 @@ public class JEfArrayTest {
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
         Temp[] result = new Temp[]{firstTemp,thirdTemp,secondTemp};
-        JEfArray.orderBySpecial(array, "parameter1");
+        JEfArray.orderBySpecial(array, "parameter1", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void orderBySpecial2() {
+    public void orderBySpecialDescTest() {
+        TempInner firstInner = new TempInner("BBB","ZZZ",1);
+        TempInner secondInner = new TempInner("AAA","EEE",2);
+        TempInner thirdInner = new TempInner("CCC","DDD",3);
+
+        Temp firstTemp = new Temp("BBA", "XXX",1,firstInner);
+        Temp secondTemp = new Temp("BBZ", "XBX",1,secondInner);
+        Temp thirdTemp = new Temp("BBB", "BBX",1,thirdInner);
+
+        Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
+        Temp[] result = new Temp[]{secondTemp, thirdTemp,firstTemp};
+        JEfArray.orderBySpecial(array, "parameter1", JEfOrderType.DESC);
+        Assert.assertArrayEquals(array,result);
+    }
+
+    @Test
+    public void orderBySpecial2Test() {
         TempInner firstInner = new TempInner("BBB","ZZZ",1);
         TempInner secondInner = new TempInner("AAA","EEE",2);
         TempInner thirdInner = new TempInner("CCC","DDD",3);
@@ -106,12 +121,12 @@ public class JEfArrayTest {
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
         Temp[] result = new Temp[]{thirdTemp,secondTemp,firstTemp};
-        JEfArray.orderBySpecial(array, "parameter2");
+        JEfArray.orderBySpecial(array, "parameter2", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void orderBySpecial3() {
+    public void orderBySpecial3Test() {
         TempInner firstInner = new TempInner("BBB","ZZZ",3);
         TempInner secondInner = new TempInner("AAA","EEE",1);
         TempInner thirdInner = new TempInner("CCC","DDD",2);
@@ -122,12 +137,12 @@ public class JEfArrayTest {
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
         Temp[] result = new Temp[]{secondTemp,thirdTemp,firstTemp};
-        JEfArray.orderBySpecial(array, "parameter3");
+        JEfArray.orderBySpecial(array, "parameter3", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void orderBySpecial4() {
+    public void orderBySpecial4Test() {
         TempInner firstInner = new TempInner("BBB","ZZZ",3);
         TempInner secondInner = new TempInner("AAA","EEE",1);
         TempInner thirdInner = new TempInner("CCC","DDD",2);
@@ -138,12 +153,12 @@ public class JEfArrayTest {
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
         Temp[] result = new Temp[]{secondTemp,thirdTemp,firstTemp};
-        JEfArray.orderBySpecial(array, "parameter3");
+        JEfArray.orderBySpecial(array, "parameter3", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void orderBySpecial5() {
+    public void orderBySpecial5Test() {
         TempInner firstInner = new TempInner("BBB","ZZZ",3);
         TempInner secondInner = new TempInner("AAA","EEE",1);
         TempInner thirdInner = new TempInner("CCC","DDD",2);
@@ -154,12 +169,12 @@ public class JEfArrayTest {
 
         Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
         Temp[] result = new Temp[]{secondTemp,thirdTemp,firstTemp};
-        JEfArray.orderBySpecial(array, "parameter4");
+        JEfArray.orderBySpecial(array, "parameter4", JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void orderBySpecials() {
+    public void orderBySpecialsTest() {
         TempInner firstInner = new TempInner("BBB","ZZZ",3);
         TempInner secondInner = new TempInner("AAA","EEE",1);
         TempInner thirdInner = new TempInner("CCC","DDD",2);
@@ -173,12 +188,12 @@ public class JEfArrayTest {
         List<String> parameters = new ArrayList<>();
         parameters.add("parameter1");
         parameters.add("parameter3");
-        JEfArray.orderBySpecials(array, parameters);
+        JEfArray.orderBySpecials(array, parameters, JEfOrderType.ASC);
         Assert.assertArrayEquals(array,result);
     }
 
     @Test
-    public void alphabeticalOrderWithSubString() {
+    public void alphabeticalOrderWithSubStringTest() {
         String[] array = new String[]{"Gorkem", "Genc", "Zarkm"};
         String[] expectedResult = new String[]{"Zarkm", "Genc", "Gorkem"};
         JEfArray.alphabeticalOrderWithSubString(array,1, array[1].length()-1);
@@ -186,7 +201,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void alphabeticalOrderWithSubStringException() throws JEfArrayIndexOutOfRangeException {
+    public void alphabeticalOrderWithSubStringExceptionTest() throws JEfArrayIndexOutOfRangeException {
         String[] array = new String[]{"Gorkem", "Genc", "Zarkm"};
 
         expectedEx.expect(JEfArrayIndexOutOfRangeException.class);
@@ -195,7 +210,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void bubbleSort() {
+    public void bubbleSortTest() {
         int[] array = new int[]{1,2,3,1};
         JEfArray.bubbleSort(array);
         int[] result = new int[]{1,1,2,3};
@@ -203,7 +218,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void mergeSort() {
+    public void mergeSortTest() {
         int[] array = new int[]{1,2,3,1};
         JEfArray.mergeSort(array);
         int[] result = new int[]{1,1,2,3};
@@ -211,7 +226,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void quickSort() {
+    public void quickSortTest() {
         int[] array = new int[]{1,2,3,1};
         JEfArray.quickSort(array);
         int[] result = new int[]{1,1,2,3};
@@ -219,7 +234,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void insertionSort() {
+    public void insertionSortTest() {
         int[] array = new int[]{1,2,3,1};
         JEfArray.insertionSort(array);
         int[] result = new int[]{1,1,2,3};
@@ -227,7 +242,7 @@ public class JEfArrayTest {
     }
 
     @Test
-    public void heapSort() {
+    public void heapSortTest() {
         int[] array = new int[]{1,2,3,1};
         JEfArray.heapSort(array);
         int[] result = new int[]{1,1,2,3};

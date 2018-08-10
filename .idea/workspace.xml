@@ -49,12 +49,21 @@
       <file leaf-file-name="JEfArray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="230" column="106" lean-forward="false" selection-start-line="230" selection-start-column="106" selection-end-line="230" selection-end-column="106" />
+            <state relative-caret-position="5563">
+              <caret line="546" column="0" lean-forward="true" selection-start-line="546" selection-start-column="0" selection-end-line="546" selection-end-column="0" />
               <folding>
-                <element signature="method#normalizedString#0;class#JEfArray#0" expanded="false" />
-                <element signature="method#isNullOrBlank#0;class#JEfArray#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JEfOrderType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfOrderType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,11 +71,10 @@
       <file leaf-file-name="JEfList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="239" column="13" lean-forward="true" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
+            <state relative-caret-position="3507">
+              <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
               <folding>
                 <element signature="method#orderBySpecial#0;class#JEfList#0" expanded="false" />
-                <element signature="e#8279#8742#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,9 +83,11 @@
       <file leaf-file-name="JEfArrayTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="3990">
+              <caret line="190" column="68" lean-forward="false" selection-start-line="190" selection-start-column="68" selection-end-line="190" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,9 +95,11 @@
       <file leaf-file-name="JEfListTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="1617">
+              <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,12 +139,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/jEfTransform/JEfMinTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfStringTransform.java" />
-        <option value="$PROJECT_DIR$/src/test/java/jEfSort/JEfStringTransformTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfTransform/JEfStringTransformTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfTransform/JEfListTransform.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfCheck/JEfHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfHelper/JEfWrapper.java" />
@@ -178,12 +186,16 @@
         <option value="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfJaccardSimilarityTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfSimilarity/JEfLongestCommonSubsequence.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfLongestCommonSubsequenceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jEfSort/JEfOrderType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2206" />
-    <option name="y" value="654" />
+    <option name="x" value="2456" />
+    <option name="y" value="270" />
     <option name="width" value="1936" />
     <option name="height" value="1039" />
   </component>
@@ -305,7 +317,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JEfLongestCommonSubsequenceTest">
+  <component name="RunManager" selected="JUnit.JEfListTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -327,43 +339,18 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="JEfArrayTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JEfArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="jEfRotation.*" />
+          <option name="PATTERN" value="jEfSort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="jEfStruct" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jEfRotation" />
-      <option name="MAIN_CLASS_NAME" value="jEfRotation.JEfArrayTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="JEfCosineSimilarityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jEfSimilarity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jEfStruct" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jEfSimilarity" />
-      <option name="MAIN_CLASS_NAME" value="jEfSimilarity.JEfCosineSimilarityTest" />
+      <option name="PACKAGE_NAME" value="jEfSort" />
+      <option name="MAIN_CLASS_NAME" value="jEfSort.JEfArrayTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -414,6 +401,31 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="jEfSimilarity" />
       <option name="MAIN_CLASS_NAME" value="jEfSimilarity.JEfJaccardSimilarityTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="JEfListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jEfSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jEfStruct" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jEfSort" />
+      <option name="MAIN_CLASS_NAME" value="jEfSort.JEfListTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -513,19 +525,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JEfArrayTest (1)" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.JEfCosineSimilarityTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JEfEditDistanceSimilarityTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.JEfEditDistanceSimilarityTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JEfEditDistanceSimilarityTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JEfCosineSimilarityTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JEfArrayTest (1)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JEfListTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JEfArrayTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JEfLongestCommonSubsequenceTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JEfJaccardSimilarityTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JEfEditDistanceSimilarityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -564,6 +576,9 @@
     <history-entry file="JEfJaccardSimilarityTest - 2018.08.10 at 21h 17m 58s.xml">
       <configuration name="JEfJaccardSimilarityTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JEfListTest - 2018.08.10 at 22h 53m 14s.xml">
+      <configuration name="JEfListTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="JEfListTest_(1) - 2018.08.10 at 20h 42m 08s.xml">
       <configuration name="JEfListTest (1)" configurationId="JUnit" />
     </history-entry>
@@ -573,12 +588,9 @@
     <history-entry file="JEfLongestCommonSubsequenceTest - 2018.08.10 at 21h 28m 00s.xml">
       <configuration name="JEfLongestCommonSubsequenceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JEfMatrixRotationTest - 2018.08.10 at 20h 42m 01s.xml">
-      <configuration name="JEfMatrixRotationTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2409" y="399" width="2418" height="1318" extended-state="6" />
+    <frame x="2391" y="141" width="2418" height="1318" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -711,18 +723,6 @@
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java</url>
-          <line>158</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="42" />
     </breakpoint-manager>
@@ -753,17 +753,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="380" column="18" lean-forward="false" selection-start-line="380" selection-start-column="18" selection-end-line="380" selection-end-column="18" />
-          <folding>
-            <element signature="e#15782#15783#0" expanded="false" />
-            <element signature="e#15818#15819#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -991,7 +980,7 @@
         <state relative-caret-position="231">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1001,7 +990,7 @@
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="11" selection-end-column="85" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1011,7 +1000,7 @@
         <state relative-caret-position="294">
           <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1021,7 +1010,7 @@
         <state relative-caret-position="168">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,7 +1020,7 @@
         <state relative-caret-position="1911">
           <caret line="91" column="53" lean-forward="false" selection-start-line="91" selection-start-column="53" selection-end-line="91" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1041,7 +1030,7 @@
         <state relative-caret-position="210">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1051,7 +1040,7 @@
         <state relative-caret-position="420">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,7 +1050,7 @@
         <state relative-caret-position="504">
           <caret line="24" column="41" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,7 +1076,7 @@
         <state relative-caret-position="105">
           <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1097,7 +1086,7 @@
         <state relative-caret-position="441">
           <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,7 +1096,7 @@
         <state relative-caret-position="693">
           <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1117,7 +1106,7 @@
         <state relative-caret-position="-1073">
           <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1135,7 +1124,7 @@
         <state relative-caret-position="882">
           <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1169,9 +1158,9 @@
         <state relative-caret-position="630">
           <caret line="30" column="106" lean-forward="false" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3339#3340#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3339#3340#0" expanded="false" />
+            <element signature="e#3393#3394#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1181,7 +1170,7 @@
         <state relative-caret-position="819">
           <caret line="39" column="59" lean-forward="false" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1194,41 +1183,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="230" column="106" lean-forward="false" selection-start-line="230" selection-start-column="106" selection-end-line="230" selection-end-column="106" />
+        <state relative-caret-position="3507">
+          <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
           <folding>
-            <element signature="method#normalizedString#0;class#JEfArray#0" expanded="false" />
-            <element signature="method#isNullOrBlank#0;class#JEfArray#0" expanded="false" />
+            <element signature="method#orderBySpecial#0;class#JEfList#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfOrderType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="239" column="13" lean-forward="true" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5563">
+          <caret line="546" column="0" lean-forward="true" selection-start-line="546" selection-start-column="0" selection-end-line="546" selection-end-column="0" />
           <folding>
-            <element signature="method#orderBySpecial#0;class#JEfList#0" expanded="false" />
-            <element signature="e#8279#8742#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="3990">
+          <caret line="190" column="68" lean-forward="false" selection-start-line="190" selection-start-column="68" selection-end-line="190" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="1617">
+          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
