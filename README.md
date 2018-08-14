@@ -132,7 +132,7 @@ Other other = new Other("Test", 2);
 boolean isSame = JEfType.same(temp,other);
 ```
 
-##### Usage of JEfType - inner(T first, K second):
+##### Usage of JEfType<T, K>  - inner(T first, K second):
 
 <i>This function determines whether first parameter is instance of second parameter. If first parameter is instance of second, function returns true. Otherwise function returns false.</i>
 
@@ -150,7 +150,7 @@ classOne.list.add(1);
 boolean isInner = JEfType.inner(tempFirst, tempSecond);
 ```
 
-##### Usage of JEfType - sameByValue(T first, T second):
+##### Usage of JEfType<T, K>  - sameByValue(T first, T second):
 
 <i>This function determines whether first and second parameters have same declared fields or not, If true, function returns true. Otherwise function returns false. You can use this function for an object which has another object (inner class of other class).</i>
 
