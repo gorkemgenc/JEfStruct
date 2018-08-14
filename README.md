@@ -1,3 +1,3 @@
 # JEfStruct
 
-Declarative Java library for typed structure to parse and manage with efficient process.
+Declarative Java8 library for typed structure to parse and manage with efficient process.
