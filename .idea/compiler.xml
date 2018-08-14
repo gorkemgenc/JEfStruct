@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jEfStruct" />
+        <module name="jEfficient" />
+        <module name="jEfficient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jEfStruct" target="1.8" />
+      <module name="jEfficient" target="1.8" />
+      <module name="jEfficient" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
