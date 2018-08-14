@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfArray.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfArray.java" afterPath="$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfList.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfList.java" afterPath="$PROJECT_DIR$/src/main/java/jEfModify/JEfList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfMatrixRotation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfMatrixRotation.java" afterPath="$PROJECT_DIR$/src/main/java/jEfModify/JEfMatrixRotation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfString.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfRotation/JEfString.java" afterPath="$PROJECT_DIR$/src/main/java/jEfModify/JEfString.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfArrayTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/jEfModify/JEfArrayTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfListTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfListTest.java" afterPath="$PROJECT_DIR$/src/test/java/jEfModify/JEfListTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfMatrixRotationTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfMatrixRotationTest.java" afterPath="$PROJECT_DIR$/src/test/java/jEfModify/JEfMatrixRotationTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfStringTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfRotation/JEfStringTest.java" afterPath="$PROJECT_DIR$/src/test/java/jEfModify/JEfStringTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java" afterPath="$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,8 +139,8 @@
       <file leaf-file-name="JEfArray.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="188">
+              <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/jEfCheck/JEfListTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfCheck/JEfStringTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfHelper/JEfModifierTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/jEfHelper/JEfModifier.java" />
@@ -250,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/java/jEfStructure/QuadTree.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfStructure/QuadTreeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/jEfStructure/JEfQuadTreeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java" />
       </list>
     </option>
   </component>
@@ -363,6 +347,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jEfStruct" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jEfModify" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jEfStruct" type="b2602c69:ProjectViewProjectNode" />
@@ -661,11 +653,11 @@
     <history-entry file="All_in_jEfStruct - 2018.08.14 at 05h 32m 44s.xml">
       <configuration name="All in jEfStruct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JEfMaxTest - 2018.08.10 at 23h 48m 38s.xml">
-      <configuration name="JEfMaxTest" configurationId="JUnit" />
+    <history-entry file="All_in_jEfStruct - 2018.08.14 at 05h 40m 13s.xml">
+      <configuration name="All in jEfStruct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JEfMaxTest - 2018.08.10 at 23h 51m 18s.xml">
-      <configuration name="JEfMaxTest" configurationId="JUnit" />
+    <history-entry file="All_in_jEfStruct - 2018.08.14 at 05h 42m 38s.xml">
+      <configuration name="All in jEfStruct" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JEfMinTest - 2018.08.11 at 00h 02m 38s.xml">
       <configuration name="JEfMinTest" configurationId="JUnit" />
@@ -702,7 +694,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31065354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31065354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296328" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294539" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -714,7 +706,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3992838" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1242,8 +1234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="188">
+          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

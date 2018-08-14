@@ -7,7 +7,7 @@ public class JEfArray<T> {
 
     /***
      * This function rotates generic type array with given rotateCount. You can rotate array to right or left with given a rotatecount.
-     * If array is null, function throws a JEfArrayNullException;
+     * If array is null, function throws a JEfArrayNullException.
      * If array length is zero or rotateCount equals to array length function does nothing.
      * @param array
      * @param JEfDirection
