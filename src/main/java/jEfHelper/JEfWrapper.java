@@ -10,11 +10,21 @@ public class JEfWrapper {
     private static final Set<Class<?>> WRAPPER_TYPES = getWrapperTypes();
     private static final Set<Class<?>> WRAPPER_TYPES_FOR_TYPE_CHECK = getWrapperTypesForType();
 
+    /***
+     * This function returns if class type is Boolean, Character, Byte, Short, Integer, Long, Float, Double, Void or String
+     * @param clazz
+     * @return
+     */
     public static boolean isWrapperType(Class<?> clazz) {
 
         return WRAPPER_TYPES.contains(clazz);
     }
 
+    /***
+     * This function returns if class type is Boolean, Character, Byte, Short, Integer, Long, Float, Double, Void or String, List, Set, Map
+     * @param clazz
+     * @return
+     */
     public static boolean isWrapperTypeForType(Class<?> clazz)
     {
         return WRAPPER_TYPES_FOR_TYPE_CHECK.contains(clazz);

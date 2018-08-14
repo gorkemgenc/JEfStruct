@@ -27,7 +27,7 @@ public class JEfJaccardSimilarityTest {
     }
 
     @Test
-    public void cosineSimilarityThrowExceptionTest() throws JEfArrayNullException {
+    public void jaccardSimilarityThrowExceptionTest() throws JEfArrayNullException {
 
         expectedEx.expect(JEfArrayNullException.class);
         expectedEx.expectMessage("Array should not be null.");
@@ -56,7 +56,7 @@ public class JEfJaccardSimilarityTest {
     }
 
     @Test
-    public void cosineSimilarityForListExceptionTest() throws JEfListNullException {
+    public void jaccardSimilarityForListExceptionTest() throws JEfListNullException {
 
         expectedEx.expect(JEfListNullException.class);
         expectedEx.expectMessage("List should not be null");

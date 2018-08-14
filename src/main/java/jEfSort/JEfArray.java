@@ -107,7 +107,7 @@ public class JEfArray<T> {
      * If fieldName is not in object class, function throws a NoSuchFieldException
      * You can use this function for inner classes
      * @param array
-     * @param areaName
+     * @param fieldName
      * @param <T>
      */
     public static <T> void orderBySpecial(T[] array, String fieldName, JEfOrderType orderType){

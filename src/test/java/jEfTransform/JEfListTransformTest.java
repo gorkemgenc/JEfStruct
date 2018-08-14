@@ -10,7 +10,6 @@ public class JEfListTransformTest {
 
     @Test
     public void toBigIntListTest() {
-        String[] array = new String[]{"123", "12312312312321312311231"};
         List<String> list = new ArrayList<>();
         list.add("123");
         list.add("12312312312321312311231");

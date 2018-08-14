@@ -147,12 +147,10 @@ public class JEfArrayTest {
         List<List<Integer>> result = JEfArray.permute(array);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
-        temp.add(1);
-        temp.add(2);
+        temp.addAll(Arrays.asList(1,2));
         expectedResult.add(temp);
         temp = new ArrayList<>();
-        temp.add(2);
-        temp.add(1);
+        temp.addAll(Arrays.asList(2,1));
         expectedResult.add(temp);
 
         JEfHelper.checkElementByElement(result,expectedResult);

@@ -183,7 +183,6 @@ public class JEfListTest {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
-
         List<List<Integer>> result = JEfList.permute(list);
         List<List<Integer>> expectedResult = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
