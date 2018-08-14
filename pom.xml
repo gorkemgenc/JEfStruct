@@ -22,15 +22,31 @@
     <packaging>jar</packaging>
 
     <name>jEfficient</name>
-    <url>http://maven.apache.org</url>
+    <description>JEfficient is an efficient easy-to-use Java library to manipulate, calculate, transform, sort and check
+        java collections, objects, primitive types and reference types with defining function's boundaries.</description>
+    <url>https://github.com/gorkemgenc/JEfficient</url>
 
     <licenses>
         <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/gorkemgenc/JEfficient.git</connection>
+        <developerConnection>scm:git:ssh://github.com:gorkemgenc/JEfficient.git</developerConnection>
+        <url>https://github.com/gorkemgenc/JEfficient</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Gorkem Genc</name>
+            <email>gencmahmutgorkem@gmail.com</email>
+            <organization>com.github.gorkemgenc</organization>
+            <organizationUrl>https://github.com/gorkemgenc/</organizationUrl>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

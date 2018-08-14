@@ -489,9 +489,7 @@ JEfList.rotate(listLeft, JEfDirection.LEFT,2);
 <i>This function rotates matrix with given direction. Function returns matrix to left or right 90 degree.If matrix is null function throw a JEfMatrixNullException</i>
 
 ```
-Integer[][] matrix = new Integer[][]{{1,2,3},
-                {4,5,6},
-                {7,8,9}};
+Integer[][] matrix = new Integer[][]{{1,2,3},{4,5,6},{7,8,9}};
 Object[][] result = JEfMatrixRotation.rotateMatrix(matrix, JEfDirection.LEFT);
 ```
 
