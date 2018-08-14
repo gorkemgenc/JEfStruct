@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jEfStruct.iml" filepath="$PROJECT_DIR$/jEfStruct.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jEfficient.iml" filepath="$PROJECT_DIR$/jEfficient.iml" />
     </modules>
   </component>
 </project>
