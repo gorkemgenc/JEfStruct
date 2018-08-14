@@ -1,67 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfCheck/jEfType.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfCheck/JEfArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfCheck/JEfArray.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfCheck/JEfList.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfCheck/JEfList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfCheck/JEfString.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfCheck/JEfString.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfEnums/JEfDirection.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfEnums/JEfDirection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfEnums/JEfNodeType.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfEnums/JEfNodeType.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfEnums/JEfOrderType.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfEnums/JEfOrderType.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayIndexOutOfRangeException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfArrayIndexOutOfRangeException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayLengthNotEqualException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfArrayLengthNotEqualException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfArrayNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfArrayNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfHashTableIsNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfHashTableIsNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfListNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfListNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfListSizeNotEqualException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfListSizeNotEqualException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfMapIsNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfMapIsNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfMatrixNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfMatrixNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfQueueEmptyException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfQueueEmptyException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfSetIsNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfSetIsNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfStringNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfStringNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfExceptions/JEfVectorNullException.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfExceptions/JEfVectorNullException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfHelper/JEfModifier.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfHelper/JEfModifier.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfHelper/JEfWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfHelper/JEfWrapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfModify/JEfArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfModify/JEfArray.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfModify/JEfList.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfModify/JEfList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfModify/JEfMatrixRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfModify/JEfMatrixRotation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfModify/JEfString.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfModify/JEfString.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSimilarity/JEfCosineSimilarity.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfSimilarity/JEfCosineSimilarity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSimilarity/JEfEditDistanceSimilarity.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfSimilarity/JEfEditDistanceSimilarity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSimilarity/JEfJaccardSimilarity.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfSimilarity/JEfJaccardSimilarity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSimilarity/JEfLongestCommonSubsequence.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfSimilarity/JEfLongestCommonSubsequence.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSort/JEfArray.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfSort/JEfList.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfTransform/JEfArrayTransform.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfTransform/JEfArrayTransform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfTransform/JEfListTransform.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfTransform/JEfListTransform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfTransform/JEfMax.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfTransform/JEfMax.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfTransform/JEfMin.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfTransform/JEfMin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfTransform/JEfStringTransform.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/gorkemgenc/jEfTransform/JEfStringTransform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jEfcheck/jEfType.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfCheck/JEfArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfCheck/JEfArrayTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfCheck/JEfHelper.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfCheck/JEfHelper.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfCheck/JEfListTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfCheck/JEfListTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfCheck/JEfStringTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfCheck/JEfStringTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfCheck/JEfTypeTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfCheck/JEfTypeTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfHelper/JEfModifierTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfHelper/JEfModifierTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfModify/JEfArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfModify/JEfArrayTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfModify/JEfListTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfModify/JEfListTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfModify/JEfMatrixRotationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfModify/JEfMatrixRotationTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfModify/JEfStringTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfModify/JEfStringTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfCosineSimilarityTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSimilarity/JEfCosineSimilarityTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfEditDistanceSimilarityTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSimilarity/JEfEditDistanceSimilarityTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfJaccardSimilarityTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSimilarity/JEfJaccardSimilarityTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSimilarity/JEfLongestCommonSubsequenceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSimilarity/JEfLongestCommonSubsequenceTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSort/JEfArrayTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfSort/JEfListTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfTransform/JEfArrayTransformTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfTransform/JEfArrayTransformTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfTransform/JEfListTransformTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfTransform/JEfListTransformTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfTransform/JEfMaxTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfTransform/JEfMaxTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfTransform/JEfMinTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfTransform/JEfMinTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jEfTransform/JEfStringTransformTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfTransform/JEfStringTransformTest.java" />
-    </list>
+    <list default="true" id="01572b85-01d7-4476-a587-d97f65d6f830" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -159,8 +99,8 @@
       <file leaf-file-name="JEfListTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSort/JEfListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="336">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -801,6 +741,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2409" y="399" width="2418" height="1318" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -810,7 +751,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31065354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31065354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294539" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1429,8 +1370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/gorkemgenc/jEfSort/JEfListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="336">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
