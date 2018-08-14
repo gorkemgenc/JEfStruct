@@ -5,7 +5,7 @@ import jEfExceptions.JEfListNullException;
 import jEfHelper.JEfWrapper;
 import java.util.*;
 
-class JEfArray<T> {
+public class JEfArray<T> {
 
     /***
      * This function determines whether array (Type T) is unique or not. If it is unique, it returns true otherwise it returns false.
