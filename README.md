@@ -222,6 +222,24 @@ JEfWrapper.isWrapperTypeForType(fields[i].getType());
 
 JEfSort contains 2 different class which are JEfArray and JEfList.  
 
+##### Usage of JEfArray<T> - orderBySpecial(T[] array, String fieldName, JEfOrderType orderType):
+
+<i>This function sorts given generic type of array with given fieldName. FieldName should be given as a String. If array is null or fieldName is null or fieldName is zero, function does nothing. If fieldName is not in object class, function throws a NoSuchFieldException. You can use this function for inner classes.</i>
+
+```
+TempInner firstInner = new TempInner("BBB","ZZZ",1);
+TempInner secondInner = new TempInner("AAA","EEE",2);
+TempInner thirdInner = new TempInner("CCC","DDD",3);
+
+Temp firstTemp = new Temp("BBA", "XXX",1,firstInner);
+Temp secondTemp = new Temp("BBZ", "XBX",1,secondInner);
+Temp thirdTemp = new Temp("BBB", "BBX",1,thirdInner);
+
+Temp[] array = new Temp[]{firstTemp,secondTemp,thirdTemp};
+Temp[] result = new Temp[]{thirdTemp,secondTemp,firstTemp};
+JEfArray.orderBySpecial(array, "parameter2", JEfOrderType.ASC);
+```
+
 ##### Usage of JEfArray<T> - descendingOrder(Integer[] array):
 
 <i></i>
@@ -294,13 +312,6 @@ String[] array = new String[]{"Test", "TestTestTestTest", "TestTestTest", "Test"
 JEfArray.reverseAlphabeticalOrder(array);
 ```
 
-##### Usage of JEfArray<T> - orderBySpecial(T[] array, String fieldName, JEfOrderType orderType):
-
-<i>This function sorts given generic type of array with given fieldName. FieldName should be given as a String. If array is null or fieldName is null or fieldName is zero, function does nothing. If fieldName is not in object class, function throws a NoSuchFieldException. You can use this function for inner classes.</i>
-
-```
-
-```
 
 ##### Usage of JEfArray<T> - orderBySpecials(T[] array, List<String> fieldName, JEfOrderType orderType):
 
