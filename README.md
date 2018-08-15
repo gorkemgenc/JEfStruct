@@ -635,7 +635,6 @@ map.put(10,10d);
 map.put(2,20d);
 Integer max = JEfMax.maxHashMapByKey(map);
 ```
-
 ##### Usage of JEfMax<T extends Number, K extends Number> - maxHashTableByValue(Hashtable<K, T> hashTable):
 
 <i>This function returns the maximum element of generic type of Java HashTable according to Values. Generic type extends from Number class. If HashTable is empty or map size is zero, function throws a JEfHashTableIsNullException exception.</i>
