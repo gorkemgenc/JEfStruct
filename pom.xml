@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gorkemgenc</groupId>
     <artifactId>jEfficient</artifactId>
-    <version>1.2.8-SNAPSHOT</version>
+    <version>1.2.9</version>
     <packaging>pom</packaging>
     <name>jEfficient</name>
     <description>JEfficient is an efficient easy-to-use Java library to manipulate, calculate, transform, sort and check
@@ -39,7 +39,8 @@
         <connection>scm:git:git://github.com/gorkemgenc/JEfficient.git</connection>
         <developerConnection>scm:git:ssh://github.com:gorkemgenc/JEfficient.git</developerConnection>
         <url>https://github.com/gorkemgenc/JEfficient</url>
-    </scm>
+      <tag>1.2.9</tag>
+  </scm>
     <distributionManagement>
         <downloadUrl>https://oss.sonatype.org/content/groups/public</downloadUrl>
         <repository>
@@ -190,28 +191,28 @@
                                 <phase>verify</phase>
                                 <configuration>
                                     <target>
-                                        <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
-                                        <property environment="env"/>
-                                        <available file="xcop" filepath="${env.PATH}" property="xcop.present"/>
+                                        <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath" />
+                                        <property environment="env" />
+                                        <available file="xcop" filepath="${env.PATH}" property="xcop.present" />
                                         <if>
-                                            <equals arg1="${xcop.present}" arg2="true"/>
+                                            <equals arg1="${xcop.present}" arg2="true" />
                                             <then>
                                                 <fileset dir="." id="files">
-                                                    <include name="**/*.xml"/>
-                                                    <include name="**/*.xsl"/>
-                                                    <include name="**/*.xsd"/>
-                                                    <exclude name="target/**/*"/>
-                                                    <exclude name=".idea/**/*"/>
+                                                    <include name="**/*.xml" />
+                                                    <include name="**/*.xsl" />
+                                                    <include name="**/*.xsd" />
+                                                    <exclude name="target/**/*" />
+                                                    <exclude name=".idea/**/*" />
                                                 </fileset>
-                                                <pathconvert refid="files" property="converted" pathsep=" "/>
+                                                <pathconvert refid="files" property="converted" pathsep=" " />
                                                 <exec executable="xcop" failonerror="true">
-                                                    <arg value="--license"/>
-                                                    <arg value="LICENSE.txt"/>
-                                                    <arg line="${converted}"/>
+                                                    <arg value="--license" />
+                                                    <arg value="LICENSE.txt" />
+                                                    <arg line="${converted}" />
                                                 </exec>
                                             </then>
                                             <else>
-                                                <echo message="XCOP is not available in PATH"/>
+                                                <echo message="XCOP is not available in PATH" />
                                             </else>
                                         </if>
                                     </target>
@@ -1733,6 +1734,6 @@
         </pluginManagement>
     </build>
     <reporting>
-        <excludeDefaults/>
+        <excludeDefaults />
     </reporting>
 </project>
