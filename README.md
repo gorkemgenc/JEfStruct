@@ -29,7 +29,6 @@ JEfCheck contains 4 different class which are JEfArray, JEfList, JEfString and J
 Integer[] array = new Integer[]{1,2,3,2,5,4};
 boolean isUnique = JEfArray.unique(array);
 ```
-
 ```
 Temp[] tempList = new Temp[3];
 tempList[0] = new Temp("Test",1);
